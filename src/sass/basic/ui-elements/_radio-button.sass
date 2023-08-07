@@ -1,0 +1,63 @@
+.form-radio
+	position: relative
+	padding: 0 0 0 33px
+	user-select: none
+	display: block
+	cursor: pointer
+	line-height: 1.4
+
+	+bp($bp-small)
+		padding-left: 28px
+	
+	&[disabled]
+		opacity: .5
+		pointer-events: none
+	
+	&__input
+		position: absolute
+		cursor: pointer
+		opacity: 0
+		width: 0
+		height: 0
+		
+		&:checked ~ .form-radio__checkmark:after
+			opacity: 1
+			transform: none
+	
+	&__text
+		font-size: rem(16px)
+		line-height: 1
+
+		+bp($bp-small)
+			font-size: rem(14px)
+	
+	&__checkmark
+		position: absolute
+		top: -4px
+		left: 0
+		border: 2px solid $purple
+		border-radius: 50%
+		background-color: $white
+		width: 24px
+		height: 24px
+		
+		&:after
+			background: $purple
+			border-radius: 50%
+			width: 80%
+			height: 80%
+			content: ''
+			opacity: 0
+			transition: 0.4s ease-in-out 0s
+			transform: scale(3)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto
+		+bp($bp-small)
+			width: 20px
+			height: 20px
+			top: 0px
+

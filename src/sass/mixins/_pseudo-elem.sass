@@ -1,0 +1,8 @@
+@mixin pseudo-element($top,$right,$bottom,$left,$width,$height: $width,$content: '')
+	content: $content
+	position: absolute
+	top: $top
+	left: $left
+	bottom: $bottom
+	right: $right
+	@include size($width,$height)

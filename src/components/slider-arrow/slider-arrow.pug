@@ -1,0 +1,8 @@
+include ../../pug/mixins/svg
+
+mixin slider-arrow(data)
+	.slider-arrow&attributes(attributes)
+		.slider-arrow__item.slider-arrow__item--prev(class= data.prev)
+			+svg('arrow-prev')
+		.slider-arrow__item.slider-arrow__item--next(class= data.next)
+			+svg('arrow-next')

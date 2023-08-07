@@ -1,0 +1,87 @@
+.pagination-wrapper
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.pagination-perpage
+	width: 200px
+	margin-left: 20px
+	+bp($bp-large)
+		.select2-container .select
+			height: 34px
+	+bp(1100px)
+		display: none
+
+.pagination
+	&__btn
+		padding: 0 15px
+		background-color: transparent
+		border: none
+
+		&:hover
+			border-color: $yellow
+			color: #000
+
+	&__showmore
+		width: 100%
+		margin-bottom: 20px
+		display: none
+		align-items: center
+
+	&__pages
+		display: flex
+		margin: 0 20px
+
+	&__page
+		width: 40px
+		margin-right: 6px
+		border: none
+		&:last-child
+			margin-right: 0
+		&--active,
+		&:hover
+			border-color: $yellow
+			color: #000
+
+	&__row
+		display: flex
+		justify-content: space-between
+
+	+bp($bp-large)
+		&__page
+			width: 34px
+			height: 34px
+			padding: 0
+		&__btn
+			height: 34px
+		&--news
+			.pagination-perpage
+				sisplay: none
+
+	+bp(1100px)
+		width: 100%
+
+	+bp($bp-medium)
+		&__showmore
+			display: flex
+
+		&__row
+			justify-content: space-between
+
+	+bp($bp-small)
+		&__prev,
+		&__next
+			display: none
+
+		&__pages
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			justify-content: center
+
+		&__btn
+			height: 30px
+			font-size: rem(15px)
+
+		&__page
+			flex-grow: 1

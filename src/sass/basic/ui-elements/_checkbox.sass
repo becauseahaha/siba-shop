@@ -1,0 +1,71 @@
+.form-checkbox
+	position: relative
+	padding: 0 0 0 32px
+	user-select: none
+	display: block
+	cursor: pointer
+	font-size: rem(16px)
+
+	&[disabled]
+		opacity: .5
+		pointer-events: none
+
+	&__input
+		position: absolute
+		cursor: pointer
+		opacity: 0
+		width: 0
+		height: 0
+
+		&:checked ~ .form-checkbox__checkmark
+			border-color: $yellow2
+			&:before
+				transform: scale(1)
+			&:after
+				opacity: 1
+				transform: translateY(0)
+
+	&__text
+		font-size: rem(16px)
+		color: $baseTxt
+		line-height: 1.4
+		+bp($bp-small)
+			font-size: rem(14px)
+
+	&__checkmark
+		position: absolute
+		top: -2px
+		left: 0
+		border: 1px solid $gray3
+		background-color: $white
+		width: 24px
+		height: 24px
+		overflow: hidden
+		transition: all 0.25s cubic-bezier(.4,.0,.23,1)
+		&:before 
+			content: ''
+			width: 100% 
+			height: 100% 
+			background-color: $yellow2 
+			position: absolute 
+			top: 0
+			left: 0
+			transform: scale(0)
+			transition: 0.2s cubic-bezier(.4,.0,.23,1)
+
+		&:after
+			content: ''
+			background: url("../images/check.png") 50% no-repeat
+			background-size: 12px 10px
+			width: 24px
+			height: 24px
+			opacity: 0
+			transform: translateY(-25px)
+			transition: 0.2s cubic-bezier(.4,.0,.23,1)
+			transition-delay: 0.15s
+			position: absolute
+			top: 0
+			left: 0
+
+
+

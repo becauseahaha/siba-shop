@@ -1,0 +1,82 @@
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	font-family: $baseFont
+	color: $baseTxt
+	font-size: rem(18px)
+	font-weight: 500
+	text-align: center
+	white-space: nowrap
+	transition: 0.5s ease
+	cursor: pointer
+	padding: 0 30px
+	border-bottom: none
+	height: rem(50px)
+	background-color: $yellow
+	position: relative
+	overflow: hidden
+
+
+	&__shadow
+		display: block
+		content: ''
+		width: 7px
+		height: 7px
+		opacity: 0
+		box-shadow: 0px 0px 35px 35px $yellow3
+		background: $yellow3
+		position: absolute
+		transition: 0.25s
+		filter: blur(10px)
+		will-change: transform
+		&.is-active
+			opacity: 1
+	
+	&:hover 
+		color: inherit
+	
+	span 
+		display: inline-block
+		position: relative
+		z-index: 2
+	
+	&--small
+		height: rem(35px)
+		padding: 0 15px
+		font-size: rem(14px)
+	&--middle
+		height: rem(55px)
+		padding: 0 35px
+
+	&--gray
+		background-color: $gray4
+
+	&--dark
+		background-color: $baseTxt
+		color: $white
+		.btn__shadow
+			box-shadow: 0px 0px 35px 35px $gray8
+			background: $gray8
+			
+		&:hover
+			background-color: $baseTxt
+			color: $white
+
+	
+
+	&.is-hide
+		display: none
+	&.is-show
+		display: flex
+
+	&[disabled],
+	&.is-disabled
+		opacity: .5
+		pointer-events: none
+
+
+	+bp($bp-small)
+		font-size: rem(15px)
+		height: 40px
+		padding: 0 30px

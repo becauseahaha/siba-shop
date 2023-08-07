@@ -1,0 +1,51 @@
+.btn-group
+	display: flex
+	flex-wrap: wrap
+	border: 1px solid $btn-group-bor
+	border-radius: $btn-group-bor-radius
+	
+	&__item
+		padding: 22px 30px 21px
+		border: unset
+		font-size: $btn-group-fs
+		color: $btn-group-color
+		position: relative
+		
+		&--active
+			font-weight: 500
+			color: $btn-group-color-active
+			&:after
+				content: ''
+				position: absolute
+				left: -1px
+				top: -1px
+				right: 0
+				bottom: 0
+				width: calc(100% + 2px)
+				height: calc(100% + 2px)
+				border: 1px solid $btn-group-bor-active
+				
+			&:first-child
+				&:after
+					border-radius: $btn-group-bor-radius 0 0 $btn-group-bor-radius
+					
+			&:last-child
+				&:after
+					border-radius: 0 $btn-group-bor-radius $btn-group-bor-radius 0
+		
+		&:not(:last-child)
+			border-right: 1px solid $btn-group-bor
+	
+	+bp($bp-tablet)
+		flex-direction: column
+		&__item
+			&:first-child
+				&:after
+					border-radius: $btn-group-bor-radius $btn-group-bor-radius 0 0
+			
+			&:last-child
+				&:after
+					border-radius: 0 0 $btn-group-bor-radius $btn-group-bor-radius
+			&:not(:last-child)
+				border-right: unset
+				border-bottom: 1px solid $btn-group-bor

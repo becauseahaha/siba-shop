@@ -1,0 +1,9 @@
+include ./select
+include ../../pug/mixins/svg
+include ../../pug/mixins/blocks
+
++select({
+  className: 'js-select',
+  options: ['по популярности', 'по новизне', 'по цене', 'по алфавиту'],
+  optionsValue: ['popular', 'new', 'price', 'alphabet']
+})

@@ -1,0 +1,8 @@
+mixin form-checkbox(props)
+  - var color = (props.color ? `background: ${props.color}; ${props.isWhiteColor ? 'border-color: #E6E5E4;' : ''}` : false);
+
+  label.form-checkbox.form-group(class={'form-checkbox--color': props.isColorCheckbox, 'form-checkbox--orange': props.isOrange})&attributes(attributes)
+    input.form-checkbox__input(type='checkbox' checked=props.checked class=props.clCheck)
+    span.form-checkbox__checkmark(style=color)
+    if props.text
+      span.form-checkbox__text !{props.text}

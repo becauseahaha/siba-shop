@@ -1,0 +1,6 @@
+mixin form-radio(props)
+	label.form-radio.form-group&attributes(attributes)
+		input.form-radio__input(type='radio' checked=props.checked name=props.name)
+		span.form-radio__checkmark
+		span.form-radio__text=props.text
+		block

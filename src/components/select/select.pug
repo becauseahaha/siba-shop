@@ -1,0 +1,7 @@
+mixin select(props)
+	.form-field.form-group
+		label.form-field__label-select=props.label
+		select(name=props.name class=props.className required)&attributes(attributes)
+			option(data-display='Select')
+			each item, index in props.options
+				option(value=props.optionsValue[index])= item

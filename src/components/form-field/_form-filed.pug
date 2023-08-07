@@ -1,0 +1,19 @@
+include ./form-field
+
++form-field({
+	input: true,
+	label: 'Ваш email',
+	type: 'email',
+	name: 'email',
+	msg: 'Обязательное поле',
+	req: true,
+})
+
++form-field({
+	textarea: true,
+	label: 'Вашу сообщение',
+	name: 'message',
+	cl: 'form-field__textarea',
+	msg: 'Обязательное поле',
+	req: true,
+})

@@ -1,0 +1,30 @@
+.tag
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -4px
+	
+	&__item
+		border: 1px solid $tag-bor-color
+		box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05)
+		border-radius: 200px
+		color: $tag-color
+		padding: 0 16px
+		height: 32px
+		display: flex
+		align-items: center
+		margin: 0 4px 8px
+		
+		span
+			text-transform: uppercase
+			font-weight: 500
+			font-size: $tag-fs
+			line-height: $tag-lh
+			
+		&--icon
+			color: $blue
+			svg
+				fill: transparent
+				color: $tag-icon-color
+				margin: 0 8px 0 0
+				width: 20px
+				height: 20px

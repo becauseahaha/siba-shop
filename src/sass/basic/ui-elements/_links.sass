@@ -1,0 +1,52 @@
+.link,a
+	display: inline
+	color: inherit
+	font-size: inherit 
+	line-height: inherit
+	text-decoration: none
+	transition: 0.4s ease
+	outline: none
+	color: $baseTxt
+	border-bottom: 1px solid $gray2
+	
+	&:hover
+		border-color: transparent
+		
+	&--blue
+		color: $blue
+		border-color: transparent
+		&:hover 
+			color: $blue-dark
+	
+	&--yellow
+		color: $yellow 
+		border-color: transparent
+		&:hover 
+			color: $yellow2
+	
+	&--blue-bor
+		border-color: $blue
+	
+	&--yellow-bor
+		border-color: $yellow 
+		
+	&--arrow
+		display: inline-flex
+		align-items: center
+		border-color: transparent
+		font-weight: 500
+		
+		svg
+			margin: 0 9px 0 0
+			transform: rotate(-90deg)
+			width: 11px
+			height: 6px
+			fill: transparent 
+			transition: 0.35s ease 
+		
+		&:hover 
+			color: $blue
+			svg 
+				transform: rotate(-90deg) translateY(4px)
+				stroke: $blue
+

@@ -1,0 +1,15 @@
+@mixin center($position)
+	position: absolute
+	
+	@if $position == 'v'
+		top: 50%
+		transform: translateY(-50%)
+	
+	@else if $position == 'h' 
+		left: 50%
+		transform: translateX(-50%)
+	
+	@else if $position == 'both'
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)

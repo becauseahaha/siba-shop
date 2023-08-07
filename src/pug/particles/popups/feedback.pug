@@ -1,0 +1,40 @@
++popup({type: 'feedback', staticPopup: true})
+	h2.popup__name Написать нам 
+	form.form.js-form(action="#" method="GET" data-thank="#popup-thank" style="max-width: 500px")
+		.form__grid
+			.form__line
+				+form-field({
+					input: true,
+					label: 'Ваше имя',
+					type: 'text',
+					name: 'name',
+					msg: 'Обязательное поле',
+					req: true,
+				})
+			.form__line
+				+form-field({
+					input: true,
+					label: 'Ваш телефон',
+					type: 'tel',
+					name: 'phone',
+					cl: 'js-phone',
+					msg: '',
+					mask: '+7-(___)-___-____',
+					slots: '_',
+					min: '11',
+					req: true,
+				})
+		.form__line
+			+select({
+				className: 'js-select',
+				name: 'old',
+				label: 'Ваш возраст',
+				options: ['20-30', '30-40', '40-50'],
+				optionsValue: ['0', '1', '2']
+			})
+		.form__line
+			+form-checkbox({ text:'Принимаю условия <a href="#" target="_blank" class="link link--blue">использования информации</a>', checked: true, clCheck: 'js-checkbox-rules'})
+		.form__line
+			button.btn.btn--middle.js-form-submit(type="submit") 
+				span Оформить
+				.btn__shadow

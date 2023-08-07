@@ -1,0 +1,133 @@
+.form-field
+	position: relative
+	display: block
+	width: 100%
+	
+	&[disabled],
+	&.disabled
+		opacity: .5
+		pointer-events: none
+
+
+	&__input
+		font-family: $baseFont
+		display: block
+		width: 100%
+		padding: 0px 20px 0px
+		height: rem(50px)
+		line-height: rem(50px)
+		color: $baseTxt
+		font-size: rem(16px)
+		transition: .3s linear
+		position: relative
+		z-index: 3
+		
+		&:focus
+			border-color: $red
+
+		+bp($bp-small)
+			height: rem(40px)
+			line-height: rem(40px)
+			font-size: rem(14px)
+
+	&__textarea 
+		height: 120px 
+		line-height: 1.5	
+		padding-top: 25px 
+		padding-bottom: 25px
+
+		+bp($bp-small)
+			height: 90px	
+	&__label 
+		font-size: rem(16px)
+		position: absolute 
+		top: 17px 
+		padding: 0 20px 
+		z-index: 2
+		transform-origin: 0 0
+		transition: .3s linear
+		will-change: transform
+
+		+bp($bp-small)
+			top: 12px
+			font-size: rem(14px)
+
+	&__mask
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		padding: 0 20px
+		display: flex
+		align-items: center
+		width: 100%
+		height: 100%
+		transform-origin: 20px 0
+		transition: .3s linear
+		border: 1px solid $gray3 
+		background-color: $gray4
+		z-index: 1
+		&--top 
+			align-items: flex-start 
+			padding-top: 24px
+
+		+bp($bp-small)
+			font-size: rem(14px)
+	
+		
+	&__icon
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 16px
+		margin: auto 0
+		width: 24px
+		height: 24px
+		opacity: 0
+		transition: opacity .3s linear
+		+foil 
+		background-image: url('../images/alert.svg')
+		
+		svg
+			width: 100%
+			height: 100%
+			fill: transparent
+
+	.select2-container
+		width: 100% !important
+		
+	&--focused
+		.form-field__label
+			transform: translate(6px,-13px) scale(0.7)
+			transform-origin: 0 0
+		
+	&.has-danger
+		.form-field__label
+			color: $red !important
+			transform: translate(6px,-13px) scale(0.7)
+			transform-origin: 0 0
+	
+		.form-field__mask
+			border-color: $red
+			
+		.form-field__icon
+			opacity: 1
+			color: $red
+
+	&-textarea
+		.form-field__icon
+			bottom: auto 
+			top: 16px
+
+.pristine-error
+	display: none
+	position: absolute
+	left: 0
+	bottom: -14px 
+	font-size: 12px
+	color: $red
+
+label.error
+	display: none
+			

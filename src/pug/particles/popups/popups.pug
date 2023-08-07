@@ -1,0 +1,20 @@
+include ../../../components/popup/popup
+include ../../../components/form-field/form-field
+include ../../../components/form-checkbox/form-checkbox
+include ../../../components/form-radio/form-radio
+include ../../../components/select/select
+
+.popups-wrapper.js-popups-wrapper
+	.popups-wrapper__layout
+		.popups-wrapper__overlay.js-popup-close
+		.popups-wrapper__close.js-popup-close
+				+svg('close')
+		.popups-wrapper__inner
+			
+			+popup({type: 'fetch-content', fetchPopup: true})
+
+			include feedback
+
+			include popup-thank
+
+			include video-popup

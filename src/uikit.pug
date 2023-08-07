@@ -1,0 +1,397 @@
+extends pug/base
+include components/form-field/form-field
+include components/select/select
+include components/counter/counter
+include components/form-checkbox/form-checkbox
+include components/form-radio/form-radio
+include components/breadcrumbs/breadcrumbs
+include components/pagination/pagination
+include components/file-upload/file-upload
+include components/slider-arrow/slider-arrow
+
+append vars
+	- title = 'UiKit'
+
+block content
+	style.
+		.elem {
+			margin-bottom: 80px;
+		}
+
+		.row {
+			display: inline-flex;
+		}
+		.row .col {
+			margin-right: 25px;
+		}
+		.button .row {
+			max-width: 588px;
+			margin: 0 0 16px;
+		}
+
+		.button .row .col {
+			max-width: 160px;
+			width: 100%;
+			margin: 0 10px;
+		}
+
+		.input .row {
+			max-width: 730px;
+			margin: 0 0 37px;
+		}
+
+		.elem {
+			width: 100%;
+		}
+
+		.input .row .col,.select .row .col {
+			max-width: 350px;
+			width: 100%;
+			margin: 10px;
+		}
+
+		.input {
+			margin: 0 -10px;
+		}
+		.modal-form__btn {
+			margin-top: 20px;
+		}
+
+		.checkbox .row {
+			max-width: 350px;
+		}
+
+		.select .row {
+			max-width: 730px;
+		}
+
+		.tooltip .icon {
+			color: #212429;
+			fill: transparent;
+			width: 24px;
+			height: 24px;
+		}
+
+		.tooltip .icon svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		.links .row {
+			max-width: 500px;
+			margin-bottom: 20px;
+		}
+
+		.links .row .col{
+			margin-right: 78px;
+		}
+
+		.nav .row {
+			max-width: 250px;
+			align-items: center;
+		}
+		.block-popup .row {
+			justify-content: flex-start;
+		}
+		.block-popup .row .col{
+			width: auto;
+			max-width: none;
+			margin-left: 0;
+			margin-right: 30px;
+		}
+		
+		.fx-item {
+			width: calc(100% - 300px)
+		}
+		.fb-wrap {
+			margin-bottom: 80px;
+		}
+		.fb-wrap:last-child {
+			margin-bottom: 0px;
+		}
+		.w15 {
+			width: 300px;
+		}
+		.fx-item:first-child h3 {
+			margin-top: 0;
+		}
+		.fx-item h1:first-child {
+			margin-top: 0;
+		}
+		.color {
+			display: flex;
+		}
+		.color-box {
+			width: 120px;
+			height: 120px;
+			border-radius: 8px;
+			margin-right: 22px;
+		}
+		.color-line {
+			width: 120px;
+			height: 54px;
+		}
+		.typography__line {
+			position: relative;
+			margin-bottom: 30px;
+		}
+		.typography__name {
+			width: 100px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			color: #CACACA;
+			font-size: 12px;
+		}
+		.typography__flex {
+			display: flex;
+			margin-bottom: 20px;
+		}
+		.typography__unit {
+			margin-right: 50px;
+		}
+		.typography__unit:last-child {
+			margin-right: 0;
+		}
+		.typography h1,
+		.typography h2,
+		.typography h3,
+		.typography h4,
+		.typography h5,
+		.typography h6,
+		.typography p,
+		.typography small {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		.icons  {
+			justify-content: flex-start !important;
+		}
+		.icon-wrap .col-icon {
+			width: 24px;
+			height: 24px;
+			margin: 0 10px;
+		}
+		.icon-wrap .fx-item {
+			margin-right: 70px;
+		}
+		.icon-wrap {
+			align-items: center;
+		}
+		.col-soc {
+			margin: 10px;
+		}
+		.link-wrap .col {
+			margin-right: 50px;
+			margin-bottom: 50px;
+		}
+
+	section.theme-dark.js-anim
+
+		.wrapper
+			.fb-wrap.elem(style="padding-top: 130px;")
+				.fx-item.w15
+					h1 Ui Kit
+				.fx-item
+
+			.fb-wrap.elem
+				.color
+					.color-box.gray(style="border: 1px solid #9E9EA5")
+					.color-box.gray2
+					.color-box.gray3
+					.color-box.gray4
+					.color-box.yellow
+					.color-box.yellow2
+			.fb-wrap
+				h2 Типография
+				.typography.elem
+					.typography__line
+						.typography__name h1
+						.typography__value
+							h1 Hayes Valley Studio
+					.typography__line
+						.typography__name h2
+						.typography__value
+							h2 Hayes Valley Studio
+					.typography__line
+						.typography__name h3
+						.typography__value
+							h3 Hayes Valley Studio
+					.typography__line
+						.typography__name h4
+						.typography__value
+							h4 Hayes Valley Studio
+					.typography__line
+						.typography__name h5
+						.typography__value
+							h5 Hayes Valley Studio
+					.typography__line
+						.typography__name h6 
+						.typography__value
+							h6 Hayes Valley Studio
+					.typography__line
+						.typography__name p
+						.typography__value
+							p Hayes Valley Studio
+					.typography__line
+						.typography__name p b
+						.typography__value
+							p
+								b Hayes Valley Studio
+					.typography__line
+						.typography__name small
+						.typography__value
+							small Hayes Valley Studio
+					.typography__line(style="margin-top: 30px")
+						.typography__name small b
+						.typography__value
+							small 
+								b Hayes Valley Studio
+
+			.fb-wrap
+				h2 Кнопки
+				.button.elem(style="margin-bottom: 30px;")
+					a.btn.btn--small(href="#") 
+						span Забронировать
+						.btn__shadow
+					.typography__line
+					a.btn(href="#") 
+						span Забронировать
+						.btn__shadow
+					.typography__line
+					a.btn.btn--middle(href="#") 
+						span Забронировать
+						.btn__shadow
+					.typography__line
+					a.btn.btn--dark(href="#") 
+						span Забронировать
+						.btn__shadow
+
+						
+
+			.fb-wrap
+				h2 Ссылки
+				.typography__line
+					a.link(href="#") Ссылка
+				.typography__line
+					a.link.link--blue(href="#") Ссылка
+				.typography__line
+					a.link.link--blue.link--blue-bor(href="#") Ссылка
+				.typography__line
+					a.link.link--yellow(href="#") Ссылка
+				.typography__line
+					a.link.link--yellow.link--yellow-bor(href="#") Ссылка
+				.typography__line
+					a.link.link--arrow(href="#")
+						+svg('arrow')
+						span Ссылка
+
+			.fb-wrap
+				h2 Формы
+				form.form.js-form(action="#" method="GET" data-thank="#popup-thank" style="max-width: 500px")
+					.form__line
+						+form-field({
+							input: true,
+							label: 'Ваше имя',
+							type: 'text',
+							name: 'name',
+							msg: 'Обязательное поле',
+							req: true,
+						})
+					.form__line
+						+form-field({
+							input: true,
+							label: 'Ваш телефон',
+							type: 'tel',
+							name: 'phone',
+							cl: 'js-phone',
+							msg: '',
+							mask: '+7-(___)-___-____',
+							slots: '_',
+							min: '11',
+							req: true,
+						})
+					.form__line
+						+form-field({
+							input: true,
+							label: 'Ваш email',
+							type: 'email',
+							name: 'email',
+							msg: '',
+							req: true,
+						})
+					.form__line
+						+select({
+							className: 'js-select',
+							name: 'region',
+							label: 'Ваш регион',
+							options: ['Москва', 'Краснодар', 'Оренбург'],
+							optionsValue: ['0', '1', '2']
+						})
+					.form__line
+						+select({
+							className: 'js-select',
+							name: 'old',
+							label: 'Ваш возраст',
+							options: ['20-30', '30-40', '40-50'],
+							optionsValue: ['0', '1', '2']
+						})
+					.form__line
+						+form-field({
+							textarea: true,
+							label: 'Вашу сообщение',
+							name: 'message',
+							cl: 'form-field__textarea',
+							msg: '',
+							req: true,
+						})
+					.form__line.form__line--flex 
+						.form__column 
+							+form-radio({ name:'modification', text: 'Вариант 1'})
+						.form__column
+							+form-radio({ name:'modification', text: 'Вариант 2'})
+					.form__line
+						+form-checkbox({ text:'Принимаю условия <a href="#" target="_blank" class="link link--blue">использования информации</a>', checked: true, clCheck: 'js-checkbox-rules'})
+					.form__line
+						button.btn.btn--middle.js-form-submit(type="submit") 
+							span Отправить
+							.btn__shadow
+
+				
+
+			.fb-wrap
+				.fx-item(style="max-width: 500px;")
+					.typography__line
+						br
+						br
+						+file-upload()
+					.typography__line
+						br
+						br
+						+breadcrumbs(['Главная','Акции','Акция на терминал сбора данных Urovo DT50'])
+					.typography__line
+						br
+						br
+						+pagination()
+
+			.fb-wrap(style="padding-bottom: 100px")
+				.row 
+					.col
+						a.btn.js-popup-link(href="#" data-link="feedback") 
+							span Попап стандартный
+							.btn__shadow
+					.col
+						a.btn.js-popup-link(data-href="fetch-content-example.html" href="fetch-content-example.html" data-link="fetch-content") 
+							span Попап fetch 
+							.btn__shadow
+					.col
+						a.btn.js-popup-link(href="#" data-link="video" data-src="https://www.youtube.com/embed/hFj5L6sbX-o") 
+							span Попап видео
+							.btn__shadow
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+.form-field
+	&__label-select 
+		position: absolute 
+		display: block 
+		width: 100% 
+		height: 100%
+		display: flex 
+		align-items: center
+		font-size: rem(16px)
+		padding: 0 20px 
+		pointer-events: none
+		z-index: 3
+		transform-origin: 0 0
+		transition: .3s linear
+		will-change: transform
+	
+	select 
+		overflow: hidden !important
+		position: absolute
+
+	.nice-select 
+		width: 100%
+		height: 50px
+		border-radius: 0
+		float: none 
+		border-color: $gray3
+		background-color: $gray4 
+		padding: 0 20px
+		&:after
+			width: 9px
+			height: 9px
+
+		&-dropdown
+			width: 100% 
+			border-radius: 0
+			margin: 0
+			box-shadow: none
+			left: -1px 
+			width: calc(100% + 2px)
+			
+		
+		.list 
+			margin: 0
+			border: 1px solid $gray3 
+			padding-bottom: 15px
+		
+		.option
+			padding: 5px 20px
+			margin: 0
+			&:after 
+				display: none
+			&.selected 
+				background-color: $gray4
+		
+		.current
+			display: block 
+			width: 100% 
+			height: 100%
+			display: flex 
+			align-items: center
+			font-size: rem(16px)
+	
+	&.has-danger
+		.form-field__label-select
+			color: $red !important
+			transform: translate(6px,-9px) scale(0.7)
+			transform-origin: 0 0
+	
+		.nice-select
+			border-color: $red
+			
+		.form-field__icon
+			opacity: 1
+			color: $red
+	
+	&.has-success
+		.form-field__label-select
+			opacity: 0
+
+

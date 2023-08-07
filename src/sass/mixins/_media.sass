@@ -1,0 +1,11 @@
+@mixin bp($width,$direction:max)
+	@if $direction == min 
+		@media screen and (min-width: $width)
+			@content
+	@else 
+		@media screen and (max-width: $width) 
+			@content
+
+@mixin bpNotebook()
+	@media only screen and (min-width: $pointNetbookStart) and (max-width: $pointNetbookEnd)
+		@content

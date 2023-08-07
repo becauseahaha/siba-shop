@@ -1,0 +1,101 @@
+.form-filter
+	display: flex
+	
+	&__label
+		font-size: $filter-fs
+		line-height: 1
+		margin-right: 29px
+	
+	.filter
+		display: flex
+		align-items: center
+		
+		&.select2-selection--single
+			border: unset
+			height: unset
+			
+			.select2-selection__rendered
+				padding: 0 26px 0 0
+				color: $link-color
+				font-size: $filter-fs
+				line-height: 1
+				
+				&:hover
+					color: $link-color-hover
+			
+			.select2-selection__arrow
+				top: 0
+				bottom: 0
+				right: 0
+				margin: auto
+				height: 6px
+				width: 11px
+				b
+					width: 100%
+					height: 100%
+					background: url('../images/arrow.svg') 50% no-repeat
+					background-size: contain
+					border: unset
+					transition: .3s linear
+					
+.select2-container
+	.filter-dropdown
+		background-color: $filter-bg
+		width: unset!important
+		margin: 10px 0 0
+		border-radius: $tooltip-bor-radius!important
+		
+		&:after
+			content: ''
+			position: absolute
+			left: 19px
+			top: -5px
+			width: 0
+			height: 0
+			border-left: 7px solid transparent
+			border-right: 7px solid transparent
+			border-bottom: 7px solid $filter-bg
+			
+		&.select2-dropdown--above
+			margin: 0
+			transform: translate(0,-10px)
+			
+			&:after
+				content: ''
+				top: unset
+				bottom: -5px
+				border-top: 7px solid $filter-bg
+				border-bottom: unset
+				
+		.select2-results
+			& > .select2-results__options
+				max-height: unset
+				padding: 14px 0
+				
+				.select2-results__option
+					margin: 0!important
+					padding: 10px 18px!important
+					position: relative
+					color: $white
+					font-size: $filter-item-fs
+					white-space: nowrap
+					transition: .3s ease-in
+					
+					&:before
+						content: ''
+						position: absolute
+						left: 0
+						top: 0
+						right: 0
+						bottom: 0
+						width: 100%
+						height: 100%
+						background-color: $filter-item-hover
+						opacity: 0
+						
+					&:hover
+						&:before
+							opacity: 0.2
+		
+.js-select-filter + .select2-container
+	width: unset!important

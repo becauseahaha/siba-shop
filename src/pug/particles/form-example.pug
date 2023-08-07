@@ -1,0 +1,36 @@
+.form-block(style="max-width: 730px;")
+	h2 Пример формы обратной связи
+	form.form.js-form(action='#' data-thank="#popup-thank")
+		.form-row
+			.form-col
+				label.form-field
+					input.js-input.form-field__input(type='text', name="name", data-msg="" required)
+					span.form-field__label Ваше имя
+					span.form-field__icon
+
+			.form-col
+				label.form-field
+					input.js-input.js-input-mask.form-field__input(type='tel', name="tel", data-mask="+7(999)999-99-99" data-msg="" required)
+					span.form-field__label Ваш телефон
+					span.form-field__icon
+			.form-col
+				.form-field.form-select
+					select.js-select(name='example' data-placeholder="Выбор значения" data-msg="" required)
+						option(value='') 
+						option(value='GY') Gravity
+						option(value='ME') Mechanical
+						option(value='EL') Electronic
+						option(value='EL') Electronic
+					.form-field__icon
+			.form-line
+				label.form-field.form-field-textarea
+					textarea.js-input.form-field__input.form-field__textarea(name="message" data-msg="")
+					span.form-field__label.form-field__label--top Ваше сообщение
+					span.form-field__icon
+
+		.form-bottom
+			label.form-checkbox
+				input.form-checkbox__input.js-agree(type='checkbox')
+				span.form-checkbox__checkmark
+				a.form-checkbox__text.link(href="#" target="_blank") Согласие на обработку данных
+			button.submit.btn.btn--red.btn--large(type="submit" disabled='disabled') Отправить

@@ -1,0 +1,7 @@
+mixin popup(props)
+	.popup.js-popup(data-block= props.type)&attributes(attributes)
+		if props.staticPopup
+			block
+		
+		if props.fetchPopup
+			.js-fetch-wrapper

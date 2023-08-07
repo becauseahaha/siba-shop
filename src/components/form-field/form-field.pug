@@ -1,0 +1,30 @@
+include ../../pug/mixins/svg
+
+mixin form-field(props)
+	.form-field.form-group&attributes(attributes)
+		if props.label
+			.form-field__label=props.label
+		if props.input
+			input.form-field__input.js-input(
+				type=props.type,
+				value=props.val,
+				name=props.name,
+				data-pristine-required-message=props.msg,
+				data-mask=props.mask,
+				data-slots=props.slots,
+				class=props.cl,
+				minlength=props.min,
+				required=props.req
+			)
+		if props.textarea
+			textarea.form-field__input.js-input(
+				value=props.val,
+				name=props.name,
+				data-pristine-required-message=props.msg,
+				class=props.cl,
+				required=props.req
+			)
+		.form-field__mask
+		if error
+			.form-field__icon
+				+svg('error')

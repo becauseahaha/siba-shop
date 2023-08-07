@@ -1,0 +1,36 @@
+.breadcrumbs
+	margin-bottom: 16px
+	color: $gray5
+	margin-bottom: 12px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+
+	&__link
+		display: inline
+		position: relative
+		font-size: rem(15px)
+		font-weight: 400
+		margin: 5px 30px 5px 0
+		transition: .25s
+		&:not(:last-child):after
+			content: '/'
+			position: absolute
+			right: -18px
+		&:last-child
+			border-color: transparent
+			pointer-events: none
+		&:hover
+			color: $yellow
+
+		&--back
+			padding-left: 20px
+			font-size: 13px
+			
+
+	+bp($bp-tablet)
+		&__link
+			font-size: rem(13px)
+			&:after
+				font-size: inherit
