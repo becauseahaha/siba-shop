@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>UiKit
+    </title>
+    <link rel="icon" href="">
+    <link rel="icon" href="" sizes="16x16">
+    <link rel="stylesheet" href="css/main.css?v=1691601269501">
+  </head>
+  <body>
+    <div class="page js-page">
+      <header class="header js-header">
+        <div class="header__top"> 
+          <div class="wrapper">
+            <div class="header__menu js-mobile-menu">
+              <h2 class="header__mobile-title">Меню </h2>
+              <div class="header__menu-close js-close-mobile-menu">
+                <svg>
+                  <use xlink:href="images/sprites.svg#close"></use>
+                </svg>
+              </div>
+              <nav class="header__nav"> 
+                <ul class="header__list">
+                  <li class="header__item"><a class="link link--default" href="#">О компании</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Оплата и доставка</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Гарантия и сопровождение</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Обзоры</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Статьи</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Новости</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Контакты</a></li>
+                </ul>
+              </nav><a class="header__lk link link--default link--arrow" href="#">
+                <svg>
+                  <use xlink:href="images/sprites.svg#lk"></use>
+                </svg><span>Личный кабинет</span></a><a class="btn btn--middle header__mobile-btn" href="#"> <span>Задать вопрос</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="header__about">
+          <div class="wrapper">
+            <div class="header__line"><a class="header__mobile-icon" href="#">
+                <svg>
+                  <use xlink:href="images/sprites.svg#place"></use>
+                </svg></a><a class="header__logo" href="main.html"><img src="./images/logo.svg" alt=""/></a><a class="header__mobile-icon" href="tel:+74951208137">
+                <svg>
+                  <use xlink:href="images/sprites.svg#phone"></use>
+                </svg></a>
+              <div class="header__city"> <span class="header__city-value">Москва </span>
+                <svg>
+                  <use xlink:href="images/sprites.svg#arrow-bottom"></use>
+                </svg>
+              </div>
+              <div class="header__part">
+                <address class="header__address">г. Москва, 4-й Лихачёвский переулок, 4с2</address><a class="header__phone" href="tel:+74951208137">+7 (495) 120-81-37</a><span class="header__inform">Офис: 08:00-18:00, касса 08:00-17:00 </span>
+              </div><a class="btn btn--middle btn--mobile header__btn" href="#"> <span>Задать вопрос</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="header__data">
+          <div class="wrapper">
+            <div class="header__line header__line--large"><a class="btn header__btn-catalog" href="#"> <span>Каталог </span>
+                <svg width="36" height="36">
+                  <use xlink:href="images/sprites.svg#catalog"></use>
+                </svg></a><a class="btn btn--blue header__btn-action" hrfe="#"> <span>акции</span></a>
+              <form class="header__search js-form" action="#" name="form-search">
+                <div class="form-field form-group form-field--search">
+                  <div class="form-field__label">Я ИЩУ...</div>
+                  <input class="form-field__input js-input" type="search" name="search" data-pristine-required-message="" required="required"/>
+                  <div class="form-field__mask"></div>
+                </div>
+                <button class="btn btn--blue btn--icon header__search-btn" type="submit">
+                  <svg width="24" height="24">
+                    <use xlink:href="images/sprites.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <div class="header__hide-block"> <a class="header__phone" href="tel:+74951208137">+7 (495) 120-81-37</a><span class="header__inform">Офис: 08:00-18:00, касса 08:00-17:00 </span></div>
+              <div class="header__basket"> 
+                <svg class="header__basket-icon">
+                  <use xlink:href="images/sprites.svg#basket"></use>
+                </svg>
+                <div class="header__basket-name">Корзина </div>
+                <div class="header__price"> <span>231 243</span><span>&#8381; </span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main" id="main">
+        <style>
+          .elem {
+          	margin-bottom: 80px;
+          }
+          
+          .row {
+          	display: inline-flex;
+          }
+          .row .col {
+          	margin-right: 25px;
+          }
+          .button .row {
+          	max-width: 588px;
+          	margin: 0 0 16px;
+          }
+          
+          .button .row .col {
+          	max-width: 160px;
+          	width: 100%;
+          	margin: 0 10px;
+          }
+          
+          .input .row {
+          	max-width: 730px;
+          	margin: 0 0 37px;
+          }
+          
+          .elem {
+          	width: 100%;
+          }
+          
+          .input .row .col,.select .row .col {
+          	max-width: 350px;
+          	width: 100%;
+          	margin: 10px;
+          }
+          
+          .input {
+          	margin: 0 -10px;
+          }
+          .modal-form__btn {
+          	margin-top: 20px;
+          }
+          
+          .checkbox .row {
+          	max-width: 350px;
+          }
+          
+          .select .row {
+          	max-width: 730px;
+          }
+          
+          .tooltip .icon {
+          	color: #212429;
+          	fill: transparent;
+          	width: 24px;
+          	height: 24px;
+          }
+          
+          .tooltip .icon svg {
+          	width: 100%;
+          	height: 100%;
+          }
+          
+          .links .row {
+          	max-width: 500px;
+          	margin-bottom: 20px;
+          }
+          
+          .links .row .col{
+          	margin-right: 78px;
+          }
+          
+          .nav .row {
+          	max-width: 250px;
+          	align-items: center;
+          }
+          .block-popup .row {
+          	justify-content: flex-start;
+          }
+          .block-popup .row .col{
+          	width: auto;
+          	max-width: none;
+          	margin-left: 0;
+          	margin-right: 30px;
+          }
+          
+          .fx-item {
+          	width: calc(100% - 300px)
+          }
+          .fb-wrap {
+          	margin-bottom: 80px;
+          }
+          .fb-wrap:last-child {
+          	margin-bottom: 0px;
+          }
+          .w15 {
+          	width: 300px;
+          }
+          .fx-item:first-child h3 {
+          	margin-top: 0;
+          }
+          .fx-item h1:first-child {
+          	margin-top: 0;
+          }
+          .color {
+          	display: flex;
+          }
+          .color-box {
+          	width: 120px;
+          	height: 120px;
+          	border-radius: 8px;
+          	margin-right: 22px;
+          }
+          .color-line {
+          	width: 120px;
+          	height: 54px;
+          }
+          .typography__line {
+          	position: relative;
+          	margin-bottom: 30px;
+          }
+          .typography__name {
+          	width: 100px;
+          	position: absolute;
+          	top: 50%;
+          	transform: translateY(-50%);
+          	left: 0;
+          	color: #CACACA;
+          	font-size: 12px;
+          }
+          .typography__flex {
+          	display: flex;
+          	margin-bottom: 20px;
+          }
+          .typography__unit {
+          	margin-right: 50px;
+          }
+          .typography__unit:last-child {
+          	margin-right: 0;
+          }
+          .typography h1,
+          .typography h2,
+          .typography h3,
+          .typography h4,
+          .typography h5,
+          .typography h6,
+          .typography p,
+          .typography small {
+          	margin-top: 0;
+          	margin-bottom: 30px;
+          }
+          .icons  {
+          	justify-content: flex-start !important;
+          }
+          .icon-wrap .col-icon {
+          	width: 24px;
+          	height: 24px;
+          	margin: 0 10px;
+          }
+          .icon-wrap .fx-item {
+          	margin-right: 70px;
+          }
+          .icon-wrap {
+          	align-items: center;
+          }
+          .col-soc {
+          	margin: 10px;
+          }
+          .link-wrap .col {
+          	margin-right: 50px;
+          	margin-bottom: 50px;
+          }
+          
+        </style>
+        <section class="theme-dark js-anim">
+          <div class="wrapper">
+            <div class="fb-wrap elem" style="padding-top: 130px;">
+              <div class="fx-item w15">
+                <h1>Ui Kit</h1>
+              </div>
+              <div class="fx-item"></div>
+            </div>
+            <div class="fb-wrap elem">
+              <div class="color">
+                <div class="color-box gray" style="border: 1px solid #9E9EA5"></div>
+                <div class="color-box gray2"></div>
+                <div class="color-box gray3"></div>
+                <div class="color-box gray4"></div>
+                <div class="color-box yellow"></div>
+                <div class="color-box yellow2"></div>
+              </div>
+            </div>
+            <div class="fb-wrap">
+              <h2>Типография</h2>
+              <div class="typography elem">
+                <div class="typography__line">
+                  <div class="typography__name">h1</div>
+                  <div class="typography__value">
+                    <h1>Hayes Valley Studio</h1>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">h2</div>
+                  <div class="typography__value">
+                    <h2>Hayes Valley Studio</h2>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">h3</div>
+                  <div class="typography__value">
+                    <h3>Hayes Valley Studio</h3>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">h4</div>
+                  <div class="typography__value">
+                    <h4>Hayes Valley Studio</h4>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">h5</div>
+                  <div class="typography__value">
+                    <h5>Hayes Valley Studio</h5>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">h6 </div>
+                  <div class="typography__value">
+                    <h6>Hayes Valley Studio</h6>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">p</div>
+                  <div class="typography__value">
+                    <p>Hayes Valley Studio</p>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">p b</div>
+                  <div class="typography__value">
+                    <p><b>Hayes Valley Studio</b></p>
+                  </div>
+                </div>
+                <div class="typography__line">
+                  <div class="typography__name">small</div>
+                  <div class="typography__value"><small>Hayes Valley Studio</small></div>
+                </div>
+                <div class="typography__line" style="margin-top: 30px">
+                  <div class="typography__name">small b</div>
+                  <div class="typography__value"><small> <b>Hayes Valley Studio</b></small></div>
+                </div>
+              </div>
+            </div>
+            <div class="fb-wrap">
+              <h2>Кнопки</h2>
+              <div class="button elem" style="margin-bottom: 30px;"><a class="btn" href="#"> <span>Каталог ...</span>
+                  <div class="btn__shadow"></div></a>
+                <div class="typography__line"></div><a class="btn btn--blue" href="#"> <span>Акции</span>
+                  <div class="btn__shadow"></div></a>
+                <div class="typography__line"></div><a class="btn btn--middle" href="#"> <span>Забронировать</span>
+                  <div class="btn__shadow"></div></a>
+                <div class="typography__line"></div><a class="btn btn--dark" href="#"> <span>Забронировать</span>
+                  <div class="btn__shadow"></div></a>
+              </div>
+            </div>
+            <div class="fb-wrap">
+              <h2>Ссылки</h2>
+              <div class="typography__line"><a class="link" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--blue" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--blue link--blue-bor" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--yellow" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--yellow link--yellow-bor" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--arrow" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#arrow"></use>
+                  </svg><span>Ссылка</span></a></div>
+            </div>
+            <div class="fb-wrap">
+              <h2>Формы</h2>
+              <form class="form js-form" action="#" method="GET" data-thank="#popup-thank" style="max-width: 500px">
+                <div class="form__line">
+                  <div class="form-field form-group">
+                    <div class="form-field__label">Ваше имя</div>
+                    <input class="form-field__input js-input" type="text" name="name" data-pristine-required-message="Обязательное поле" required="required"/>
+                    <div class="form-field__mask"></div>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="form-field form-group">
+                    <div class="form-field__label">Ваш телефон</div>
+                    <input class="form-field__input js-input js-phone" type="tel" name="phone" data-pristine-required-message="" data-mask="+7-(___)-___-____" data-slots="_" minlength="11" required="required"/>
+                    <div class="form-field__mask"></div>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="form-field form-group">
+                    <div class="form-field__label">Ваш email</div>
+                    <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required="required"/>
+                    <div class="form-field__mask"></div>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="form-field form-group">
+                    <label class="form-field__label-select">Ваш регион</label>
+                    <select class="js-select" name="region" required="required">
+                      <option data-display="Select"></option>
+                      <option value="0">Москва</option>
+                      <option value="1">Краснодар</option>
+                      <option value="2">Оренбург</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="form-field form-group">
+                    <label class="form-field__label-select">Ваш возраст</label>
+                    <select class="js-select" name="old" required="required">
+                      <option data-display="Select"></option>
+                      <option value="0">20-30</option>
+                      <option value="1">30-40</option>
+                      <option value="2">40-50</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="form-field form-group">
+                    <div class="form-field__label">Вашу сообщение</div>
+                    <textarea class="form-field__input js-input form-field__textarea" name="message" data-pristine-required-message="" required="required"></textarea>
+                    <div class="form-field__mask"></div>
+                  </div>
+                </div>
+                <div class="form__line form__line--flex"> 
+                  <div class="form__column"> 
+                    <label class="form-radio form-group">
+                      <input class="form-radio__input" type="radio" name="modification"/><span class="form-radio__checkmark"></span><span class="form-radio__text">Вариант 1</span>
+                    </label>
+                  </div>
+                  <div class="form__column">
+                    <label class="form-radio form-group">
+                      <input class="form-radio__input" type="radio" name="modification"/><span class="form-radio__checkmark"></span><span class="form-radio__text">Вариант 2</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <label class="form-checkbox form-group">
+                    <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked="checked"/><span class="form-checkbox__checkmark"></span><span class="form-checkbox__text">Принимаю условия <a href="#" target="_blank" class="link link--blue">использования информации</a></span>
+                  </label>
+                </div>
+                <div class="form__line">
+                  <button class="btn btn--middle js-form-submit" type="submit"> <span>Отправить</span>
+                    <div class="btn__shadow"></div>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="fb-wrap">
+              <div class="fx-item" style="max-width: 500px;">
+                <div class="typography__line"><br><br>
+                  <div class="file-upload js-file-upload">
+                    <label class="file-upload__wrap">
+                      <input class="file-upload__input js-file-upload-input" type="file"/>
+                      <div class="file-upload__btn">
+                        <svg class="file-upload__btn-icon">
+                          <use xlink:href="images/sprites.svg#clip"></use>
+                        </svg>
+                        <div class="file-upload__btn-txt">Прикрепить реквизиты</div>
+                      </div>
+                    </label>
+                    <div class="file-upload__notice">с расширением (png, jpg, doc, pdf, docx, xls, xlsx) и размером, не более 9.54 МБ.</div>
+                    <div class="file-upload__result js-file-upload-result"></div>
+                  </div>
+                </div>
+                <div class="typography__line"><br><br>
+                  <!--start breadcrumbs-->
+                  <div class="breadcrumbs">
+                    <div class="breadcrumbs__list"><a class="link breadcrumbs__link" href="#!">Главная</a><a class="link breadcrumbs__link" href="#!">Акции</a><a class="link breadcrumbs__link breadcrumbs__link--current" href="#!">Акция на терминал сбора данных Urovo DT50</a>
+                    </div>
+                  </div>
+                  <!--end breadcrumbs-->
+                </div>
+                <div class="typography__line"><br><br>
+                  <div class="pagination"><a class="pagination__showmore pagination__btn" href="#!">Показать еще</a>
+                    <div class="pagination__row"><a class="pagination__prev pagination__btn" href="#!">Назад</a>
+                      <div class="pagination__pages"><a class="pagination__page pagination__btn" href="#!">1</a><a class="pagination__page pagination__btn pagination__page--active" href="#!">2</a><a class="pagination__page pagination__btn" href="#!">3</a><a class="pagination__page pagination__btn" href="#!">4</a><a class="pagination__page pagination__btn" href="#!">5</a><a class="pagination__page pagination__btn" href="#!">6</a><a class="pagination__page pagination__btn" href="#!">7</a><a class="pagination__page pagination__btn" href="#!">...</a><a class="pagination__page pagination__btn" href="#!">32</a></div><a class="pagination__next pagination__btn" href="#!">Далее</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fb-wrap" style="padding-bottom: 100px">
+              <div class="row"> 
+                <div class="col"><a class="btn js-popup-link" href="#" data-link="feedback"> <span>Попап стандартный</span>
+                    <div class="btn__shadow"></div></a></div>
+                <div class="col"><a class="btn js-popup-link" data-href="fetch-content-example.html" href="fetch-content-example.html" data-link="fetch-content"> <span>Попап fetch </span>
+                    <div class="btn__shadow"></div></a></div>
+                <div class="col"><a class="btn js-popup-link" href="#" data-link="video" data-src="https://www.youtube.com/embed/hFj5L6sbX-o"> <span>Попап видео</span>
+                    <div class="btn__shadow"></div></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"></footer>
+      <div class="mobile-navbar js-mobile-navbar">
+        <div class="mobile-navbar__main"><a class="mobile-navbar__item is-active" href="main.html">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#main"></use>
+            </svg>
+            <div class="mobile-navbar__text">Главная</div></a><a class="mobile-navbar__item" href="catalog.html">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#catalog2"></use>
+            </svg>
+            <div class="mobile-navbar__text">Каталог</div></a><a class="mobile-navbar__item" href="basket.html">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#basket2"></use>
+            </svg>
+            <div class="mobile-navbar__text">Корзина</div></a><a class="mobile-navbar__item" href="lk.html">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#lk2"></use>
+            </svg>
+            <div class="mobile-navbar__text">Кабинет</div></a><a class="mobile-navbar__item js-open-mobile-menu">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#menu"></use>
+            </svg>
+            <div class="mobile-navbar__text">Mеню</div></a></div>
+      </div>
+    </div>
+    <div class="popups-wrapper js-popups-wrapper">
+      <div class="popups-wrapper__layout">
+        <div class="popups-wrapper__overlay js-popup-close"></div>
+        <div class="popups-wrapper__close js-popup-close">
+              <svg>
+                <use xlink:href="images/sprites.svg#close"></use>
+              </svg>
+        </div>
+        <div class="popups-wrapper__inner">
+              <div class="popup js-popup" data-block="fetch-content">
+                <div class="js-fetch-wrapper"></div>
+              </div>
+              <div class="popup js-popup" data-block="feedback">
+                <h2 class="popup__name">Написать нам </h2>
+                <form class="form js-form" action="#" method="GET" data-thank="#popup-thank" style="max-width: 500px">
+                  <div class="form__grid">
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Ваше имя</div>
+                            <input class="form-field__input js-input" type="text" name="name" data-pristine-required-message="Обязательное поле" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Ваш телефон</div>
+                            <input class="form-field__input js-input js-phone" type="tel" name="phone" data-pristine-required-message="" data-mask="+7-(___)-___-____" data-slots="_" minlength="11" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="form__line">
+                        <div class="form-field form-group">
+                          <label class="form-field__label-select">Ваш возраст</label>
+                          <select class="js-select" name="old" required>
+                            <option data-display="Select"></option>
+                            <option value="0">20-30</option>
+                            <option value="1">30-40</option>
+                            <option value="2">40-50</option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="form__line">
+                        <label class="form-checkbox form-group">
+                          <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"></span><span class="form-checkbox__text">Принимаю условия <a href="#" target="_blank" class="link link--blue">использования информации</a></span>
+                        </label>
+                  </div>
+                  <div class="form__line">
+                    <button class="btn btn--middle js-form-submit" type="submit"> <span>Оформить</span>
+                      <div class="btn__shadow"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="popup js-popup" data-block="thank" id="popup-thank">
+                <div class="popup__thank-block"> 
+                  <h2 class="popup__name">Спасибо!</h2>
+                  <p>Наш менеджер с Вами свяжется в ближайшее время!</p>
+                </div>
+              </div>
+              <div class="popup js-popup" data-block="video">
+                <iframe class="js-iframe" src="" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+              </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.js?v=1691601269505"></script>
+    <script src="js/main.js?v=1691601269505"></script>
+  </body>
+</html>

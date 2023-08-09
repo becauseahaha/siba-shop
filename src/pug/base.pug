@@ -2,6 +2,7 @@ include mixins/svg
 include mixins/blocks
 include template/header
 include template/footer
+include ../components/mobile-navbar/mobile-navbar
 
 block vars
 	-
@@ -54,10 +55,13 @@ html(class=html.classList)&attributes(html.attrs)
 		.page.js-page
 			block header
 				+header()
+			//-main content
 			main.main#main
 				block content
 			block footer 
 				+footer()
+			block mobile 
+				+mobile-navbar()
 		block popup 
 			include particles/popups/popups
 		block scripts

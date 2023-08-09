@@ -1,2 +1,71 @@
+include ../../components/form-field/form-field
+
 mixin header(props)
-  header.header.js-header
+	header.header.js-header
+		.header__top 
+			.wrapper
+				.header__menu.js-mobile-menu
+					h2.header__mobile-title Меню 
+					.header__menu-close.js-close-mobile-menu
+						+svg('close')
+					nav.header__nav 
+						ul.header__list
+							li.header__item: a.link.link--default(href="#") О компании
+							li.header__item: a.link.link--default(href="#") Оплата и доставка
+							li.header__item: a.link.link--default(href="#") Гарантия и сопровождение
+							li.header__item: a.link.link--default(href="#") Обзоры
+							li.header__item: a.link.link--default(href="#") Статьи
+							li.header__item: a.link.link--default(href="#") Новости
+							li.header__item: a.link.link--default(href="#") Контакты
+					a.header__lk.link.link--default.link--arrow(href="#")
+						+svg('lk')
+						span Личный кабинет
+					a.btn.btn--middle.header__mobile-btn(href="#") 
+						span Задать вопрос
+		.header__about
+			.wrapper
+				.header__line
+					a.header__mobile-icon(href="#")
+						+svg('place')
+					a.header__logo(href="main.html")
+						+img('logo.svg')
+					a.header__mobile-icon(href="tel:+74951208137")
+						+svg('phone')
+					.header__city 
+						span.header__city-value Москва 
+						+svg('arrow-bottom')
+					.header__part
+						address.header__address г. Москва, 4-й Лихачёвский переулок, 4с2
+						a.header__phone(href="tel:+74951208137") +7 (495) 120-81-37
+						span.header__inform Офис: 08:00-18:00, касса 08:00-17:00 
+					a.btn.btn--middle.btn--mobile.header__btn(href="#") 
+						span Задать вопрос
+		.header__data
+			.wrapper
+				.header__line.header__line--large
+					a.btn.header__btn-catalog(href="#") 
+						span Каталог 
+						+svg('catalog')(width="36" height="36")
+					a.btn.btn--blue.header__btn-action(hrfe="#") 
+						span акции
+					form.header__search.js-form(action="#" name="form-search")
+						+form-field({
+							input: true,
+							label: 'Я ИЩУ...',
+							type: 'search',
+							name: 'search',
+							msg: '',
+							req: true,
+						}).form-field--search
+						button.btn.btn--blue.btn--icon.header__search-btn(type="submit")
+							+svg('search')(width="24" height="24")
+					.header__hide-block 
+						a.header__phone(href="tel:+74951208137") +7 (495) 120-81-37
+						span.header__inform Офис: 08:00-18:00, касса 08:00-17:00 
+					.header__basket 
+						+svg('basket').header__basket-icon 
+						.header__basket-name Корзина 
+						.header__price 
+							span 231 243
+							span &#8381; 
+

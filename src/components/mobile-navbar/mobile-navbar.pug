@@ -1,0 +1,22 @@
+mixin mobile-navbar()
+	.mobile-navbar.js-mobile-navbar
+		.mobile-navbar__main
+			a.mobile-navbar__item.is-active(href="main.html")
+				+svg('main').mobile-navbar__icon
+				.mobile-navbar__text Главная
+
+			a.mobile-navbar__item(href="catalog.html")
+				+svg('catalog2').mobile-navbar__icon
+				.mobile-navbar__text Каталог
+
+			a.mobile-navbar__item(href="basket.html")
+				+svg('basket2').mobile-navbar__icon
+				.mobile-navbar__text Корзина
+
+			a.mobile-navbar__item(href="lk.html")
+				+svg('lk2').mobile-navbar__icon
+				.mobile-navbar__text Кабинет
+
+			a.mobile-navbar__item.js-open-mobile-menu
+				+svg('menu').mobile-navbar__icon
+				.mobile-navbar__text Mеню

@@ -14,16 +14,18 @@
 		display: block
 		width: 100%
 		padding: 0px 20px 0px
-		height: rem(50px)
-		line-height: rem(50px)
+		height: rem(60px)
+		line-height: rem(60px)
 		color: $baseTxt
-		font-size: rem(16px)
+		font-size: rem(15px)
+		letter-spacing: 0.45px
 		transition: .3s linear
 		position: relative
+		border-radius: 7px
 		z-index: 3
 		
-		&:focus
-			border-color: $red
+		&:focus ~ .form-field__mask
+			border-color: $blue-light2
 
 		+bp($bp-small)
 			height: rem(40px)
@@ -39,9 +41,12 @@
 		+bp($bp-small)
 			height: 90px	
 	&__label 
-		font-size: rem(16px)
+		font-size: rem(15px)
+		font-weight: 300
+		color: $gray
+		letter-spacing: 0.45px
 		position: absolute 
-		top: 17px 
+		top: 22px 
 		padding: 0 20px 
 		z-index: 2
 		transform-origin: 0 0
@@ -65,8 +70,9 @@
 		height: 100%
 		transform-origin: 20px 0
 		transition: .3s linear
-		border: 1px solid $gray3 
-		background-color: $gray4
+		border: 1px solid $blue-light 
+		background-color: $white
+		border-radius: 7px
 		z-index: 1
 		&--top 
 			align-items: flex-start 
@@ -96,16 +102,29 @@
 
 	.select2-container
 		width: 100% !important
+	
+	&--search 
+		.form-field__input,
+		.form-field__mask 
+			height: 46px
+		.form-field__mask 
+			border-width: 2px
+		.form-field__input,
+		.form-field__label 
+			font-size: rem(14px)
+			padding-right: 50px
+		.form-field__label 
+			top: 17px
 		
 	&--focused
 		.form-field__label
-			transform: translate(6px,-13px) scale(0.7)
+			transform: translate(6px,-16px) scale(0.7)
 			transform-origin: 0 0
 		
 	&.has-danger
 		.form-field__label
 			color: $red !important
-			transform: translate(6px,-13px) scale(0.7)
+			transform: translate(6px,-16px) scale(0.7)
 			transform-origin: 0 0
 	
 		.form-field__mask
@@ -114,11 +133,33 @@
 		.form-field__icon
 			opacity: 1
 			color: $red
+	&.has-danger.form-field--search,
+	&--focused.form-field--search
+		.form-field__label
+			transform: translate(6px,-13px) scale(0.7)
 
 	&-textarea
 		.form-field__icon
 			bottom: auto 
 			top: 16px
+	
+	+bp($bp-medium)
+		&__input
+			height: rem(40px)
+			line-heigght: rem(40px)
+			font-size: rem(14px)
+		&__label 
+			font-size: rem(14px)
+		&--search 
+		.form-field__input,
+		.form-field__mask 
+			height: 40px
+		.form-field__label 
+			top: 13px
+		&.has-danger.form-field--search,
+		&--focused.form-field--search
+			.form-field__label
+				transform: translate(6px,-9px) scale(0.7)
 
 .pristine-error
 	display: none

@@ -6,47 +6,39 @@
 	text-decoration: none
 	transition: 0.4s ease
 	outline: none
-	color: $baseTxt
-	border-bottom: 1px solid $gray2
+	font-weight: 400
 	
 	&:hover
-		border-color: transparent
-		
-	&--blue
 		color: $blue
-		border-color: transparent
+	
+	&--default 
+		color: $baseTxt 
 		&:hover 
-			color: $blue-dark
-	
-	&--yellow
-		color: $yellow 
-		border-color: transparent
-		&:hover 
-			color: $yellow2
-	
-	&--blue-bor
-		border-color: $blue
-	
-	&--yellow-bor
-		border-color: $yellow 
+			color: $orange
+
+		
 		
 	&--arrow
 		display: inline-flex
 		align-items: center
-		border-color: transparent
-		font-weight: 500
 		
 		svg
-			margin: 0 9px 0 0
-			transform: rotate(-90deg)
-			width: 11px
-			height: 6px
+			margin: 0 5px 0 0
+			width: 24px
+			height: 24px
 			fill: transparent 
 			transition: 0.35s ease 
+			stroke-width: 1.2px
+			stroke: $baseTxt
 		
 		&:hover 
-			color: $blue
+			color: $orange
 			svg 
-				transform: rotate(-90deg) translateY(4px)
-				stroke: $blue
+				stroke: $orange
+	
+	+bp($bp-medium)
+		&--arrow 
+			svg 
+				width: 18px
+				height: 18px
 

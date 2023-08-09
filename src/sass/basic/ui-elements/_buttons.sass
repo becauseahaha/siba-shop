@@ -1,69 +1,62 @@
 .btn
 	display: inline-flex
 	align-items: center
-	justify-content: center
 	font-family: $baseFont
-	color: $baseTxt
-	font-size: rem(18px)
-	font-weight: 500
+	color: $white
+	font-size: rem(14px)
+	font-weight: 600
 	text-align: center
 	white-space: nowrap
-	transition: 0.5s ease
 	cursor: pointer
-	padding: 0 30px
-	border-bottom: none
-	height: rem(50px)
-	background-color: $yellow
+	padding: 0 20px
+	height: rem(46px)
 	position: relative
 	overflow: hidden
-
-
-	&__shadow
-		display: block
+	text-transform: uppercase
+	letter-spacing: 1.12px
+	background-color: $orange
+	border-radius: 7px 
+	&:before 
 		content: ''
-		width: 7px
-		height: 7px
-		opacity: 0
-		box-shadow: 0px 0px 35px 35px $yellow3
-		background: $yellow3
-		position: absolute
-		transition: 0.25s
-		filter: blur(10px)
-		will-change: transform
-		&.is-active
-			opacity: 1
-	
-	&:hover 
-		color: inherit
-	
-	span 
+		width: 100% 
+		height: 100% 
+		position: absolute  
+		bottom: 0 
+		left: 0 
+		background-color: $orange2
+		transition: $transition
+		transform-origin: 50% 100% 
+		transform: scaleY(0)
+	span,
+	svg 
 		display: inline-block
 		position: relative
 		z-index: 2
+	svg 
+		fill: $white
+	&:hover 
+		color: $white
+		&:before 
+			transform: scaleY(1)
+	
+	&--blue 
+		background-color: $blue
+		&:before 
+			background-color: $blue2
+	
+	&--icon 
+		padding: 0 
+		width: 46px 
+		justify-content: center
 	
 	&--small
 		height: rem(35px)
 		padding: 0 15px
 		font-size: rem(14px)
 	&--middle
-		height: rem(55px)
-		padding: 0 35px
-
-	&--gray
-		background-color: $gray4
-
-	&--dark
-		background-color: $baseTxt
-		color: $white
-		.btn__shadow
-			box-shadow: 0px 0px 35px 35px $gray8
-			background: $gray8
-			
-		&:hover
-			background-color: $baseTxt
-			color: $white
-
-	
+		height: rem(40px)
+		font-size: rem(13px)
+		letter-spacing: 0.39px
 
 	&.is-hide
 		display: none
@@ -74,9 +67,20 @@
 	&.is-disabled
 		opacity: .5
 		pointer-events: none
+	
+	+bp(1100px)
+		&--mobile
+			height: 32px 
+			font-size: rem(12px)
+			padding: 0 14px
+	
+	+bp($bp-medium)
+		height: 40px
+		&--mobile 
+			height: 32px
 
 
 	+bp($bp-small)
-		font-size: rem(15px)
+		font-size: rem(14px)
 		height: 40px
-		padding: 0 30px
+		padding: 0 20px
