@@ -1,9 +1,225 @@
 extends pug/base
-//- include components/promo-block/promo-block
+include components/product/product
+include components/slider-arrow/slider-arrow
 
 
 append vars
 	- title = 'Главная'
 
 block content
-	div(style="min-height: 200vh")
+	section.banner.sec 
+		.wrapper 
+
+	section.products.sec.sec--small
+		.wrapper
+			.products__container.js-tab
+				.products__tab.js-tab__list
+					h4.title.products__title.js-tab__item.is-active(data-id="popular") Популярное
+					h4.title.products__title.js-tab__item(data-id="novelties") Новинки
+				.js-tab__content
+					.js-tab__block.is-active#popular
+						.products__slider.swiper-container.js-slider 
+							.swiper-wrapper.products__swiper-wrapper 
+								.swiper-slide.products__item
+									+product({
+										hit: true, 
+										img: 'product-1.png',
+										img2: 'product-2.png',
+										name: 'Снековый автомат SWING (под заказ)', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item
+									+product({
+										hit: true, 
+										img: 'product-2.png',
+										name: 'Кофе в зернах BOASI «Gran Crema»', 
+										text: 'Артикул 142 364',
+										price: '785'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-3.png',
+										img2: 'product-1.png',
+										img3: 'product-2.png',
+										name: 'Зерновая кофемашина Necta Koro Prime ES3', 
+										text: 'Артикул 142 364',
+										price: '215 000'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-4.png',
+										name: 'Kikko ES6', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-5.png',
+										img2: 'product-2.png',
+										name: 'Капсула LВ Caffe Crema Lungo', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item
+									+product({
+										hit: true, 
+										img: 'product-2.png',
+										img2: 'product-4.png',
+										name: 'Снековый автомат SWING (под заказ)', 
+										text: 'Артикул 142 364',
+										price: '4 600'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-5.png',
+										name: 'Капсула LВ Caffe Crema Lungo', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item
+									+product({
+										hit: true, 
+										img: 'product-2.png',
+										name: 'Снековый автомат SWING (под заказ)', 
+										text: 'Артикул 142 364',
+										price: '4 600'
+									})
+							+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).slider-arrow--top-right
+					.js-tab__block#novelties
+						.products__slider.swiper-container.js-slider 
+							.swiper-wrapper.products__swiper-wrapper 
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-4.png',
+										name: 'Kikko ES6', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-1.png',
+										img2: 'product-2.png',
+										name: 'Снековый автомат SWING (под заказ)', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item
+									+product({
+										hit: true, 
+										img: 'product-2.png',
+										name: 'Кофе в зернах BOASI «Gran Crema»', 
+										text: 'Артикул 142 364',
+										price: '785'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-3.png',
+										img2: 'product-1.png',
+										img3: 'product-2.png',
+										name: 'Зерновая кофемашина Necta Koro Prime ES3', 
+										text: 'Артикул 142 364',
+										price: '215 000'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-5.png',
+										img2: 'product-2.png',
+										name: 'Капсула LВ Caffe Crema Lungo', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-2.png',
+										img2: 'product-4.png',
+										name: 'Снековый автомат SWING (под заказ)', 
+										text: 'Артикул 142 364',
+										price: '4 600'
+									})
+								.swiper-slide.products__item 
+									+product({
+										hit: true, 
+										img: 'product-5.png',
+										name: 'Капсула LВ Caffe Crema Lungo', 
+										text: 'Артикул 142 364',
+										price: '100 000'
+									})
+								.swiper-slide.products__item
+									+product({
+										hit: true, 
+										img: 'product-2.png',
+										name: 'Снековый автомат SWING (под заказ)', 
+										text: 'Артикул 142 364',
+										price: '4 600'
+									})
+							+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).slider-arrow--top-right
+	
+	section.products.products--action.sec.sec--small
+		.wrapper
+			.products__container
+				.products__tab.js-tab__list
+					h4.title.products__title Товары по акции
+				.products__slider.swiper-container.js-slider 
+					.swiper-wrapper.products__swiper-wrapper  
+						.swiper-slide.products__item 
+							+product({
+								sale: true, 
+								img: 'product-6.png',
+								name: 'Капсульная кофемашина CLASSY&MILK', 
+								text: 'Артикул 142 364',
+								price: '51 625',
+								priceOld: '57 625'
+							})
+						.swiper-slide.products__item 
+							+product({
+								sale: true, 
+								img: 'product-7.png',
+								name: 'Кофе в зернах LAVAZZA Espresso «Crema e Aroma»', 
+								text: 'Артикул 142 364',
+								price: '2 100',
+								priceOld: '3 100'
+							})
+						.swiper-slide.products__item 
+							+product({
+								sale: true, 
+								img: 'product-8.png',
+								img2: 'product-2.png',
+								img3: 'product-5.png',
+								name: 'Kikko ES6', 
+								text: 'Артикул 142 364',
+								price: '100 000',
+								priceOld: '130 000'
+							})
+						.swiper-slide.products__item
+							a.product-banner(href="#")
+								+img('banner-1.jpg')
+						.swiper-slide.products__item 
+							+product({
+								sale: true, 
+								img: 'product-9.png',
+								name: 'Капсулы EP Aroma Club (коробка)', 
+								text: 'Артикул 142 364',
+								price: '4 500',
+								priceOld: '5 500'
+							})
+						.swiper-slide.products__item
+							+product({
+								sale: true, 
+								img: 'product-7.png',
+								name: 'Кофе в зернах LAVAZZA Espresso «Crema e Aroma»', 
+								text: 'Артикул 142 364',
+								price: '2 100',
+								priceOld: '3 100'
+							})
+					+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).slider-arrow--top-right
+

@@ -1,0 +1,64 @@
+.counter
+	display: inline-flex
+	border-radius: 7px
+	border: 1px solid $gray2
+	height: 36px
+	user-select: none
+	background: $white
+	
+	&__item
+		height: 100%
+		width: 34px
+		position: relative
+		
+		&:first-child
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				margin: auto
+				width: 8px
+				height: 2px
+				background-color: $baseTxt
+				border-radius: 7px
+				
+		&:last-child
+			&:before,&:after
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				margin: auto
+				width: 8px
+				height: 2px
+				background-color: $baseTxt
+				border-radius: 7px
+				
+			&:after
+				transform: rotate(90deg)
+				
+		&:last-child,&:first-child
+			cursor: pointer
+			
+				
+		&:nth-child(2)
+			width: 31px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: rem(15px)
+			letter-spacing: 0.75px
+			font-weight: 500
+			color: $baseTxt
+			// border-right: 1px solid $gray2
+			// border-left: 1px solid $gray2
+
+	&__input
+		width: 100%
+		height: 100%
+		text-align: center

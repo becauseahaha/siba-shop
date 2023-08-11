@@ -39,7 +39,16 @@ body
 
 .main
 	flex-grow: 1
+	padding-top: 185px
 	
+	+bp(1130px)
+		padding-top: 181px
+	
+	+bp($bp-medium)
+		padding-top: 178px
+
+	+bp(730px)
+		padding-top: 58px
 
 img
 	max-width: 100%
@@ -63,22 +72,16 @@ img
 	+bp($bp-small2)
 		padding: 0 20px
 
+.js-tab__block 
+	height: 0px 
+	pointer-events: none 
+	&.is-active
+		pointer-events: auto 
+		height: auto
 
-.gray 
-	background-color: $gray
-
-.gray2 
-	background-color: $gray2
-
-.gray3 
-	background-color: $gray3
-
-.gray4 
-	background-color: $gray4
-
-.yellow 
-	background-color: $yellow
-
-.yellow2 
-	background-color: $yellow2
+.title
+	margin-bottom: 36px 
+	margin-top: 0
+	+bp($bp-small)
+		margin-bottom: 20px
 

@@ -1,0 +1,102 @@
+
+.sec
+	padding: 45px 0 
+	&--small
+		padding-bottom: 25px 
+	
+	+bp($bp-large)
+		padding: 33px 0 
+		&--small
+			padding-bottom: 10px 
+	
+	+bp($bp-large)
+		padding: 18px 0 
+		&--small
+			padding-bottom: 5px 
+	
+	+bp($bp-tablet)
+		padding: 25px 0 
+		&--small
+			padding-bottom: 5px 
+.products
+	&__container 
+		overflow: hidden
+		margin-left: -20px
+		width: calc(100% + 40px) 
+	&__slider
+		padding: 0 20px
+		position: relative
+		width: 100%
+		position: relative
+		z-index: 2
+		padding-bottom: 25px
+
+	&__item 
+		display: inline-block 
+		width: auto 
+		margin-right: 20px
+
+	&__tab 
+		display: flex 
+		padding: 0 20px
+	&__title
+		margin-right: 36px
+		cursor: pointer
+		border-bottom: 1px dashed transparent
+		&.is-active 
+			color: $blue 
+			border-color: $blue
+	
+	+bp(800px)
+		&__slider
+			max-width: 80%
+
+			.slider-arrow
+				display: none
+	
+	+bp($bp-tablet)
+		&--action
+			display: none
+
+	+bp($bp-small)
+		&__slider
+			max-width: 100%
+		&__swiper-wrapper
+			transform: none !important
+			display: grid 
+			grid-template-columns: repeat(2, 1fr)
+			grid-column-gap: 10px 
+			grid-row-gap: 15px
+		&__item 
+			margin: 0 
+			display: none 
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4)
+				display: block
+		&__title
+			margin-right: 20px
+		
+
+	
+.js-tab__block 
+	.swiper-wrapper
+		height: 0px 
+		pointer-events: none 
+		opacity: 0 
+	.slider-arrow
+		opacity: 0 
+		pointer-events: none
+	&.is-active
+		.swiper-wrapper
+			pointer-events: auto
+			opacity: 1
+			height: auto
+		.slider-arrow
+			opacity: 1
+			pointer-events: auto
+
+	
+	
+			

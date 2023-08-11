@@ -1,0 +1,40 @@
+include ../counter/counter
+
+mixin product(props)
+	.product
+		if props.hit 
+			.product-icon Хит
+		if props.sale 
+			.product-icon.product-icon--sale Sale
+		a.product__image-slider.swiper-container.js-product-slider(href="#")
+			.swiper-wrapper
+				.swiper-slide.product__slide
+					+img(`products/${props.img}`)
+				if props.img2
+					.swiper-slide.product__slide
+						+img(`products/${props.img2}`)
+				if props.img3
+					.swiper-slide.product__slide
+						+img(`products/${props.img3}`)
+			.product__arrows-item.product__arrows-item--next.js-product-slider__next.swiper-button-next
+				+svg('next')
+			.product__arrows-item.js-product-slider__prev.swiper-button-prev
+				+svg('prev')
+		.product__desc
+			a.product__desc-wrap(href='#')
+				.product__about
+					h6.product__name= props.name
+					small.product__text= props.text
+				.product__prices
+					.product__price
+						span= props.price
+						span &#8381;
+					if props.priceOld
+						.product__price.product__price--old
+							span= props.priceOld
+							span &#8381;
+			.product__data
+				+counter({val: 1})
+				.btn.btn--blue.btn--small.btn--arrow.product__btn
+					+svg('basket')
+					span в корзину

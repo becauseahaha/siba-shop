@@ -1,0 +1,189 @@
+.product 
+	position: relative
+	padding-bottom: 80px
+	&__image-slider
+		display: block
+		overflow: hidden 
+		padding: 73px 0 57px
+		border-radius: 7px
+		background-color: $gray2
+	&__arrows-item 
+		position: absolute 
+		top: 50%
+		left: 4px 
+		width: 24px
+		height: 24px
+		cursor: pointer
+		z-index: 3
+		opacity: 0 
+		pointer-events: none
+		transition: 0.25s
+		display: flex 
+		align-items: center 
+		justify-content: center
+		&--next
+			left: auto 
+			right: 4px 
+		svg 
+			width: 10px
+			height: 14px
+			stroke: $baseTxt 
+			stroke-width: 2px
+			fill: transparent
+		&.is-hide
+			display: none
+		
+	&__slide 
+		max-height: 240px
+		+flex_center_b
+		margin: 0 auto
+		img 
+			max-height: 100%
+	&__desc 
+		background-color: $white
+		padding: 0 8px
+		border-radius: 7px 
+		position: absolute 
+		bottom: 0 
+		left: 0 
+		right: 0 
+		z-index: 3
+		overflow: hidden 
+		transition: 0.25s
+		height: 80px
+	&__desc-wrap
+		display: flex 
+		padding: 12px 0 5px
+		color: $baseTxt
+		transition: 0s
+		&:hover 
+			color: inherit
+	&__about
+		margin-right: 14px 
+	&__name 
+		font-size: rem(13px)
+		line-height: rem(17px) 
+		max-height: rem(51px)
+		overflow: hidden
+		font-weight: 500
+		letter-spacing: 0.39px
+		margin: 0
+	&__text 
+		font-size: rem(12px)
+		line-heigth: 130% 
+		font-weight: 300
+		letter-spacing: -0.12px
+		opacity: 0.8
+		margin-top: 13px 
+	&__price 
+		font-size: rem(13px)
+		line-heigth: 130% 
+		font-weight: 400
+		letter-spacing: 0.39px
+		margin: 0
+		white-space: nowrap
+		padding-top: 3px
+		span 
+			padding-left: 3px
+		
+		&--old 
+			font-size: rem(12px)
+			font-weight: 300
+			letter-spacing: 0.36px
+			opacity: 0.8
+			margin-top: 4px 
+	&__data 
+		display: none
+		align-items: center
+		justify-content: space-between
+		align-items: center 
+		padding-bottom: 11px
+	&__btn 
+		margin-left: 5px
+	
+	&-icon 
+		display: inline-flex
+		align-items: center
+		padding: 0 9px
+		font-size: rem(15px)
+		font-weight: 500 
+		text-transform: uppercase 
+		letter-spacing: 0.75px
+		height: 24px
+		border-radius: 5px
+		position: absolute 
+		z-index: 4 
+		top: 10px
+		left: 10px
+		color: $white 
+		background-color: $orange
+
+		&--sale 
+			background-color: $blue 
+		
+		~ .product-icon--sale
+				top: 44px
+	
+	+bp(577px, 'min')
+	
+		&:hover 
+			.product__desc
+				height: auto
+				box-shadow: 0px 10px 25px 0px rgba(0, 39, 83, 0.08), 0px 3px 10px 0px rgba(0, 39, 83, 0.03)
+			.product__data 
+				display: flex
+			.product__arrows-item
+				opacity: 1 
+				pointer-events: auto
+				&.swiper-button-disabled
+					opacity: 0.3
+	
+	+bp($bp-small)
+		padding-bottom: 0
+		&__image-slider
+			padding: 30px 0
+		&__slide 
+			height: 130px 
+		&__desc 
+			position: static 
+			height: auto
+		&__desc-wrap 
+			display: block
+			padding-top: 7px
+		&__about 
+			margin-right: 0 
+		&__price 
+			margin-top: 4px 
+			padding-right: 44px
+			span 
+				&:first-child 
+					padding-left: 0 
+		&__data 
+			display: flex 
+			.counter 
+				display: none
+		&__about 
+			padding-bottom: 14px
+		&__btn 
+			padding: 0 
+			justify-content: center 
+			width: 34px 
+			heigth: 34px
+			position: absolute 
+			right: 5px
+			bottom: 7px
+			span 
+				display: none
+			svg 
+				margin-right: 0
+		&__name
+			font-size: rem(12px)
+			line-height: rem(15px)
+			height: rem(45px)
+
+
+		
+
+
+
+	

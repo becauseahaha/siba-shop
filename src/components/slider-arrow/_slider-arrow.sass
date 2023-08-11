@@ -1,11 +1,17 @@
 .slider-arrow
 	display: flex
 	justify-content: space-between
+	width: 110px 
+
+	&--top-right
+		position: absolute 
+		right: 0 
+		top: -80px
 
 
 	&__item 
-		width: 44px
-		height: 44px
+		width: 50px
+		height: 50px
 		border-radius: 50%
 		display: flex 
 		align-items: center
@@ -15,22 +21,24 @@
 		overflow: hidden
 		transition: 0.4s
 		border: 1px solid $gray2
+		&.swiper-button-disabled
+			opacity: 0.6 
+			pointer-events: none
 
 		svg 
 			width: 9px 
 			height: 16px
 			fill: transparent
 			transition: 0.4s
-			stroke: $gray2
+			stroke: $baseTxt
 			stroke-width: 2px
 
 
 
 		&:hover
-			background-color: $yellow
-			border-color: $yellow
+			border-color: $gray3
 			svg 
-				stroke: $white
+				stroke: $orange
 
 		&--prev:hover 
 
@@ -66,16 +74,6 @@
 			.slider-arrow__item
 				position: static 
 				transform: none
-
-
-	
-	+bp($bp-tablet)
-		&__item 
-			width: 50px 
-			height: 50px
-
-		&--line-nt 
-			display: none
 
 	+bp($bp-small)
 		&__item 

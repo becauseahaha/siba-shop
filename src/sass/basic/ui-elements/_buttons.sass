@@ -50,13 +50,23 @@
 		justify-content: center
 	
 	&--small
-		height: rem(35px)
-		padding: 0 15px
-		font-size: rem(14px)
+		height: rem(36px)
+		padding: 0 8px
+		font-size: rem(13px)
+		font-weight: 500
+
 	&--middle
 		height: rem(40px)
 		font-size: rem(13px)
 		letter-spacing: 0.39px
+	&--arrow 
+		svg 
+			width: 24px 
+			height: 24px
+			margin-right: 3px
+			fill: transparent
+			stroke: $white
+			stroke-width: 2px
 
 	&.is-hide
 		display: none
@@ -78,9 +88,13 @@
 		height: 40px
 		&--mobile 
 			height: 32px
+		&--small 
+			height: 36px
 
 
 	+bp($bp-small)
 		font-size: rem(14px)
 		height: 40px
 		padding: 0 20px
+		&--small 
+			height: 36px

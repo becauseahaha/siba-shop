@@ -4,6 +4,8 @@
 	position: absolute 
 	top: 0
 	left: 0
+	background-color: $white
+	z-index: 16
 	&__mobile-title, 
 	&__menu-close, 
 	&__mobile-btn,
@@ -99,11 +101,11 @@
 		position: relative 
 		padding-left: 40px
 		cursor: pointer 
-	&:hover 
-		.header__basket-icon 
-			stroke: $orange 
-		.header__price
-			color: $orange
+		&:hover 
+			.header__basket-icon 
+				stroke: $orange 
+			.header__price
+				color: $orange
 	&__basket-icon 
 		width: 36px 
 		height: 36px
@@ -243,7 +245,7 @@
 			right: 0
 			display: block 
 			opacity: 0 
-			ponter-events: none 
+			pointer-events: none 
 			transform: translate3d(0,50%,0)
 			transition: $transition
 			&.is-active 
