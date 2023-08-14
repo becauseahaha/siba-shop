@@ -15,8 +15,38 @@
 		color: $baseTxt 
 		&:hover 
 			color: $orange
-
-		
+	
+	&--bor 
+		position: relative 
+		&:after 
+			content: ''
+			width: 100% 
+			height: 1px 
+			position: absolute 
+			left: 0 
+			bottom: -2px 
+			background-color: $baseTxt 
+			opacity: 0.3
+			transform: scale(1)
+			transform-origin: 100% 100%
+			transition: $transition
+		&:hover:after 
+			transform: scale(0)
+	
+	&--bor-white
+		color: $white
+		&:hover 
+			color: $white
+		&:after 
+			background-color: $white
+	
+	&--white-mark 
+		font-weight: 500 
+		color: $white
+		letter-spacing: 0.42px
+		font-size: rem(21px)
+		&:hover 
+			color: $white
 		
 	&--arrow
 		display: inline-flex
@@ -36,9 +66,20 @@
 			svg 
 				stroke: $orange
 	
+	+bp($bp-large)
+		&--white-mark
+			font-size: rem(18px)
+	
 	+bp($bp-medium)
 		&--arrow 
 			svg 
 				width: 18px
 				height: 18px
+
+		&--white-mark
+			font-size: rem(13px)
+	
+	+bp($bp-small)		
+		&--white-mark
+			font-size: rem(8px)
 

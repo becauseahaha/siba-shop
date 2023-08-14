@@ -1,14 +1,25 @@
 extends pug/base
+include components/banner/banner
+include components/banner-slider/banner-slider
 include components/product/product
 include components/slider-arrow/slider-arrow
+include components/b-category/b-category
+include components/b-services/b-services
+include components/b-video/b-video
+include components/partners/partners
 
 
 append vars
 	- title = 'Главная'
 
 block content
-	section.banner.sec 
-		.wrapper 
+	section.banner-grid.sec 
+		.wrapper
+			.banner-grid__part 
+				+banner().banner-grid__left
+				+banner-slider()
+
+	
 
 	section.products.sec.sec--small
 		.wrapper
@@ -164,6 +175,49 @@ block content
 									})
 							+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).slider-arrow--top-right
 	
+	section.category.sec
+		.wrapper
+			h4.title Популярные Категории
+			.category__list 
+				.category__item.category__item--w50
+					+b-category({
+						foil: 'images/c-1.jpg',
+						foilMobile: 'images/c-1-mobile.jpg',
+						img: 'category-1.png',
+						name: 'Кофе',
+						count: '82 товара'
+					})
+				.category__item.category__item--w50
+					+b-category({
+						foil: 'images/c-2.jpg',
+						foilMobile: 'images/c-3-mobile.jpg',
+						img: 'category-2.png',
+						name: 'Торговые автоматы',
+						count: '44 товара'
+					})
+				.category__item
+					+b-category({
+						foil: 'images/c-3.jpg',
+						foilMobile: 'images/c-2-mobile.jpg',
+						img: 'category-3.png',
+						name: 'Кофемашины',
+						count: '53 товара'
+					})
+				.category__item
+					+b-category({
+						foil: 'images/c-4.jpg',
+						img: 'category-4.png',
+						name: 'Доп. оборудование',
+						count: '22 товара'
+					})
+				.category__item
+					+b-category({
+						foil: 'images/c-5.jpg',
+						img: 'category-5.png',
+						name: 'Запчасти для торговых атоматов',
+						count: '22 товара'
+					})
+
 	section.products.products--action.sec.sec--small
 		.wrapper
 			.products__container
@@ -223,3 +277,140 @@ block content
 							})
 					+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).slider-arrow--top-right
 
+	section.settings 
+		.wrapper
+			.settings__part
+				.settings__block 
+					small.settings__name Услуги и сервис
+					h4.title.settings__title ремонт и настройка оборудования
+					a.btn.btn--bor-white.btn--large(href="#")
+						span Подробнее
+				.settings__image
+					+img('set.png')
+	
+	section.services.sec.sec--bottom
+		.wrapper 
+			.services__grid 
+				+b-services({
+					foil: 's-1.jpg',
+					img: 'person-1.png',
+					name: 'Бесплатная доставка при заказе от 15 000 рублей'
+				})
+				+b-services({
+					foil: 's-2.jpg',
+					img: 'person-2.png',
+					name: 'Бесплатная настройка автоматов под клиента'
+				})
+				+b-services({
+					foil: 's-3.jpg',
+					img: 'person-3.png',
+					name: 'Бесплатные консультации и обучениепо работе с оборудованием'
+				})
+	
+	section.videos
+		.wrapper 
+			.videos__container.sec.sec--line
+				h4.title видеообзоры
+				.videos__slider.swiper-container.js-video-slider
+					.swiper-wrapper 
+						-for(var i =0; i <3; i++)
+							.swiper-slide.videos__slide
+								+b-video({
+									cl: 'js-popup-link',
+									link: 'video', 
+									url: 'https://www.youtube.com/embed/hFj5L6sbX-o',
+									img: 'products/v-1.jpg', 
+									title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+									date: '26 июня 2023',
+									play: true
+								})
+								+b-video({
+									cl: 'js-popup-link',
+									link: 'video', 
+									url: 'https://www.youtube.com/embed/hFj5L6sbX-o',
+									img: 'products/v-2.jpg', 
+									title: 'N&W Global Vending на VENDEXPO 2023', 
+									date: '26 июня 2023',
+									play: true
+								})
+								+b-video({
+									cl: 'js-popup-link',
+									link: 'video', 
+									url: 'https://www.youtube.com/embed/hFj5L6sbX-o',
+									img: 'products/v-3.jpg', 
+									title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+									date: '26 июня 2023',
+									play: true
+								})
+								+b-video({
+									cl: 'js-popup-link',
+									link: 'video', 
+									url: 'https://www.youtube.com/embed/hFj5L6sbX-o',
+									img: 'products/v-4.jpg', 
+									title: 'Обзор Кофе в зернах MARZOTTO «Intenso»', 
+									date: '26 июня 2023',
+									play: true
+								})
+								+b-video({
+									cl: 'js-popup-link',
+									link: 'video', 
+									url: 'https://www.youtube.com/embed/hFj5L6sbX-o',
+									img: 'products/v-5.jpg', 
+									title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+									date: '26 июня 2023',
+									play: true
+								})
+					+slider-arrow({prev: 'js-video-slider__prev', next: 'js-video-slider__next'}).slider-arrow--top-right
+	
+	+partners()
+		+partners-item({color: '#DA702D', logo: 'logo-1'})
+		+partners-item({color: '#000000', logo: 'logo-2'})
+		+partners-item({color: '#EE2E24', logo: 'logo-3'})
+		+partners-item({color: '#59B767', logo: 'logo-4'})
+		+partners-item({color: '#A7827A', logo: 'logo-5'})
+		+partners-item({color: '#EE2E24', logo: 'logo-6'})
+		+partners-item({color: '#7A3223', logo: 'logo-7'})
+		+partners-item({color: '#004F95', logo: 'logo-8'})
+
+	section.news.sec.sec--line
+		.wrapper
+			.news__container
+				h4.title Новости 
+				.news__slider.swiper-container.js-news-slider 
+					.swiper-wrapper 
+						.swiper-slide
+							+b-video({
+								cl: 'b-video--news',
+								img: 'news/news-1.jpg', 
+								title: 'Итоги выставки Versus 2023', 
+								date: '26 июня 2023',
+							})
+						.swiper-slide
+							+b-video({
+								cl: 'b-video--news',
+								img: 'news/news-2.jpg', 
+								title: 'Наш новый адрес в Москве: 4-й Лихачёвский переулок, 4с2', 
+								date: '26 июня 2023',
+							})
+						.swiper-slide
+							+b-video({
+								cl: 'b-video--news',
+								img: 'news/news-3.jpg', 
+								title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+								date: '26 июня 2023',
+							})
+						.swiper-slide
+							+b-video({
+								cl: 'b-video--news',
+								img: 'news/news-2.jpg', 
+								title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+								date: '26 июня 2023',
+							})
+						.swiper-slide
+							+b-video({
+								cl: 'b-video--news',
+								img: 'news/news-3.jpg', 
+								title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+								date: '26 июня 2023',
+							})
+					+slider-arrow({prev: 'js-news-slider__prev', next: 'js-news-slider__next'}).slider-arrow--top-right.news__arrow

@@ -1,0 +1,95 @@
+.partners 
+	background: radial-gradient(49.57% 54.78% at 65.03% 62.26%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%), #222
+	color: $white 
+	position: relative 
+	overflow: hidden
+	&:after 
+		content: ''
+		width: 793px 
+		height: 892px 
+		+foil
+		background-image: url(../images/rounds2.svg) 
+		position: absolute 
+		right: 2% 
+		top: 45%
+
+	&__content 
+		position: relative 
+		z-index: 2
+	&__title 
+		position: absolute 
+		left: 0 
+		top: 35px
+		max-width: 509px 
+		width: 40%
+	&__title
+		margin-top: 0 
+	&__list 
+		display: flex 
+		flex-wrap: wrap
+		margin: 0 -10px
+	&-item 
+		width: calc(100% / 5)
+		padding: 10px
+		+bp(993px, 'min')
+			&:first-child 
+				margin-left: 40% 
+			&:nth-child(7)
+				margin-right: 20% 
+			&:nth-child(8)
+				margin-left: 20% 
+		&__logo 
+			height: 150px 
+			padding: 0px 5px 
+			+flex_center_b
+			border-radius: 5px
+			img 
+				max-height: 100%
+	
+	+bp($bp-large)
+		&:after 
+			right: -20%
+		&-item 
+			&__logo 
+				height: 140px
+	
+	+bp($bp-medium)
+		&:after 
+			transform: scale(0.7)
+			right: -70% 
+			top: 1%
+			transform-origin: 0 0
+		&__title 
+			position: static 
+			width: auto
+			padding-top: 15px
+		&-item 
+			width: calc(100% / 4)
+	
+	+bp($bp-tablet)
+		&__list 
+			margin: 0 -7px
+		&-item
+			width: calc(100% / 3)
+			padding: 7px
+	
+	+bp($bp-small)
+		&:after 
+			right: -105%
+			transform: scale(0.45)
+			transform-origin: 50% 0
+		&__title 
+			padding-top: 0 
+			text-transform: uppercase 
+			font-size: rem(18px)
+		&__list 
+			margin: 0 -5px
+		&-item
+			width: calc(100% / 2)
+			padding: 5px
+			&__logo 
+				height: 90px
+	
+
+			
+			

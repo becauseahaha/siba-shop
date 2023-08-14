@@ -1,0 +1,22 @@
+.banner
+	overflow: hidden
+	border-radius: 10px
+	&__image 
+		display: block
+		height: 500px
+		border-radius: 10px
+		background-size: cover 
+		background-position: top left 
+		background-repeat: no-repeat
+
+	+bp($bp-large)
+		&__image
+			height: 100%
+	
+	+bp($bp-medium)
+		&__image 
+			height: 50vw
+	
+	+bp($bp-small2)
+		.slider-pagination
+			display: none

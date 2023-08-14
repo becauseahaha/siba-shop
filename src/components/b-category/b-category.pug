@@ -1,0 +1,8 @@
+mixin b-category(data)
+	a.b-category(href="#" style=`background-image: url(${data.foil})`)
+		.b-category__image
+			img(src=`images/products/${data.img}`)
+		.b-category__data
+			h5.b-category__name= data.name
+			.link.link--bor.link--bor-white.b-category__link= data.count
+		.b-category__mobile-foil(style=`background-image: url(${data.foilMobile})`)

@@ -1,0 +1,6 @@
+mixin b-services(data)
+	a.b-services(href="#")
+		.b-services__image(style=`background-image: url(images/${data.foil})`)
+			+img(data.img)
+		.b-services__name
+			h6.h6-title!= data.name 

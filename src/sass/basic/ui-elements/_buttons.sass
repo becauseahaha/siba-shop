@@ -44,6 +44,15 @@
 		&:before 
 			background-color: $blue2
 	
+	&--bor-white 
+		color: $white 
+		border: 1px solid $white
+		background-color: transparent
+		&:before
+			background-color: $white 
+		&:hover 
+			color: $baseTxt
+	
 	&--icon 
 		padding: 0 
 		width: 46px 
@@ -59,6 +68,10 @@
 		height: rem(40px)
 		font-size: rem(13px)
 		letter-spacing: 0.39px
+	
+	&--large 
+		height: rem(60px)
+		padding: 0 40px
 	&--arrow 
 		svg 
 			width: 24px 
@@ -67,6 +80,17 @@
 			fill: transparent
 			stroke: $white
 			stroke-width: 2px
+	
+	&-play 
+		&__hov 
+			position: absolute 
+			top: 0 
+			left: 0
+			opacity: 0 
+			transition: $transition 
+		&:hover
+			.btn-play__hov 
+				opacity: 1
 
 	&.is-hide
 		display: none
@@ -90,6 +114,8 @@
 			height: 32px
 		&--small 
 			height: 36px
+		&--large 
+			height: 60px
 
 
 	+bp($bp-small)
@@ -98,3 +124,6 @@
 		padding: 0 20px
 		&--small 
 			height: 36px
+		&--large 
+			height: 46px 
+			padding: 0 26px

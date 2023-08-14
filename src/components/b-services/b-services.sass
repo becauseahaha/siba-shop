@@ -1,0 +1,51 @@
+.b-services 
+	display: block
+	color: $baseTxt 
+	&:hover 
+		color: $baseTxt 
+		.b-services__name 
+			h6 
+				border-color: $gray
+	&__image 
+		display: flex 
+		align-items: flex-end 
+		justify-content: center
+		height: 340px 
+		padding-top: 8px 
+		padding-left: 5px 
+		padding-right: 5px
+		+foil 
+		border-radius: 10px 
+		overflow: hidden
+		img 
+			max-height: 100%
+
+	&__name 
+		margin-top: 20px 
+		padding-left: 4px
+		h6 
+			display: inline 
+			border-bottom: 1px solid transparent 
+			transition: $transition
+	
+	+bp($bp-large)
+		&__image 
+			height: 290px
+	
+	+bp($bp-tablet)
+		&__image 
+			height: 240px
+		&__name 
+			padding: 0
+	
+	+bp($bp-small2)
+		margin-bottom: 20px 
+
+		&__name
+			margin-top: 10px
+	
+	+bp($bp-small)
+		&__image 
+			height: 200px
+		
+

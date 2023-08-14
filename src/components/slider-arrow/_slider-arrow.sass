@@ -7,6 +7,20 @@
 		position: absolute 
 		right: 0 
 		top: -80px
+	
+	&--center 
+		position: absolute 
+		top: 50% 
+		transform: translateY(-57%)
+		left: 0px
+		padding: 20px
+		width: 100%
+		z-index: 3
+	
+	&--white 
+		.slider-arrow__item
+			background-color: $white 
+			border-color: $white
 
 
 	&__item 
@@ -21,6 +35,7 @@
 		overflow: hidden
 		transition: 0.4s
 		border: 1px solid $gray2
+		background-color: $white
 		&.swiper-button-disabled
 			opacity: 0.6 
 			pointer-events: none
@@ -48,31 +63,6 @@
 		&--next:hover 
 			svg 
 				transform: translateX(4px)
-
-	&--line
-		.slider-arrow__item
-			position: absolute 
-			bottom: 38%
-			left: 70px 
-			z-index: 5
-			&--next 
-				right: 70px
-				left: auto
-
-		+bp($bp-large)
-			display: none
-
-	+bp($bp-large)
-		&--line-nt
-			display: flex 
-			position: absolute 
-			top: 0 
-			bottom: auto
-			right: 50px 
-			width: 132px
-
-			.slider-arrow__item
-				position: static 
 				transform: none
 
 	+bp($bp-small)
@@ -80,14 +70,32 @@
 			width: 40px 
 			height: 40px
 
-.swiper-pagination-bullet
-	width: 4px !important
-	height: 4px !important 
-	background-color: $white !important 
-	opacity: 0.5 !important
-	margin: 0 3 !important
+.slider-pagination
+	width: 100% 
+	position: absolute 
+	bottom: 15px
+	left: 0 
+	z-index: 3
+	display: flex
+	justify-content: center 
+	padding-left: 10px 
+	padding-right: 6px
+	.swiper-pagination-bullet
+		width: 100% 
+		max-width: 80px
+		height: 4px
+		margin-right: 4px
+		background-color: $gray4
+		border-radius: 5px
+		cursor: pointer
+		transition: 0.3s 
+		&:hover 
+			background-color: $gray
+	.swiper-pagination-bullet-active
+		background-color: $white
+	
+	+bp($bp-tablet)
+		.swiper-pagination-bullet
+			max-width: 60px
 
-	&.swiper-pagination-bullet-active
-		opacity: 1 !important 
-		transform: scale(1.8)
 			

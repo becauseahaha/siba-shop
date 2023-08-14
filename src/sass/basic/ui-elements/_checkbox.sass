@@ -18,7 +18,7 @@
 		height: 0
 
 		&:checked ~ .form-checkbox__checkmark
-			border-color: $yellow2
+			border-color: $blue-light3
 			&:before
 				transform: scale(1)
 			&:after
@@ -36,17 +36,18 @@
 		position: absolute
 		top: -2px
 		left: 0
-		border: 1px solid $gray3
+		border: 1px solid $baseTxt
 		background-color: $white
 		width: 24px
 		height: 24px
+		border-radius: 5px
 		overflow: hidden
 		transition: all 0.25s cubic-bezier(.4,.0,.23,1)
 		&:before 
 			content: ''
 			width: 100% 
 			height: 100% 
-			background-color: $yellow2 
+			background-color: $blue-light2 
 			position: absolute 
 			top: 0
 			left: 0
@@ -55,8 +56,8 @@
 
 		&:after
 			content: ''
-			background: url("../images/check.png") 50% no-repeat
-			background-size: 12px 10px
+			background: url("../images/check.svg") 50% no-repeat
+			background-size: 13px 9px
 			width: 24px
 			height: 24px
 			opacity: 0

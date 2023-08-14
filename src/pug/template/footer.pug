@@ -1,2 +1,16 @@
 mixin footer(props)
-  footer.footer
+	footer.footer
+		.wrapper
+			.footer__top 
+				.footer__unit 
+					+svg('footer-sale')
+					small.footer__unit-text Выгодная система скидок
+				.footer__unit 
+					+svg('footer-support')
+					small.footer__unit-text Сервисная поддержка
+				.footer__unit 
+					+svg('footer-delivery')
+					small.footer__unit-text Бесплатная доставка
+				.footer__unit 
+					+svg('')
+					small.footer__unit-text Бесплатное обучение

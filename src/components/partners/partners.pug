@@ -1,0 +1,12 @@
+mixin partners()
+	section.partners.sec.sec--line
+		.wrapper
+			.partners__content
+				h5.partners__title мы Работаем только с лучшими производителями
+				.partners__list 
+					block
+	
+mixin partners-item(data)
+	.partners-item 
+		a.partners-item__logo(href="#" target="_blank" style=`background-color: ${data.color}`)
+			img(src=`images/partners/${data.logo}.png` alt="logo")

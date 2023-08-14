@@ -1,0 +1,28 @@
+include ../slider-arrow/slider-arrow
+
+mixin banner-slider()
+	.banner-slider.swiper-container.js-banner-sl
+		.swiper-wrapper 
+			.swiper-slide 
+				+banner-item({
+					img: 'products/banner-sl-1.jpg',
+					title: 'Как выбрать альтернативу ушедшим брендам?',
+					color: '#FF671F'
+				})
+			.swiper-slide 
+				+banner-item({
+					img: 'products/banner-sl-1.jpg',
+					title: 'Как выбрать альтернативу ушедшим брендам?',
+					color: '#0057B8'
+				})
+		+slider-arrow({prev: 'js-banner-sl__prev', next: 'js-banner-sl__next'}).slider-arrow--center.slider-arrow--white
+
+mixin banner-item(data)
+	a.banner-item(href="#" style=`background-color: ${data.color}`)
+		.banner-item__image
+			+img(data.img) 
+		.banner-item__desc
+			h3.banner-item__title=data.title 
+			.banner-item__link.link.link--white-mark Полезно знать
+
+

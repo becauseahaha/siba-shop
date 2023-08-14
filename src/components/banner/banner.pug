@@ -1,0 +1,7 @@
+mixin banner()
+	.banner.swiper-container.js-banner&attributes(attributes)
+		.swiper-wrapper 
+				- for(var i = 0; i < 10; i++)
+					.swiper-slide 
+						a.banner__image(style="background-image: url('images/products/banner.jpg')")
+		.js-banner__pagination.slider-pagination

@@ -1,23 +1,67 @@
-
 .sec
 	padding: 45px 0 
 	&--small
-		padding-bottom: 25px 
+		padding-bottom: 0px 
+	&--bottom 
+		padding-top: 0 
+		padding-bottom: 90px
+	&--line 
+		padding: 90px 0
 	
 	+bp($bp-large)
 		padding: 33px 0 
 		&--small
-			padding-bottom: 10px 
-	
-	+bp($bp-large)
-		padding: 18px 0 
-		&--small
 			padding-bottom: 5px 
+		&--bottom 
+			padding-top: 0 
+			padding-bottom: 66px
+		&--line 
+			padding: 66px 0
 	
 	+bp($bp-tablet)
 		padding: 25px 0 
 		&--small
 			padding-bottom: 5px 
+		&--bottom 
+			padding-top: 0 
+			padding-bottom: 50px
+		&--line 
+			padding: 50px 0
+	
+	+bp($bp-small)
+		padding: 18px 0 
+		&--small
+			padding-bottom: 5px
+		&--line 
+			padding: 36px 0
+
+.banner-grid
+	padding-top: 15px 
+	padding-bottom: 45px 
+	&__part 
+		display: flex 
+	&__left 
+		width: 66.2% 
+		margin-right: 20px
+		flex-shrink: 0
+	
+	+bp($bp-medium)
+		&__part 
+			display: block 
+		&__left 
+			width: 100%
+			margin: 0 0 15px 0
+	
+	+bp($bp-small2)
+		padding-top: 5px
+		padding-bottom: 18px
+		width: calc(100% + 24px)
+		margin-left: -12px
+		&__left 
+			margin: 0 0 6px 0
+
+	
+	
 .products
 	&__container 
 		overflow: hidden
@@ -96,6 +140,197 @@
 		.slider-arrow
 			opacity: 1
 			pointer-events: auto
+
+.category 
+	&__list 
+		display: flex 
+		flex-wrap: wrap 
+		margin: 0 -10px 
+		+bp($bp-tablet)
+			margin: 0 -3px
+	&__item 
+		width: 33.33%
+		padding: 0 10px
+		margin: 0px 0 20px 0
+
+		&--w50 
+			+bp(993px, 'min')
+				width: 50%
+
+			.b-category 
+				+bp(1201px, 'min')
+					padding-right: 75px
+					padding-bottom: 45px
+
+				+bp(1401px, 'min')
+					height: 320px
+
+		+bp($bp-medium)
+			width: 50%
+			order: 3
+			&:first-child 
+				width: 100%
+				order: 1 
+			&:nth-child(3)
+				order: 2
+		+bp($bp-tablet)
+			padding: 0 3px
+			margin-bottom: 6px
+		+bp($bp-small)
+			width: 100%
+			&:nth-child(2)
+				.b-category__mobile-foil
+					background-image: url('../images/c-4-mobile.jpg') !important
+			&:nth-child(3)
+				.b-category__mobile-foil
+					background-image: url('../images/c-3-mobile2.jpg') !important
+			&:nth-child(1)
+				.b-category__mobile-foil
+					background-image: url('../images/c-1-mobile2.jpg') !important
+
+.settings 
+	+foil 
+	background-image: url('../images/set-foil.jpg')
+	color: $white 
+	position: relative
+	&:before 
+		content: ''
+		width: 713px 
+		height: 480px 
+		+foil 
+		background-image: url('../images/rounds.svg')
+		position: absolute 
+		top: 0 
+		left: 39% 
+	&__block 
+		max-width: 450px
+		padding-top: 9%
+		position: relative
+		z-index: 2
+	&__part 
+		display: flex 
+		justify-content: space-between 
+	&__image
+		padding-top: 50px
+		position: relative
+		z-index: 1
+	&__name
+		display: block
+		text-transform: uppercase 
+		letter-spacing: 0.75px
+		margin-bottom: 20px
+		font-size: rem(15px)
+	&__title
+		font-weight: 500
+	
+	+bp($bp-large2)
+		&__block 
+			padding-top: 6%
+	
+	+bp($bp-large3)
+		&__image 
+			padding-top: 120px
+	
+	+bp($bp-medium)
+		&:before 
+			left: 54%
+		&__part 
+			display: block
+		&__image 
+			margin-top: -5% 
+			padding-top: 0
+			margin-right: -50px
+		&__block 
+			padding-top: 80px
+	
+	+bp($bp-small)
+		&__block 
+			padding-top: 40px
+		&__image 
+			margin-top: 30px
+			width: calc(100% + 140px)
+			margin-left: -80px
+		&__title
+			font-size: rem(22px)
+		&__name
+			font-size: rem(12px)
+
+.services 
+	padding-top: 20px
+	&__grid 
+		display: grid 
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 20px
+	
+	+bp($bp-tablet)
+		padding-top: 15px
+		&__grid 
+			grid-gap: 15px
+	
+	+bp($bp-small2)
+		&__grid 
+			display: block
+
+.videos 
+	background-color: $gray2
+	&__slider 
+		position: relative
+		.b-video:first-child
+			grid-column: 1/3
+			grid-row: 1/3
+			+bp($bp-large2)
+				display: flex 
+				flex-wrap: wrap 
+				.b-video__block-image 
+					flex-grow: 1 
+	&__slide 
+		display: grid 
+		grid-template-columns: repeat(4, 1fr)
+		grid-column-gap: 20px
+		grid-row-gap: 33px
+	&__container 
+		overflow: hidden
+	
+	+bp($bp-large)
+		&__slide
+			grid-row-gap: 20px
+	
+	+bp(850px)
+		&__slide
+			grid-template-columns: repeat(3, 1fr)
+			.b-video
+				&:nth-child(3),
+				&:nth-child(5)
+					display: none
+	
+	+bp($bp-small)
+		&__slide 
+			display: block
+		
+		.slider-arrow
+			display: none
+
+.news 
+	&__container 
+		overflow: hidden
+	&__slider
+		position: relative
+	
+	+bp($bp-medium)
+		.wrapper 
+			padding-right: 0
+		&__slider
+			width: 75%
+		&__arrow 
+			display: none
+
+
+
+
+
+				
+			
+		
 
 	
 	

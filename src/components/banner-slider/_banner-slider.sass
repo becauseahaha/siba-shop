@@ -1,0 +1,92 @@
+.banner-slider
+	overflow: hidden
+	position: relative
+	.slider-arrow 
+		opacity: 0 
+		transition: $transition
+		top: 39% 
+		transform: none 
+		+bp(1100px)
+			top: 30%
+	&:hover 
+		.slider-arrow 
+			opacity: 1
+	+bp($bp-medium)
+		.swiper-wrapper
+			transform: none !important 
+			display: grid 
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap: 15px 
+			height: auto
+		.slider-arrow 
+			display: none
+		.swiper-slide 
+			opacity: 1 !important
+			transform: none !important
+			width: 100% !important
+			height: auto
+	+bp($bp-small2)
+		.swiper-wrapper
+			grid-gap: 6px 
+
+.banner-item 
+	display: flex 
+	flex-wrap: wrap
+	border-radius: 10px
+	overflow: hidden
+	height: 100%
+	&__desc
+		padding: 36px 30px 40px 40px 
+		color: $white
+		overflow: hidden
+		border-bottom-left-radius: 10px
+		border-bottom-right-radius: 10px
+		margin-top: auto
+	&__image
+		overflow: hidden
+		border-top-left-radius: 10px
+		border-top-right-radius: 10px
+	&__title
+		margin: 0 0 30px 0
+	
+	+bp($bp-large)
+		&__desc
+			padding: 25px 30px 30px
+			font-size: rem(30px)	
+		&__title
+			font-size: rem(29px)
+			margin-bottom: 18px
+	
+	+bp($bp-large2)	
+		&__title
+			font-size: rem(24px)
+	
+	+bp($bp-medium)
+		flex-wrap: wrap 
+		flex-direction: row-reverse 
+		&__desc 
+			width: 50% 
+			padding: 25px 
+		&__title
+			font-size: rem(17px)
+		&__image 
+			width: 50% 
+			height: 100% 
+			img 
+				+img
+	
+	+bp($bp-small2)
+		display: block
+		height: auto
+		&__image
+			display: none 
+		&__desc
+			width: 100% 
+			padding: 15px
+			height: 95px
+		&__title
+			font-size: rem(12px)
+			line-height: 110% 
+			letter-spacing: 0.24px
+			font-weight: 400
+			margin-bottom: 0

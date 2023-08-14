@@ -73,7 +73,7 @@ img
 	
 	&+small
 		display: block
-		color: $gray7
+		color: $gray4
 		margin: 7px 0 round($baseGutter*1.5)
 		text-align: center
 	
@@ -225,7 +225,30 @@ ul,ol,blockquote
 	p
 		margin: 0
 
+.title
+	margin-bottom: 36px 
+	margin-top: 0
+	+bp($bp-small)
+		margin-bottom: 20px
 
+.h6-title 
+		font-size: rem(15px)
+		line-height: 140%
+		text-transform: uppercase 
+		font-weight: 500 
+		letter-spacing: 0.75px
+		margin: 20px 0 0
+
+		+bp($bp-medium)
+			font-size: rem(12px)
+			letter-spacing: 0.6px
+
+.small-title
+	display: inline-block
+	font-size: rem(13px)
+	font-weight: 300 
+	letter-spacing: -0.13px
+	margin-top: 4px
 		
 +bp($bp-small)
 	h1

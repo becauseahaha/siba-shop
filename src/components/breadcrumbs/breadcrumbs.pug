@@ -1,10 +1,10 @@
-mixin breadcrumbs(links)
-  //start breadcrumbs
-  .breadcrumbs&attributes(attributes)
-    .breadcrumbs__list
-      each item in links
-        a(href="#!").link.breadcrumbs__link(class={'breadcrumbs__link--current': item === links[links.length - 1]})= item
+//- mixin breadcrumbs(links)
+//-   //start breadcrumbs
+//-   .breadcrumbs&attributes(attributes)
+//-     .breadcrumbs__list
+//-       each item in links
+//-         a(href="#!").link.breadcrumbs__link(class={'breadcrumbs__link--current': item === links[links.length - 1]})= item
 
-    //- .only-mobile
-    //-   a(href="#!").breadcrumbs__link.breadcrumbs__link--back Сканеры штрих-кода (1 354)
-  //end breadcrumbs
+//-     //- .only-mobile
+//-     //-   a(href="#!").breadcrumbs__link.breadcrumbs__link--back Сканеры штрих-кода (1 354)
+//-   //end breadcrumbs

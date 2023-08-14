@@ -37,6 +37,9 @@ body
 	position: relative 
 	z-index: 2
 
+	+bp(730px)
+		padding-bottom: 54px
+
 .main
 	flex-grow: 1
 	padding-top: 185px
@@ -79,9 +82,5 @@ img
 		pointer-events: auto 
 		height: auto
 
-.title
-	margin-bottom: 36px 
-	margin-top: 0
-	+bp($bp-small)
-		margin-bottom: 20px
+
 

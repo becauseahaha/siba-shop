@@ -1,0 +1,83 @@
+.b-category
+	display: flex 
+	align-items: flex-end 
+	justify-content: flex-end 
+	position: relative
+	height: 340px
+	padding: 20px 44px 45px 20px
+	border-radius: 10px
+	overflow: hidden
+	background-repeat: no-repeat 
+	background-size: cover 
+	background-position: top center
+	&__data
+		position: absolute 
+		left: 35px 
+		top: 35px
+		z-index: 3
+		color: $white
+	&__name
+		font-size: rem(15px)
+		line-height: rem(21px)
+		margin: 0 0 4px 0
+		text-transform: uppercase
+		letter-spacing: 0.24px
+	&__image
+		transition: 0.25s ease
+		img 
+			max-height: 100%
+	&__link 
+		font-size: rem(13px)
+		font-weight: 300
+	&__mobile-foil 
+		display: none
+	&:hover 
+		.b-category__image 
+			transform: translateX(-12px)
+		.b-category__link 
+			&:after 
+				transform: scale(0)
+	
+	+bp($bp-large)
+		height: 24.2vw
+		padding: 8%
+	
+	+bp($bp-large3)
+		&__image 
+			height: 180px 
+			img 
+				max-height: 100%
+	
+	+bp($bp-medium)
+		height: 36vw
+		padding: 5%
+
+		&__mobile-foil 
+			display: block 
+			position: absolute 
+			top: 0 
+			left: 0 
+			bottom: 0 
+			right: 0 
+			border-radius: 10px
+			z-index: 1 
+			background-repeat: no-repeat 
+			background-size: cover 
+			background-position: top center
+		&__image
+			position: relative 
+			z-index: 2
+		&__data 
+			top: 25px
+			left: 25px
+	+bp($bp-small)
+		min-height: 220px
+		height: 66vw
+		padding: 8%
+		&__image
+			height: 220px
+		&__name
+			max-width: 195px
+	+bp($bp-extra-small)
+		&__image
+			height: 41vw

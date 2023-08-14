@@ -1,0 +1,11 @@
+mixin b-video(data)
+	a.b-video(href="#" data-link=data.link data-src=data.url class=data.cl)
+		.b-video__block-image
+			+img(data.img).b-video__image
+			if data.play
+				.b-video__icon.btn-play
+					+svg('play')
+					+svg('play-hov').btn-play__hov
+		.b-video__desc 
+			h6.h6-title=data.title 
+			small.small-title=data.date
