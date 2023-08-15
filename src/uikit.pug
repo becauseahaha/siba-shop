@@ -196,13 +196,13 @@ block content
 				.fx-item
 
 			.fb-wrap.elem
-				.color
-					.color-box.gray(style="border: 1px solid #9E9EA5")
-					.color-box.gray2
-					.color-box.gray3
-					.color-box.gray4
-					.color-box.yellow
-					.color-box.yellow2
+				//- .color
+				//- 	.color-box.gray(style="border: 1px solid #9E9EA5")
+				//- 	.color-box.gray2
+				//- 	.color-box.gray3
+				//- 	.color-box.gray4
+				//- 	.color-box.yellow
+				//- 	.color-box.yellow2
 			.fb-wrap
 				h2 Типография
 				.typography.elem
@@ -248,25 +248,43 @@ block content
 						.typography__value
 							small 
 								b Hayes Valley Studio
-
+							
+	section.sec.sec--line
+		.wrapper
 			.fb-wrap
-				h2 Кнопки
-				.button.elem(style="margin-bottom: 30px;")
-					a.btn(href="#") 
-						span Каталог ...
-						.btn__shadow
-					.typography__line
-					a.btn.btn--blue(href="#") 
-						span Акции
-						.btn__shadow
-					.typography__line
-					a.btn.btn--middle(href="#") 
-						span Забронировать
-						.btn__shadow
-					.typography__line
-					a.btn.btn--dark(href="#") 
-						span Забронировать
-						.btn__shadow
+				h3 Кнопки
+				a.btn(href="#") 
+					span Каталог
+				.typography__line
+				a.btn.btn--blue(href="#") 
+					span Акции
+					.btn__shadow
+				.typography__line
+				a.btn.btn--bor-white(href="#") 
+					span Забронировать
+				.typography__line
+				a.btn.btn--icon(href="#")
+					+svg('send')(width="24" height="24")
+				.typography__line
+				a.btn.btn--icon.btn--blue(href="#")
+					+svg('search')(width="24" height="24")
+				.typography__line
+				a.btn-play(href="#")
+					+svg('play')
+					+svg('play-hov').btn-play__hov
+				.typography__line
+				a.btn.btn--small(href='#')
+					span Забронировать
+				.typography__line
+				a.btn.btn--middle(href='#')
+					span Забронировать
+				.typography__line
+				a.btn.btn--large(href='#')
+					span Забронировать
+				.typography__line
+				a.btn.btn--arrow.btn--blue(href='#')
+					+svg('basket')
+					span Корзина
 
 						
 
@@ -275,17 +293,15 @@ block content
 				.typography__line
 					a.link(href="#") Ссылка
 				.typography__line
-					a.link.link--blue(href="#") Ссылка
+					a.link.link--default(href="#") Ссылка
 				.typography__line
-					a.link.link--blue.link--blue-bor(href="#") Ссылка
+					a.link.link--bor(href="#") Ссылка
 				.typography__line
-					a.link.link--yellow(href="#") Ссылка
+					a.link.link--bor.link--bor--white(href="#") Ссылка
 				.typography__line
-					a.link.link--yellow.link--yellow-bor(href="#") Ссылка
+					a.link.link--bor.link--bor--white.link--white(href="#") Ссылка
 				.typography__line
-					a.link.link--arrow(href="#")
-						+svg('arrow')
-						span Ссылка
+					a.link.link--white-mark(href="#") Ссылка
 
 			.fb-wrap
 				h2 Формы

@@ -8,7 +8,7 @@
     </title>
     <link rel="icon" href="">
     <link rel="icon" href="" sizes="16x16">
-    <link rel="stylesheet" href="css/main.css?v=1692045344603">
+    <link rel="stylesheet" href="css/main.css?v=1692089182275">
   </head>
   <body>
     <div class="page js-page">
@@ -273,16 +273,7 @@
               </div>
               <div class="fx-item"></div>
             </div>
-            <div class="fb-wrap elem">
-              <div class="color">
-                <div class="color-box gray" style="border: 1px solid #9E9EA5"></div>
-                <div class="color-box gray2"></div>
-                <div class="color-box gray3"></div>
-                <div class="color-box gray4"></div>
-                <div class="color-box yellow"></div>
-                <div class="color-box yellow2"></div>
-              </div>
-            </div>
+            <div class="fb-wrap elem"></div>
             <div class="fb-wrap">
               <h2>Типография</h2>
               <div class="typography elem">
@@ -344,29 +335,46 @@
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="sec sec--line">
+          <div class="wrapper">
             <div class="fb-wrap">
-              <h2>Кнопки</h2>
-              <div class="button elem" style="margin-bottom: 30px;"><a class="btn" href="#"> <span>Каталог ...</span>
-                  <div class="btn__shadow"></div></a>
-                <div class="typography__line"></div><a class="btn btn--blue" href="#"> <span>Акции</span>
-                  <div class="btn__shadow"></div></a>
-                <div class="typography__line"></div><a class="btn btn--middle" href="#"> <span>Забронировать</span>
-                  <div class="btn__shadow"></div></a>
-                <div class="typography__line"></div><a class="btn btn--dark" href="#"> <span>Забронировать</span>
-                  <div class="btn__shadow"></div></a>
-              </div>
+              <h3>Кнопки</h3><a class="btn" href="#"> <span>Каталог</span></a>
+              <div class="typography__line"></div><a class="btn btn--blue" href="#"> <span>Акции</span>
+                <div class="btn__shadow"></div></a>
+              <div class="typography__line"></div><a class="btn btn--bor-white" href="#"> <span>Забронировать</span></a>
+              <div class="typography__line"></div><a class="btn btn--icon" href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="images/sprites.svg#send"></use>
+                </svg></a>
+              <div class="typography__line"></div><a class="btn btn--icon btn--blue" href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="images/sprites.svg#search"></use>
+                </svg></a>
+              <div class="typography__line"></div><a class="btn-play" href="#">
+                <svg>
+                  <use xlink:href="images/sprites.svg#play"></use>
+                </svg>
+                <svg class="btn-play__hov">
+                  <use xlink:href="images/sprites.svg#play-hov"></use>
+                </svg></a>
+              <div class="typography__line"></div><a class="btn btn--small" href="#"><span>Забронировать</span></a>
+              <div class="typography__line"></div><a class="btn btn--middle" href="#"><span>Забронировать</span></a>
+              <div class="typography__line"></div><a class="btn btn--large" href="#"><span>Забронировать</span></a>
+              <div class="typography__line"></div><a class="btn btn--arrow btn--blue" href="#">
+                <svg>
+                  <use xlink:href="images/sprites.svg#basket"></use>
+                </svg><span>Корзина</span></a>
             </div>
             <div class="fb-wrap">
               <h2>Ссылки</h2>
               <div class="typography__line"><a class="link" href="#">Ссылка</a></div>
-              <div class="typography__line"><a class="link link--blue" href="#">Ссылка</a></div>
-              <div class="typography__line"><a class="link link--blue link--blue-bor" href="#">Ссылка</a></div>
-              <div class="typography__line"><a class="link link--yellow" href="#">Ссылка</a></div>
-              <div class="typography__line"><a class="link link--yellow link--yellow-bor" href="#">Ссылка</a></div>
-              <div class="typography__line"><a class="link link--arrow" href="#">
-                  <svg>
-                    <use xlink:href="images/sprites.svg#arrow"></use>
-                  </svg><span>Ссылка</span></a></div>
+              <div class="typography__line"><a class="link link--default" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--bor" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--bor link--bor--white" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--bor link--bor--white link--white" href="#">Ссылка</a></div>
+              <div class="typography__line"><a class="link link--white-mark" href="#">Ссылка</a></div>
             </div>
             <div class="fb-wrap">
               <h2>Формы</h2>
@@ -459,7 +467,7 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="wrapper">
+        <div class="wrapper footer__wrapper">
           <div class="footer__top"> 
             <div class="footer__unit"> 
               <svg>
@@ -478,9 +486,109 @@
             </div>
             <div class="footer__unit"> 
               <svg>
-                <use xlink:href="images/sprites.svg#"></use>
+                <use xlink:href="images/sprites.svg#footer-learn"></use>
               </svg><small class="footer__unit-text">Бесплатное обучение</small>
             </div>
+          </div>
+          <div class="footer__part"> 
+            <div class="footer__column footer__column--left"><a class="footer__unit-top" href="main.html"><img src="./images/logo.svg" alt=""/></a>
+              <div class="footer__city"> <span class="footer__city-value">Москва</span>
+                <svg width="14" height="7">
+                  <use xlink:href="images/sprites.svg#arrow-bottom"></use>
+                </svg>
+              </div>
+              <div class="footer__item"> 
+                <address class="footer__data-name">125438, г. Москва, 4-й Лихачёвский переулок, 4с2</address><span>Офис: 08:00-18:00, касса 08:00-17:00</span>
+              </div>
+              <div class="footer__item"> <a class="footer__data-name link link--bor link--bor-white link--white" href="tel:+74951208137">+7 (495) 120-81-37</a><span>Бесплатно, с 08:00 до 18:00</span></div>
+              <div class="footer__item"> <a class="footer__data-name link link--bor link--bor-white link--white" href="mailto:b2b@siba-vending.ru">b2b@siba-vending.ru</a><span>Остались вопросы? Напишите нам</span></div>
+              <div class="footer__tablet"> 
+                <div class="footer__unit-top footer__unit-top--small">
+                  <h6 class="h6-title">Рассылка всего самого вкусного из новинок и акций продукции</h6>
+                  <form class="footer__form js-form" action="#" name="form-search" data-thank="#popup-thank">
+                    <div class="form-field form-group">
+                      <div class="form-field__label">Email</div>
+                      <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required="required"/>
+                      <div class="form-field__mask"></div>
+                    </div>
+                    <button class="btn btn--middle footer__btn" type="submit"><span>Подписаться</span>
+                      <svg class="footer__btn-icon">
+                        <use xlink:href="images/sprites.svg#send"></use>
+                      </svg>
+                    </button>
+                  </form>
+                  <div class="soc"> <a class="soc__link" href="#" target="_blank">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#facebook"></use>
+                      </svg></a><a class="soc__link" href="#" target="_blank">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#instagram"></use>
+                      </svg></a><a class="soc__link" href="#" target="_blank">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#youtube"></use>
+                      </svg></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column footer__column--flex footer__column--menu">
+              <div class="footer__column-unit">
+                <div class="footer__unit-top"> 
+                  <h6 class="h6-title">Сиба-вендинг</h6>
+                </div>
+                <ul class="footer__list"> 
+                  <li class="footer__list-item"><a class="footer__link" href="#">О компании</a></li>
+                  <li class="footer__list-item"><a class="footer__link" href="#">Оплата и доставка</a></li>
+                  <li class="footer__list-item"><a class="footer__link" href="#">Гарантия и сопровождение</a></li>
+                </ul>
+              </div>
+              <div class="footer__column-unit"> 
+                <div class="footer__unit-top footer__unit-top--top">
+                  <h6 class="h6-title">Каталог</h6>
+                </div>
+                <ul class="footer__list"> 
+                  <li class="footer__list-item"><a class="footer__link" href="#">Вендинговые автоматы</a></li>
+                  <li class="footer__list-item"><a class="footer__link" href="#">Ингредиенты для вендинговых автоматов</a></li>
+                  <li class="footer__list-item"><a class="footer__link" href="#">Кофемашины для бизнеса</a></li>
+                  <li class="footer__list-item"><a class="footer__link" href="#">Доп. оборудование для вендинга</a></li>
+                  <li class="footer__list-item"><a class="footer__link" href="#">Запчасти и ремонт</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--right footer__desctop">
+              <div class="footer__unit-top footer__unit-top--small">
+                <h6 class="h6-title">Рассылка всего самого вкусного из новинок и акций продукции</h6>
+                <form class="footer__form js-form" action="#" name="form-search" data-thank="#popup-thank">
+                  <div class="form-field form-group">
+                    <div class="form-field__label">Email</div>
+                    <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required="required"/>
+                    <div class="form-field__mask"></div>
+                  </div>
+                  <button class="btn btn--middle footer__btn" type="submit"><span>Подписаться</span>
+                    <svg class="footer__btn-icon">
+                      <use xlink:href="images/sprites.svg#send"></use>
+                    </svg>
+                  </button>
+                </form>
+                <div class="soc"> <a class="soc__link" href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#facebook"></use>
+                    </svg></a><a class="soc__link" href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#instagram"></use>
+                    </svg></a><a class="soc__link" href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#youtube"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__part footer__part--bottom"> 
+            <div class="footer__column footer__column--left"><span>2023 © СИБА-Вендинг. Все права защищены</span></div>
+            <div class="footer__column footer__column--flex">
+              <div class="footer__column-unit"> <a class="link link--bor link--bor-white link--white" href="#" target="_blank">Пользовательское соглашение</a></div>
+              <div class="footer__column-unit footer__column-unit--rules"><a class="link link--bor link--bor-white link--white" href="#" target="_blank">Политика конфиденциальности</a></div>
+            </div>
+            <div class="footer__column footer__column--right footer__web-unit"><span class="footer__web">Разработка сайта — <a href="https://nikoland.ru/" target="_blank" class="link link--bor link--bor-white link--white footer__web-link">Nikoland</a></span></div>
           </div>
         </div>
       </footer>
@@ -574,7 +682,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1692045344606"></script>
-    <script src="js/main.js?v=1692045344606"></script>
+    <script src="js/vendor.js?v=1692089182279"></script>
+    <script src="js/main.js?v=1692089182279"></script>
   </body>
 </html>

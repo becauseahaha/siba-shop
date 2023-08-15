@@ -18,7 +18,7 @@ h3
 	line-height: $h3-lh
 	font-weight: 400
 	letter-spacing: 0.68px
-	margin: 45px 0 25px
+	margin: 45px 0 30px
 
 h4
 	font-size: $h4-fs
@@ -139,8 +139,8 @@ ul
 	li
 		&:after
 			content: ''
-			width: 6px 
-			height: 6px 
+			width: 5px 
+			height: 5px 
 			border-radius: 50% 
 			background-color: $baseTxt
 			position: absolute
@@ -224,6 +224,14 @@ ul,ol,blockquote
 	h6,
 	p
 		margin: 0
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child
+	margin-top: 0
+
 
 .title
 	margin-bottom: 36px 
@@ -300,6 +308,7 @@ ul,ol,blockquote
 		
 		&+img
 			margin: round($baseGutter*0.2) 0 0
+	
 
 	small 
 		font-size: $small-fs-480
@@ -330,7 +339,7 @@ ul,ol,blockquote
 			margin-top: 5px
 
 	ul, ol 
-		margin: 25px 0
+		margin: 20px 0
 
 	table 
 		td

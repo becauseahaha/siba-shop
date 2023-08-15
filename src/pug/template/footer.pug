@@ -1,6 +1,8 @@
+include ../../components/form-field/form-field
+
 mixin footer(props)
 	footer.footer
-		.wrapper
+		.wrapper.footer__wrapper
 			.footer__top 
 				.footer__unit 
 					+svg('footer-sale')
@@ -12,5 +14,75 @@ mixin footer(props)
 					+svg('footer-delivery')
 					small.footer__unit-text Бесплатная доставка
 				.footer__unit 
-					+svg('')
+					+svg('footer-learn')
 					small.footer__unit-text Бесплатное обучение
+			.footer__part 
+				.footer__column.footer__column--left
+					a.footer__unit-top(href="main.html")
+						+img('logo.svg')
+					.footer__city 
+						span.footer__city-value Москва
+						+svg('arrow-bottom')(width="14" height="7")
+					.footer__item 
+						address.footer__data-name 125438, г. Москва, 4-й Лихачёвский переулок, 4с2
+						span Офис: 08:00-18:00, касса 08:00-17:00
+					.footer__item 
+						a.footer__data-name.link.link--bor.link--bor-white.link--white(href="tel:+74951208137") +7 (495) 120-81-37
+						span Бесплатно, с 08:00 до 18:00
+					.footer__item 
+						a.footer__data-name.link.link--bor.link--bor-white.link--white(href="mailto:b2b@siba-vending.ru") b2b@siba-vending.ru
+						span Остались вопросы? Напишите нам
+					.footer__tablet 
+						+footer-unit()
+				.footer__column.footer__column--flex.footer__column--menu
+					.footer__column-unit
+						.footer__unit-top 
+							h6.h6-title Сиба-вендинг
+						ul.footer__list 
+							li.footer__list-item: a.footer__link(href="#") О компании
+							li.footer__list-item: a.footer__link(href="#") Оплата и доставка
+							li.footer__list-item: a.footer__link(href="#") Гарантия и сопровождение
+					.footer__column-unit 
+						.footer__unit-top.footer__unit-top--top
+							h6.h6-title Каталог
+						ul.footer__list 
+							li.footer__list-item: a.footer__link(href="#") Вендинговые автоматы
+							li.footer__list-item: a.footer__link(href="#") Ингредиенты для вендинговых автоматов
+							li.footer__list-item: a.footer__link(href="#") Кофемашины для бизнеса
+							li.footer__list-item: a.footer__link(href="#") Доп. оборудование для вендинга
+							li.footer__list-item: a.footer__link(href="#") Запчасти и ремонт
+				.footer__column.footer__column--right.footer__desctop
+					+footer-unit()
+			.footer__part.footer__part--bottom 
+				.footer__column.footer__column--left
+					span 2023 © СИБА-Вендинг. Все права защищены
+				.footer__column.footer__column--flex
+					.footer__column-unit 
+						a.link.link--bor.link--bor-white.link--white(href="#" target="_blank") Пользовательское соглашение
+					.footer__column-unit.footer__column-unit--rules
+						a.link.link--bor.link--bor-white.link--white(href="#" target="_blank") Политика конфиденциальности
+				.footer__column.footer__column--right.footer__web-unit
+					span.footer__web Разработка сайта — <a href="https://nikoland.ru/" target="_blank" class="link link--bor link--bor-white link--white footer__web-link">Nikoland</a>
+
+mixin footer-unit()
+	.footer__unit-top.footer__unit-top--small
+		h6.h6-title Рассылка всего самого вкусного из новинок и акций продукции
+		form.footer__form.js-form(action="#" name="form-search" data-thank="#popup-thank")
+			+form-field({
+				input: true,
+				label: 'Email',
+				type: 'email',
+				name: 'email',
+				msg: '',
+				req: true,
+			})
+			button.btn.btn--middle.footer__btn(type="submit")
+				span Подписаться
+				+svg('send').footer__btn-icon
+		.soc 
+			a.soc__link(href="#" target="_blank")
+				+svg('facebook')
+			a.soc__link(href="#" target="_blank")
+				+svg('instagram')
+			a.soc__link(href="#" target="_blank")
+				+svg('youtube')

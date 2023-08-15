@@ -1,15 +1,30 @@
 .footer 
 	color: $white 
 	background-color: $blue
+	padding-bottom: 60px 
+	position: relative 
+	overflow: hidden 
+	&:after
+		content: ''
+		width: 2031px 
+		height: 640px 
+		background-image: url('../images/footer-decor.png')
+		position: absolute 
+		left: 62% 
+		bottom: 0
 	&__top 
-		padding: 54px 0
+		padding: 50px 0
 		display: flex 
 		justify-content: space-between 
 		align-items: center
-		border-bottom: 1px solid $blue-light2 
+		border-bottom: 1px solid $gray5
+	&__wrapper
+		position: relative
+		z-index: 2
 	&__unit 
 		display: flex 
 		align-items: center
+		padding-right: 20px
 		svg 
 			width: 50px 
 			height: 50px 
@@ -20,3 +35,199 @@
 		text-transform: uppercase
 		letter-spacing: 0.84px
 		font-weight: 400
+	&__part 
+		display: flex 
+		justify-content: space-between 
+		padding-top: 70px
+	&__column
+		font-size: rem(14px)
+		&--flex 
+			display: flex
+		&--right 
+			width: 360px
+		&--left 
+			width: 340px
+	&__unit-top 
+		display: inline-block
+		margin-bottom: 37px 
+	&__item 
+		margin-bottom: 30px 
+		&:last-child 
+			margin-bottom: 0
+		span
+			display: block
+			opacity: 0.5 
+			font-size: rem(12px)
+			margin-top: 6px
+			font-weight: 300
+	&__data-name 
+		line-height: 120%
+	&__form 
+		max-width: 360px
+		margin-top: 20px 
+		position: relative 
+		margin-bottom: 50px
+		.form-field__input 
+			padding-right: 160px
+	&__btn 
+		position: absolute 
+		right: 9px 
+		top: 50% 
+		transform: translateY(-50%)
+		z-index: 3
+	&__list 
+		margin: 0
+		max-width: 191px
+	&__list-item 
+		padding: 0 
+		margin-bottom: 16px 
+		&:after 
+			display: none 
+	&__link 
+		font-weight: 300 
+		font-size: rem(14px)
+		line-height: 100%
+		transition: $transition 
+		&:hover 
+			color: inherit 
+			font-weight: 600
+	&__column-unit
+		margin: 0 5px
+		width: 275px 
+		flex-shrink: none
+	&__city 
+		margin-bottom: 10px
+		cursor: pointer
+		svg 
+			fill: transparent
+	&__web 
+		display: flex 
+		align-items: center 
+		justify-content: flex-end
+	&__web-link 
+		display: inline-block 
+		margin-left: 5px
+		font-weight: 600
+	&__tablet
+		display: none
+	&__btn-icon 
+		width: 0
+		height: 0 
+		overflow: hidden
+	
+	+bp($bp-large)
+		&__top 
+			padding: 40px 0
+		&__column 
+			&--flex 
+				display: block
+				margin-left: 30px
+		&__part 
+			padding-top: 40px
+		&__unit-top 
+			margin-bottom: 20px
+			&--top 
+				margin-top: 35px
+		&__column-unit
+			&--rules 
+				margin-top: 8px
+	
+	+bp($bp-medium)
+		padding-bottom: 40px
+		&:after 
+			display: none
+		&__form 
+			.form-field__input
+				height: 50px 
+				line-height: 50px
+			.form-field__mask
+				height: 50px
+			.form-field__label 
+				top: 18px
+		&__desctop 
+			display: none
+		&__tablet
+			display: block
+		&__part 
+			&--bottom 
+				flex-wrap: wrap 
+		&__web-unit 
+			width: 100%
+		&__web 
+			width: 280px 
+			text-align: left
+			margin-left: auto
+			justify-content: flex-start
+			margin-top: 30px
+		&__btn 
+			width: 40px
+			padding: 0
+			justify-content: center
+			span 
+				display: none 
+		&__btn-icon 
+			width: 20px
+			height: 20px
+			display: block 
+	
+	+bp(720px)
+		&__item,
+		&__city
+			display: none
+		&__column--menu 
+			display: none
+		&__part 
+			display: block
+			padding-top: 20px
+		&__web 
+			margin-left: 0
+		&__column 
+			&--flex 
+				margin-left: 0
+				margin-top: 30px
+			&--left 
+				width: 100%
+		&__column-unit
+			margin-left: 0
+		&__form 
+			max-width: 100%
+			margin-bottom: 25px
+		&__unit-top 
+			display: block
+		&__top 
+			padding: 30px 0
+			display: grid 
+			grid-template-columns: repeat(2,1fr)
+			grid-gap: 25px
+		&__unit 
+			padding-right: 0 
+			display: block 
+			svg 
+				width: 36px
+				height: 36px
+		&__unit-text 
+			display: block
+			margin-top: 7px
+		&__column 
+			font-size: rem(12px)
+
+
+.soc
+	display: flex
+	margin: 0 -5px
+	&__link 
+		width: 50px 
+		height: 50px 
+		border-radius: 50% 
+		+flex_center_b
+		background-color: $gray5
+		margin: 0 5px
+		transition: $transition
+		svg 
+			width: 24px 
+			height: 24px
+			transition: $transition
+		&:hover 
+			background-color: $gray4
+			svg 
+				transform: scale(1.05)

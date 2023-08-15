@@ -18,19 +18,21 @@ const tabsInit = () => {
 			tabButton = D.querySelectorAll(".js-tab__item"),
 			contents = D.querySelectorAll(".js-tab__block");
 
-	tabs.onclick = e => {
-		const id = e.target.dataset.id;
-		if (id) {
-			tabButton.forEach(btn => {
-				btn.classList.remove("is-active");
-			});
-			e.target.classList.add("is-active");
-
-			contents.forEach(content => {
-				content.classList.remove("is-active");
-			});
-			const element = D.getElementById(id);
-			element.classList.add("is-active");
+	if(tabButton.length) {
+		tabs.onclick = (e) => {
+			const id = e.target.dataset.id;
+			if (id) {
+				tabButton.forEach(btn => {
+					btn.classList.remove("is-active");
+				});
+				e.target.classList.add("is-active");
+	
+				contents.forEach(content => {
+					content.classList.remove("is-active");
+				});
+				const element = D.getElementById(id);
+				element.classList.add("is-active");
+			}
 		}
 	}
 }
