@@ -1,0 +1,93 @@
+.b-search 
+	display: flex 
+	justify-content: space-between 
+	align-items: center 
+	padding: 7px 25px
+	border-bottom: 1px solid $gray3 
+	transition: 0.3s 
+	
+	&:hover 
+		background-color: $gray2
+
+		.b-search__image
+			img 
+				transform: scale(1.1)
+
+	&__image 
+		display: block 
+		width: 106px 
+		flex-shrink: 0 
+		padding: 22px 7px
+		transition: 0.3s
+		img 
+			transition: 0.3s
+
+	&__desc 
+		display: block 
+		color: inherit 
+		margin-right: auto 
+		margin-left: 35px 
+	
+	&__counter 
+		margin-right: 8px
+	
+	&__price 
+		font-size: rem(15px)
+		margin-right: 10%
+		width: 150px 
+		flex-shrink: 0
+		span 
+			display: inline-block
+	&__price-e 
+		color: $gray 
+		font-size: rem(12px)
+		margin-top: 3px
+	&__del 
+		color: $blue
+	
+	+bp($bp-large)
+		padding: 20px
+		&:last-child 
+			border-bottom: 0
+		&__image 
+			background-color: $gray2
+	
+	+bp($bp-large2)
+		&__price 
+			margin-right: 20px
+	
+	+bp($bp-medium)
+		&__desc 
+			margin-left: 15px
+	
+	+bp(850px)
+		&__counter 
+			display: none
+		&__price
+			margin-left: auto
+			width: 110px
+			margin-right: 7px
+		&__desc
+			max-width: 234px
+			margin-right: 15px
+	
+	+bp($bp-small2)
+		padding: 10px 
+		min-height: 150px
+		padding-left: 120px
+		position: relative
+		flex-wrap: wrap 
+		&__image 
+			+flex_center_b
+			position: absolute 
+			top: 10px 
+			left: 10px 
+			width: 100px 
+			height: 130px
+		&__desc 
+			width: 100%
+			max-width: 100% 
+			margin-right: 0
+			margin-left: 0
+		&__price
+			margin-left: 0

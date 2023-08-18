@@ -27,8 +27,11 @@ mixin product(props)
 					small.product__text= props.text
 				.product__prices
 					.product__price
-						span= props.price
-						span &#8381;
+						if props.price
+							span= props.price
+							span &#8381;
+						if props.del 
+							span.product__del Под заказ
 					if props.priceOld
 						.product__price.product__price--old
 							span= props.priceOld

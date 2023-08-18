@@ -1,0 +1,8 @@
+mixin b-vending(data)
+	.b-vending 
+		.b-vending__icon
+			+img(data.icon)
+		h6.b-vending__name= data.title 
+		.b-vending__text 
+			p=data.text
+		

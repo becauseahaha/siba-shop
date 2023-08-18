@@ -19,8 +19,8 @@
 		border: none
 
 		&:hover
-			border-color: $yellow
-			color: #000
+			border-color: $blue
+			color: #blur
 
 	&__showmore
 		width: 100%
@@ -30,45 +30,36 @@
 
 	&__pages
 		display: flex
+		justify-content: center
 		margin: 0 20px
 
 	&__page
-		width: 40px
+		+flex_center_b
+		width: 60px
+		height: 60px
 		margin-right: 6px
-		border: none
+		border: 1px solid transparent
+		font-size: rem(15px)
+		font-weight: 600
+		color: $gray 
+		border-radius: 7px
 		&:last-child
 			margin-right: 0
 		&--active,
 		&:hover
-			border-color: $yellow
-			color: #000
+			border-color: $blue
+			color: $blue
 
 	&__row
 		display: flex
-		justify-content: space-between
-
-	+bp($bp-large)
-		&__page
-			width: 34px
-			height: 34px
-			padding: 0
-		&__btn
-			height: 34px
-		&--news
-			.pagination-perpage
-				sisplay: none
-
-	+bp(1100px)
-		width: 100%
+		justify-content: center
+		padding: 20px 0 90px
 
 	+bp($bp-medium)
-		&__showmore
-			display: flex
+		&__row 
+			padding: 40px 0 50px
 
-		&__row
-			justify-content: space-between
-
-	+bp($bp-small)
+	+bp($bp-small2)
 		&__prev,
 		&__next
 			display: none
@@ -80,8 +71,14 @@
 			justify-content: center
 
 		&__btn
-			height: 30px
+			height: 40px
+			width: 40px
 			font-size: rem(15px)
 
 		&__page
-			flex-grow: 1
+			width: 40px
+			height: 40px
+			font-size: rem(15px)
+		
+		&__row 
+			padding: 25px 0 40px

@@ -1,0 +1,145 @@
+mixin menu-catalog()
+	.menu-catalog.modal.js-menu-catalog
+		.wrapper
+			.menu-catalog__part.js-catalog-menu
+				.menu-catalog__desctop
+					+menu-catalog-item({icon: 'cofee', w: '25', h: '25', name: 'Кофе, ингредиенты, продукты'}).js-catalog-menu__item.is-active(data-id="cofee")
+					+menu-catalog-item({icon: 'eq', w: '22', h: '30', name: 'Оборудование'}).js-catalog-menu__item(data-id="equipment")
+					+menu-catalog-item({icon: 'z', w: '30', h: '30', name: 'Запчасти'}).js-catalog-menu__item(data-id="spare-parts")
+				.menu-catalog-list
+
+					.menu-catalog-list__block.is-active.js-catalog-menu__block#cofee
+						.menu-catalog-list__title.js-catalog-menu__mobile
+							+menu-catalog-item({icon: 'cofee', w: '25', h: '25', name: 'Кофе, ингредиенты, продукты'})
+						.menu-catalog-list__content.js-catalog-menu__mobile-content
+							.menu-catalog-list__grid 
+								+menu-catalog-unit({name: 'Кофе'})
+									+menu-catalog-link({link: 'В зернах'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+								
+								+menu-catalog-unit({name: 'Растворимые ингредиенты'})
+									+menu-catalog-link({link: 'Молоко'})
+									+menu-catalog-link({link: 'Горячий шоколад'})
+									+menu-catalog-link({link: 'КапучиноЧай и Кисель'})
+									+menu-catalog-link({link: 'Сахар и Сироп'})
+								
+								+menu-catalog-unit({name: 'Сливки'})
+									+menu-catalog-link({link: 'Выпечка'})
+									+menu-catalog-link({link: 'Печенье, пряники и вафли'})
+									+menu-catalog-link({link: 'Шоколодные батончики'})
+									+menu-catalog-link({link: 'Орехи, снеки и чипсы'})
+									+menu-catalog-link({link: 'Фруктово злаковые батончики'})
+								
+								+menu-catalog-unit({name: 'Сливки'})
+									+menu-catalog-link({link: 'Стаканы пластиковые'})
+									+menu-catalog-link({link: 'Печенье, пряники и вафли'})
+									+menu-catalog-link({link: 'Стаканы бумажные'})
+									+menu-catalog-link({link: 'Размешиватели'})
+									+menu-catalog-link({link: 'Крышки'})
+								
+								+menu-catalog-unit({name: 'Напитки'})
+									+menu-catalog-link({link: 'Вода'})
+									+menu-catalog-link({link: 'Соки'})
+									+menu-catalog-link({link: 'Безалкогольные напитки'})
+									+menu-catalog-link({link: 'Квас, Морс'})
+									+menu-catalog-link({link: 'Энергетики'})
+									+menu-catalog-link({link: 'Кисломолочные'})
+								
+								+menu-catalog-unit({name: 'Еда'})
+									+menu-catalog-link({link: 'Лапша, пюре, каша б/п'})
+									+menu-catalog-link({link: 'Сендвичи и роллы'})
+									+menu-catalog-link({link: 'Готовые блюда'})
+
+
+							.menu-catalog-list__logos
+								+menu-catalog-logo({logo: 'lavazza.png'})
+								+menu-catalog-logo({logo: 'covim.png'})
+								+menu-catalog-logo({logo: 'cafee.png'})
+								+menu-catalog-logo({logo: 'ristora.png'})
+								+menu-catalog-logo({logo: 'tazamia.png'})
+
+					.menu-catalog-list__block.js-catalog-menu__block#equipment
+						.menu-catalog-list__title.js-catalog-menu__mobile
+							+menu-catalog-item({icon: 'eq', w: '22', h: '30', name: 'Оборудование'})
+						.menu-catalog-list__content.js-catalog-menu__mobile-content
+							.menu-catalog-list__grid 
+								+menu-catalog-unit({name: 'Кофе'})
+									+menu-catalog-link({link: 'Кофейные автоматы'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+								
+								+menu-catalog-unit({name: 'Торговые автоматы'})
+									+menu-catalog-link({link: 'В зернах'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+								
+								+menu-catalog-unit({name: 'Кофемашины'})
+									+menu-catalog-link({link: 'В зернах'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+
+								+menu-catalog-unit({name: 'Доп. Оборудование'})
+									+menu-catalog-link({link: 'В зернах'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+
+							.menu-catalog-list__logos
+								+menu-catalog-logo({logo: 'lavazza.png'})
+								+menu-catalog-logo({logo: 'nesta.png'})
+								
+					
+					.menu-catalog-list__block.js-catalog-menu__block#spare-parts
+						.menu-catalog-list__title.js-catalog-menu__mobile
+							+menu-catalog-item({icon: 'z', w: '30', h: '30', name: 'Запчасти'})
+						.menu-catalog-list__content.js-catalog-menu__mobile-content
+							.menu-catalog-list__grid
+								+menu-catalog-unit({name: 'Кофемашины'})
+									+menu-catalog-link({link: 'В зернах'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+
+								+menu-catalog-unit({name: 'Доп. Оборудование'})
+									+menu-catalog-link({link: 'В зернах'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+								+menu-catalog-unit({name: 'Кофе'})
+									+menu-catalog-link({link: 'В зернах'})
+									+menu-catalog-link({link: 'В капсулах'})
+									+menu-catalog-link({link: 'Молотый'})
+									+menu-catalog-link({link: 'Растворимый'})
+							.menu-catalog-list__logos
+								+menu-catalog-logo({logo: 'lavazza.png'})
+								+menu-catalog-logo({logo: 'covim.png'})
+								+menu-catalog-logo({logo: 'covim.png'})
+
+
+
+
+mixin menu-catalog-item(data)
+	.menu-catalog-item&attributes(attributes)
+		.menu-catalog-item__link
+			+svg(data.icon)(width=data.w height=data.h)
+			span=data.name 
+		
+
+mixin menu-catalog-unit(props)
+	.menu-catalog-list__unit
+		h6.menu-catalog-list__name=props.name
+		.menu-catalog-list__list
+			block  
+
+mixin menu-catalog-link(data)
+	.menu-catalog-list__item 
+		a.link.link--gray(href="#")=data.link
+
+mixin menu-catalog-logo(data)
+	a.menu-catalog-list__logo(href="#")
+		+img(data.logo)

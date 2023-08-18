@@ -1,7 +1,8 @@
 .breadcrumbs
-	margin-bottom: 16px
-	color: $gray5
-	margin-bottom: 12px
+	color: $gray
+	letter-spacing: 0.36px
+	font-weight: 300
+	padding: 11px 0 42px
 
 	&__list
 		display: flex
@@ -10,27 +11,27 @@
 	&__link
 		display: inline
 		position: relative
-		font-size: rem(15px)
+		font-size: rem(12px)
 		font-weight: 400
 		margin: 5px 30px 5px 0
 		transition: .25s
+		color: $gray
 		&:not(:last-child):after
 			content: '/'
 			position: absolute
 			right: -18px
+			color: $blue
 		&:last-child
 			border-color: transparent
 			pointer-events: none
+		&:first-child 
+			color: $blue
 		&:hover
-			color: $yellow
+			color: $blue
 
 		&--back
 			padding-left: 20px
 			font-size: 13px
 			
 
-	+bp($bp-tablet)
-		&__link
-			font-size: rem(13px)
-			&:after
-				font-size: inherit
+

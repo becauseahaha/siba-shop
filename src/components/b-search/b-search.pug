@@ -1,0 +1,23 @@
+include ../counter/counter
+
+mixin b-search(data)
+	.b-search
+		a.b-search__image(href="#")
+			img(src=`images/products/${data.img}`)
+		a.b-search__desc(href='#')
+			h6.h6-title=data.name 
+			small.small-title Артикул 142 364
+		.b-search__price
+			if data.price
+				.b-search__price__ru
+					span=data.price
+					span &#8381;
+				.b-search__price-e
+					span 6 030.00 
+					span €
+			if data.del 
+				span.b-search__del=data.del
+		+counter({val: 2}).counter--large.counter--blue.b-search__counter
+		a.btn.btn--arrow.btn--middle.btn--blue(href='#')
+			+svg('basket')
+			span Корзина

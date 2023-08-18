@@ -1,0 +1,154 @@
+extends pug/base
+include components/product/product
+include components/breadcrumbs/breadcrumbs
+include components/select/select
+include components/pagination/pagination
+include components/form-checkbox/form-checkbox
+
+
+append vars
+	- title = 'Каталог'
+
+block content
+	section.inner 
+		.wrapper
+			+breadcrumbs(['Главная','Оборудование','Кофемашины'])
+			h1 Кофемашины
+			.catalog
+				.catalog__content
+					.catalog__sort
+						.catalog__sort-list 
+							span.catalog__sort-name Сортировать по:
+							a.catalog__sort-item.is-active(href="#") названию
+							a.catalog__sort-item(href="#") сначала дороже
+							a.catalog__sort-item(href="#") сначала дешевле
+						.catalog__result 
+							span Найдено
+							span 44
+							span товара
+					.catalog__list
+						+product({
+							hit: true, 
+							img: 'eq-1.png',
+							img2: 'product-2.png',
+							name: 'Кофейный автомат CONCERTO LB', 
+							text: 'Артикул 142 364',
+							price: '281 000'
+						})
+						+product({
+							hit: true, 
+							img: 'eq-2.png',
+							img2: 'product-1.png',
+							name: 'Кофейный автомат CONCERTO TOUCH LB', 
+							text: 'Артикул 142 364',
+							price: '589 321'
+						})
+						+product({ 
+							img: 'eq-3.png',
+							name: 'Кофейный автомат MAESTRO X2 DOUBLE CUP LB', 
+							text: 'Артикул 142 364',
+							del: 'Под заказ'
+						})
+						+product({ 
+							img: 'eq-4.png',
+							img2: 'eq-2.png',
+							name: 'Снековый автомат ORCHESTRA (под заказ)', 
+							text: 'Артикул 142 364',
+							price: '687 000'
+						})
+						+product({ 
+							img: 'eq-5.png',
+							name: 'Кофейный автомат MAESTRO TOUCH', 
+							text: 'Артикул 142 364',
+							price: '589 000'
+						})
+						+product({ 
+							hit: true,
+							img: 'eq-6.png',
+							img2: 'eq-2.png',
+							name: 'Снековый автомат SWING (под заказ)', 
+							text: 'Артикул 142 364',
+							price: '100 000'
+						})
+						+product({ 
+							img: 'eq-7.png',
+							name: 'Снековый автомат SWING (под заказ)', 
+							text: 'Артикул 142 364',
+							price: '100 000'
+						})
+						+product({ 
+							hit: true, 
+							sale: true,
+							img: 'eq-8.png',
+							img2: 'eq-2.png',
+							name: 'Снековый автомат SWING (под заказ)', 
+							text: 'Артикул 142 364',
+							price: '100 000'
+						})
+						+product({ 
+							sale: true,
+							img: 'eq-9.png',
+							name: 'Снековый автомат SWING (под заказ)', 
+							text: 'Артикул 142 364',
+							price: '100 000'
+						})
+						+product({ 
+							img: 'eq-10.png',
+							name: 'Снековый автомат SWING (под заказ)', 
+							text: 'Артикул 142 364',
+							price: '100 000'
+						})
+						+product({ 
+							img: 'eq-11.png',
+							name: 'Снековый автомат SWING (под заказ)', 
+							text: 'Артикул 142 364',
+							del: 'Под заказ'
+						})
+						+product({ 
+							img: 'eq-12.png',
+							img2: 'eq-2.png',
+							img3: 'eq-4.png',
+							name: 'Снековый автомат SWING (под заказ)', 
+							text: 'Артикул 142 364',
+							price: '100 000'
+						})
+					+pagination()
+				.catalog__filter
+					form.catalog__form(action="#")
+						.catalog__line.catalog__line--full
+							+select({
+								className: 'js-select',
+								name: 'region',
+								label: 'Выберите',
+								options: ['Кофемашины', 'Оборудование', 'Запчасти'],
+								optionsValue: ['0', '1', '2']
+							})
+						.catalog__line 
+							h6.h6-title.catalog__name Вид
+							+form-checkbox({name: 'type', val: 'auto', text:'Автоматические', checked: true}).catalog__bowl
+							+form-checkbox({name: 'type', val: 'kaps', text:'Капсульные', checked: false}).catalog__bowl
+							+form-checkbox({name: 'type', val: 'roj', text:'Рожковые', checked: false}).catalog__bowl
+						.catalog__line 
+							h6.h6-title.catalog__name Бренд
+							.catalog__line-grid 
+								+form-checkbox({name: 'brand', val: '0', text:'Necta', checked: true}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '1', text:'Boasi', checked: false}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '2', text:'Lavazza', checked: true}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '3', text:'Covim', checked: false}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '4', text:'Boasi', checked: false}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '5', text:'Capitani', checked: false}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '6', text:'Covim', checked: false}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '7', text:'Necta', checked: false}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '8', text:'Capitani', checked: true}).catalog__bowl
+								+form-checkbox({name: 'brand', val: '9', text:'Lavazza', checked: true}).catalog__bowl
+						.catalog__line 
+							h6.h6-title.catalog__name Цена, ₽
+						.catalog__line 
+							h6.h6-title.catalog__name наличие
+							+form-checkbox({name: 'availability', val: 'yes', text:'На складе', checked: true}).catalog__bowl
+							+form-checkbox({name: 'availability', val: 'no', text:'под заказ', checked: false}).catalog__bowl
+						.catalog__buttons.catalog__line
+							button.btn.btn--blue.btn--middle.catalog__btn-submit(type="submit") 
+								span Показать
+							button.btn.btn--bor-white.btn--bor-dark.btn--middle.btn--p-small(type="reset") 
+								span Очистить

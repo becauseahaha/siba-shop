@@ -1,12 +1,16 @@
 .product 
 	position: relative
 	padding-bottom: 80px
+	width: 100% 
 	&__image-slider
 		display: block
 		overflow: hidden 
+		width: 100%
 		padding: 73px 0 57px
 		border-radius: 7px
 		background-color: $gray2
+		.swiper-slide 
+			width: 100% !important
 	&__arrows-item 
 		position: absolute 
 		top: 50%
@@ -101,6 +105,9 @@
 	&__btn 
 		margin-left: 5px
 	
+	&__del 
+		color: $blue
+	
 	&-icon 
 		display: inline-flex
 		align-items: center
@@ -165,21 +172,14 @@
 		&__about 
 			padding-bottom: 14px
 		&__btn 
-			padding: 0 
-			justify-content: center 
-			width: 34px 
-			heigth: 34px
 			position: absolute 
 			right: 5px
 			bottom: 7px
-			span 
-				display: none
-			svg 
-				margin-right: 0
 		&__name
 			font-size: rem(12px)
 			line-height: rem(15px)
-			height: rem(45px)
+			height: auto
+		
 
 
 		

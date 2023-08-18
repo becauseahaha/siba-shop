@@ -158,3 +158,28 @@
 
 			
 
+.modal
+	position: absolute 
+	left: 0 
+	width: 100% 
+	background-color: $white
+	overflow: hidden
+	overflow-y: auto
+	max-height: calc(100vh - 185px)
+
+	+bp($bp-medium)
+		max-height: calc(100vh - 178px)
+	
+	+bp(730px)
+		max-height: calc(100vh - 112px)
+
+.header
+	&.is-fixed
+		.modal
+			max-height: calc(100vh - 76px)
+		
+			+bp($bp-medium)
+				max-height: calc(100vh - 60px)
+			
+			+bp(730px)
+				max-height: calc(100vh - 112px)

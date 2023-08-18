@@ -1,0 +1,96 @@
+.catalog 
+	display: flex 
+	justify-content: space-between 
+	&__filter 
+		width: 241px 
+		margin-left: 35px 
+		flex-shrink: 0 
+	&__content
+		flex-grow: 1
+	&__line 
+		margin-bottom: 35px
+		padding: 0 14px 
+		&--full 
+			padding: 0
+	&__sort 
+		+flex_between_center 
+		padding: 12px 15px 
+		border-radius: 7px
+		background-color: $gray2
+		font-size: rem(13px)
+		line-height: 120%
+	&__sort-list 
+		display: flex 
+		align-items: center 
+		margin-right: 30px 
+	&__sort-item 
+		margin-left: 15px
+		transition: 0.3s
+		&.is-active 
+			font-weight: 500 
+			color: $blue
+
+	&__sort-name 
+		font-weight: 500 
+	
+	&__result 
+		span 
+			padding-left: 5px
+	
+	&__list 
+		width: 100%
+		display: grid 
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 20px
+		padding: 20px 0
+	
+	&__name
+		margin-bottom: 15px 
+	
+	&__bowl 
+		margin-bottom: 12px
+	
+	&__line-grid 
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-column-gap: 30px
+	
+	&__buttons
+		display: flex 
+	&__btn-submit 
+		margin-right: 5px
+	
+	+bp($bp-large2)
+		&__list 
+			grid-template-columns: repeat(3, 1fr)
+	
+	+bp($bp-medium)
+		display: block
+		&__filter 
+			width: 100%
+			margin: 0
+			position: fixed 
+			top: 0 
+			left: 0 
+			right: 0 
+			bottom: 0
+			background-color: $white
+			z-index: 55
+			padding: 10px 
+			opacity: 0 
+			pointer-events: none 
+			transform: translateY(-100%)
+			&.is-active 
+				opacity: 0
+				transform: none
+				transition: $transition
+
+
+	
+	+bp($bp-small2)
+		&__list 
+			grid-template-columns: repeat(2, 1fr)
+			padding-bottom: 0
+
+
+

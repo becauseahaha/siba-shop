@@ -1,0 +1,56 @@
+mixin header-city()
+	.header-city.js-city-block
+		+header-city-block({
+			cl: 'is-active',
+			icon: 'moskow',
+			name: 'Москва',
+			address: 'г. Москва, 4-й Лихачёвский переулок, 4с2',
+			phone: '+7 (495) 120-81-37',
+			hr1: 'tel:+74951208137',
+			hr2: 'mailto:b2b@siba-vending.ru',
+			mail: 'b2b@siba-vending.ru'
+		})
+		+header-city-block({
+			cl: '',
+			icon: 'sankt',
+			name: 'Санкт-Петербург',
+			address: 'г. Санкт-Петербург, пр-т 9 Января, д. 9, корп. 1',
+			phone: '+7 (812) 603-49-93',
+			hr1: 'tel:+78126034993',
+			hr2: 'mailto:b2b@spb.siba-vending.ru',
+			mail: 'b2b@spb.siba-vending.ru'
+		})
+		+header-city-block({
+			cl: '',
+			icon: 'ek',
+			name: 'Екатеринбург',
+			address: 'г. Екатеринбург, ул. Норильская, дом 75',
+			phone: '+7 (343) 243-53-89',
+			hr1: 'tel:+73432435389',
+			hr2: 'mailto:office.ural@siba-vending.ru',
+			mail: 'office.ural@siba-vending.ru'
+		})
+
+
+mixin header-city-block(data)
+	.header-city-block(class=data.cl).js-city-item
+		.header-city-block__icon 
+			+svg(data.icon)
+		.header-city-block__name.js-city-item__value=data.name 
+		.header-city-block__unit
+			.header-city-block__unit-name=data.address
+			.header-city-block__unit-span Офис: 08:00-18:00, касса 08:00-17:00
+		
+		.header-city-block__unit
+			a.header-city-block__unit-name(href=data.hr1)=data.phone
+			.header-city-block__unit-span Бесплатно, с 08:00 до 18:00
+		
+		.header-city-block__unit
+			a.header-city-block__unit-name(hrfe=data.hr2)=data.mail
+			.header-city-block__unit-span Есть вопросы? Напишите нам
+		
+		.header-city-block__unit
+			a.header-city-block__data.link.link--bor.link--upper.js-city-item__link(href="#") 
+				span.header-city-block__no Выбрать
+				span.header-city-block__yes Выбрано
+		

@@ -6,6 +6,24 @@
 	left: 0
 	background-color: $white
 	z-index: 16
+	&:after 
+		content: ''
+		position: fixed 
+		top: 0 
+		left: 0 
+		right: 0 
+		bottom: 0
+		pointer-events: none 
+		background-color: $dark 
+		opacity: 0 
+		transition: 0.3s
+		z-index: -1
+	&.is-active 
+		.header__data
+			box-shadow: 0px 1px 10px 0px rgba(0, 31, 65, 0.12)
+		&:after 
+			opacity: 0.2
+			pointer-events: auto
 	&__mobile-title, 
 	&__menu-close, 
 	&__mobile-btn,
@@ -29,12 +47,18 @@
 		line-height: 1
 		&:after 
 			display: none 
+		
+		.link
+			&:hover,
+			&.is-active
+				font-weight: 600
+				color: inherit
 	
-		.link.is-active
-			color: $orange
 	&__about
 		background-color: $blue 
 		color: $white
+		position: relative 
+		z-index: 3
 	
 	&__line
 		+flex_between_center 
@@ -60,10 +84,16 @@
 		cursor: pointer
 		margin-left: 1.4vw
 		font-weight: 600
+		position: relative
+		z-index: 7
 		svg 
 			width: 14px
 			height: 7px
 			fill: transparent
+			transition: 0.3s
+		&.is-active 
+			svg 
+				transform: rotate(180deg)
 	&__city-value
 		margin-right: 7px
 	&__inform 
@@ -133,6 +163,30 @@
 				padding-left: 0
 	&__btn 
 		flex-shrink: 0
+	&__data 
+		transition: 0.3s
+	&__top,
+	&__data 
+		position: relative 
+		z-index: 2
+		background-color: $white
+	&__btn-close 
+		opacity: 0 
+		transition: 0.3s 
+		position: absolute !important
+		top: 50% 
+		transform: translateY(-50%)
+		right: 30px
+		width: 15px 
+		height: 15px 
+		stroke: $white
+		stroke-width: 2px
+	&__btn-catalog
+		&.is-active
+			.header__btn-close
+				opacity: 1
+			.header__icon-catalog
+				opacity: 0
 	
 	&.is-fixed 
 		position: fixed
@@ -165,6 +219,8 @@
 			transform: translateY(11px)
 		&__item
 			margin-right: 20px
+		&__city 
+			position: static
 	
 	+bp(1130px)
 		&__part
@@ -224,6 +280,19 @@
 				display: none
 			.header__phone
 				margin-right: 8px
+		
+		&__mobile-icon-close 
+			display: none 
+			stroke: $white 
+			stroke-width: 2px
+		
+		&__mobile-icon 
+			&.is-active 
+				.header__mobile-icon-close
+					display: block
+				.header__mobile-icon-place
+					display: none
+
 	
 	+bp(bp-tablet)
 		&__item
@@ -330,4 +399,34 @@
 			padding-left: 20px
 			padding-right: 20px
 
+
+.header-search 
+	opacity: 0  
+	pointer-events: none 
+	&.is-active 
+		transition: 0.5s
+		opacity: 1 
+		pointer-events: auto
+	&__list 
+		padding: 30px 0
+	&__mobile
+		display: none
+	
+	+bp($bp-large)
+		padding-top: 25px
+		&__list
+			border: 1px solid $gray3 
+			border-radius: 4px
+			padding: 0
+		
+	+bp(730px)
+		&__mobile
+			display: block
+			.header__search 
+				margin: 0 0 12px
+			.btn 
+				background-color: transparent 
+				padding: 0
+				svg 
+					fill: $blue
 		

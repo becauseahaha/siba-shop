@@ -1,4 +1,8 @@
 include ../../components/form-field/form-field
+include ../../components/menu-catalog/menu-catalog
+include ../../components/b-search/b-search
+include ../../components/pagination/pagination
+include ../../components/header-city/header-city
 
 mixin header(props)
 	header.header.js-header
@@ -25,14 +29,15 @@ mixin header(props)
 		.header__about
 			.wrapper
 				.header__line
-					a.header__mobile-icon(href="#")
-						+svg('place')
+					a.header__mobile-icon.js-city(href="#")
+						+svg('place').header__mobile-icon-place
+						+svg('close').header__mobile-icon-close
 					a.header__logo(href="main.html")
 						+img('logo.svg')
 					a.header__mobile-icon(href="tel:+74951208137")
 						+svg('phone')
-					.header__city 
-						span.header__city-value Москва 
+					.header__city.js-city
+						span.header__city-value.js-city__value Москва 
 						+svg('arrow-bottom')
 					.header__part
 						address.header__address г. Москва, 4-й Лихачёвский переулок, 4с2
@@ -40,25 +45,17 @@ mixin header(props)
 						span.header__inform Офис: 08:00-18:00, касса 08:00-17:00 
 					a.btn.btn--middle.btn--mobile.header__btn(href="#") 
 						span Задать вопрос
+				+header-city()
 		.header__data
 			.wrapper
 				.header__line.header__line--large
-					a.btn.header__btn-catalog(href="#") 
+					a.btn.header__btn-catalog(href="#").js-open-catalog 
 						span Каталог 
-						+svg('catalog')(width="36" height="36")
+						+svg('catalog')(width="36" height="36").header__icon-catalog
+						+svg('close').header__btn-close
 					a.btn.btn--blue.header__btn-action(hrfe="#") 
 						span акции
-					form.header__search(action="#" name="form-search")
-						+form-field({
-							input: true,
-							label: 'Я ИЩУ...',
-							type: 'search',
-							name: 'search',
-							msg: '',
-							req: true,
-						}).form-field--search
-						button.btn.btn--blue.btn--icon.header__search-btn(type="submit")
-							+svg('search')(width="24" height="24")
+					+header-search()
 					.header__hide-block 
 						a.header__phone(href="tel:+74951208137") +7 (495) 120-81-37
 						span.header__inform Офис: 08:00-18:00, касса 08:00-17:00 
@@ -69,3 +66,61 @@ mixin header(props)
 							span 231 243
 							span &#8381; 
 
+		+menu-catalog()
+
+		.header-search.modal.js-list-search 
+			.wrapper
+				.header-search__mobile
+					+header-search()
+				.header-search__list 
+					+b-search({
+						img: 's-1.png',
+						name: 'Кофейный автомат CONCERTO',
+						price: '521 573,29'
+					})
+					+b-search({
+						img: 's-2.png',
+						name: 'Кофейный автомат CONCERTO TOUCH LB',
+						price: '532 904,32'
+					})
+					+b-search({
+						img: 's-3.png',
+						name: 'Кофейный автомат OPERA',
+						del: 'Под заказ'
+					})
+					+b-search({
+						img: 's-4.png',
+						name: 'SNAKKY LX 6-30 Б/У',
+						price: '532 904,32'
+					})
+					+b-search({
+						img: 's-5.png',
+						name: 'Кофейный автомат OPERA',
+						price: '532 904,32'
+					})
+					+b-search({
+						img: 's-6.png',
+						name: 'SNAKKY LX 6-30 Б/У',
+						del: 'Под заказ'
+					})
+					+b-search({
+						img: 's-7.png',
+						name: 'Кофейный автомат CONCERTO TOUCH LB',
+						price: '553 144,48'
+					})
+				+pagination()
+
+
+mixin header-search()
+	form.header__search(action="#" name="form-search")
+		+form-field({
+			input: true,
+			label: 'Я ИЩУ...',
+			type: 'search',
+			name: 'search',
+			msg: '',
+			req: true,
+			cl: 'js-open-search'
+		}).form-field--search
+		button.btn.btn--blue.btn--icon.header__search-btn(type="submit")
+			+svg('search')(width="24" height="24")

@@ -1,0 +1,200 @@
+.menu-catalog 
+	opacity: 0 
+	pointer-events: none 
+	transform: translateX(-100px)
+	&.is-active 
+		transition: 0.35s ease-in-out 
+		transform: translateY(0)
+		opacity: 1 
+		pointer-events: auto
+	&__part 
+		display: flex
+
+	&__desctop 
+		max-width: 374px 
+		width: 100% 
+		background-color: $gray2
+		padding: 35px 0
+		flex-shrink: 0
+		position: relative 
+		min-height: 550px
+		&:before 
+			content: ''
+			width: 1000px
+			position: absolute
+			right: 99.5% 
+			top: 0 
+			bottom: 0 
+			background-color: $gray2
+	
+	&-list 
+		flex-grow: 1 
+		padding: 60px 0px 75px 70px
+
+		&__title
+			display: none
+		
+		&__content 
+			display: flex 
+		
+		&__logos 
+			width: 120px 
+			flex-shrink: 0 
+			margin-left: 50px 
+		
+		&__logo 
+			display: block
+			background-color: $gray2
+			+flex_center_b 
+			border-radius: 5px 
+			margin-bottom: 10px 
+			transition: 0.4s ease
+			+transition
+			&:hover 
+				transform: scale(0.95)
+		
+		&__block 
+			display: none
+			&.is-active 
+				display: block
+
+		
+		&__grid 
+			flex-grow: 1 
+			display: grid 
+			grid-gap: 50px
+			grid-template-columns: repeat(3, 1fr)
+		
+		&__unit 
+			font-size: rem(14px)
+		
+		&__name 
+			font-size: inherit
+			margin-bottom: 16px 
+			font-weight: 500
+		&__item 
+			margin-bottom: 15px
+			&:last-child 
+				margin-bottom: 0
+
+	
+	&-item 
+		position: relative
+		border-right: 2px solid transparent
+		cursor: pointer
+		&.is-active 
+			background-color: $white
+			border-color: $blue 
+			&:before
+				content: ''
+				width: 1000px
+				position: absolute
+				right: 100% 
+				top: 0 
+				bottom: 0 
+				background-color: $white
+		&__link
+			display: flex 
+			align-items: center
+			padding: 17px 10px 17px 0
+			font-size: rem(16px)
+			font-weight: 500 
+			letter-spacing: 0.8px
+			text-transform: uppercase 
+			line-height: 100%
+			svg 
+				width: 30px 
+				heigth: 30px
+				margin-right: 16px
+			span 
+				display: inline-block 
+	
+	+bp($bp-large2)
+		&-list 
+			padding-left: 40px 
+			&__grid 
+				grid-gap: 30px
+				grid-template-columns: repeat(2, 1fr)
+	
+	+bp($bp-medium)
+		background-color: $gray2
+		&__desctop
+			display: none
+		&-list
+			padding: 15px 0
+			&__title 
+				display: block
+				position: relative 
+				padding-right: 50px
+				margin-top: 15px
+				&:after 
+					content: ''
+					width: 14px 
+					height: 8px 
+					+foil 
+					background-image: url('../images/arrow2.svg')
+					position: absolute 
+					top: 26px 
+					right: 0
+					transform: rotate(180deg)
+					transition: 0.3s 
+
+				&.is-active 
+						&:after 
+								transform: none
+			
+			&__block 
+				display: block
+			
+			&__content
+				display: none
+				padding: 20px 25px 35px
+				background-color: $white
+				margin-left: -25px 
+				width: calc(100% + 50px)
+				&.is-active 
+					display: flex
+	
+	+bp($bp-small2)
+		&-list
+			&__content
+				margin-left: -15px 
+				width: calc(100% + 30px)
+	
+	+bp($bp-small)
+		&-item
+			&__link 
+				font-size: rem(14px)
+				svg 
+					transform: scale(0.85)
+					margin-right: 10px
+	
+		&-list 
+			width: 100%
+			&__title
+				padding-right: 0
+
+			&__content 
+				&.is-active 
+					display: block
+			&__grid 
+				width: 100%
+			&__logos 
+				display: flex 
+				width: calc(100% + 25px)
+				padding-right: 20px
+				margin-left: 0
+				margin-top: 30px
+				overflow-x: auto
+			&__logo 
+				margin: 0 10px 0 0
+				width: 120px 
+				flex-shrink: 0
+			&__grid 
+				display: block 
+			&__unit 
+				margin-bottom: 30px 
+				&:last-child 
+					margin-bottom: 0
+		
+		

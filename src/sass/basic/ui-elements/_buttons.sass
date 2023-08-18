@@ -53,6 +53,18 @@
 		&:hover 
 			color: $baseTxt
 	
+	&--bor-dark 
+		color: $baseTxt 
+		border-color: $gray
+		&:hover 
+			color: $white 
+			&:before 
+				background-color: $baseTxt
+	
+	&--p-small 
+		padding: 0 8px
+		justify-content: center
+	
 	&--icon 
 		padding: 0 
 		width: 46px 
@@ -135,3 +147,13 @@
 		&--large 
 			height: 46px 
 			padding: 0 26px
+		&--arrow
+			padding: 0 
+			justify-content: center 
+			width: 34px 
+			heigth: 34px
+			span 
+				display: none
+			svg 
+				margin-right: 0
+

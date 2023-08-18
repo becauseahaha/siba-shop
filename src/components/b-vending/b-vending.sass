@@ -1,0 +1,27 @@
+.b-vending 
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%)
+	padding: 30px 
+	&__icon 
+		width: 60px 
+		margin-bottom: 30px 
+	&__name
+		max-width: 180px 
+		text-transform: none 
+		font-weight: 500
+		font-size: rem(15px)
+		letter-spacing: 0.45px
+		line-height: 130%
+		margin: 27px 0 18px
+
+	&__text
+		p 
+			font-size: rem(15px)
+			font-weight: 300 
+			letter-spacing: 0.45px
+			line-height: 130%
+	
+	+bp($bp-small2)
+		padding: 20px
+		&__text 
+			p 
+				font-size: rem(12px)

@@ -121,6 +121,7 @@
 				display: block
 		&__title
 			margin-right: 20px
+
 		
 
 	
@@ -326,8 +327,143 @@
 
 .vending 
 	color: $white 
-	background-color: $dark
+	+foil 
+	background-image: url('../images/v-foil.jpg')
+	&__grid 
+		padding: 40px 0 
+		display: grid 
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 40px
+	
+	+bp($bp-large)
+		&__grid
+			grid-gap: 20px
+			padding: 30px 0
 
+	+bp($bp-medium)
+		&__grid
+			grid-template-columns: repeat(2, 1fr)
+
+	+bp($bp-small2)
+		&__grid
+			grid-template-columns: repeat(1, 1fr)
+			padding: 15px 0
+
+.siba-vending
+	background-color: $blue 
+	color: $white
+	position: relative
+	overflow: hidden
+	&:after 
+		content: ''
+		width: 242px 
+		height: 160px 
+		+foil 
+		position: absolute 
+		bottom: 0 
+		right: 0
+		background-image: url('../images/decor-2.svg')
+	&:before 
+		content: ''
+		width: 120px 
+		height: 218px 
+		+foil 
+		position: absolute 
+		top: 40px 
+		left: 28px
+		background-image: url('../images/decor-1.png')
+		+bp(1700px)
+			display: none
+	&__top 
+		display: flex 
+		justify-content: space-between
+	&__top-desc
+		max-width: 827px
+		margin-right: 40px
+	&__title
+		max-width: 680px
+	&__desc
+		margin-top: 100px
+		display: flex 
+		justify-content: space-between
+		align-items: center
+	&__grid 
+		max-width: 800px 
+		width: 100% 
+		display: grid 
+		grid-row-gap: 30px
+		grid-column-gap: 30px
+		grid-template-columns: repeat(3, 1fr)
+		margin-left: 40px
+	&__r 
+		border-radius: 9px 
+		overflow: hidden
+		position: relative 
+		z-index: 2 
+	&__image 
+		position: relative 
+		&:after 
+			content: ''
+			width: 476px
+			height: 476px 
+			+foil 
+			background-image: url('../images/rounds3.svg')
+			position: absolute 
+			left: 40%
+			top: -30px
+	&__left 
+		position: relative
+		&:after 
+			content: ''
+			width: 574px
+			height: 574px 
+			+foil 
+			background-image: url('../images/rounds4.svg')
+			position: absolute 
+			left: -49%
+			top: 30px
+	
+	+bp($bp-large)
+		&__desc 
+			margin-top: 40px
+	
+	
+	+bp($bp-medium)
+		&__r 
+			display: none
+		
+		&__top-desc 
+			margin-right: 0
+			max-width: 100% 
+		
+		&__grid 
+			max-width: 100%
+			margin-left: 0
+		
+		&__left 
+			&:after 
+				left: -200px 
+				top: -100px
+		&__image 
+			&:after 
+				left: -120px
+	
+	+bp($bp-small2)
+		&__grid 
+			display: block
+		&__left 
+			&:after 
+				display: none
+		&:after 
+			display: none
+		
+		&__image 
+			&:after 
+				left: -220px
+				top: -250px
+		
+		&__desc 
+			margin-top: 15px
 
 
 

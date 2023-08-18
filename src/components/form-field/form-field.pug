@@ -14,7 +14,8 @@ mixin form-field(props)
 				data-slots=props.slots,
 				class=props.cl,
 				minlength=props.min,
-				required=props.req
+				required=props.req,
+				class=props.cl
 			)
 		if props.textarea
 			textarea.form-field__input.js-input(
