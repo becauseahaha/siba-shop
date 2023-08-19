@@ -1,0 +1,30 @@
++popup({type: 'enter', staticPopup: true})
+	.enter__top 
+		h3.enter__title Вход 
+		h3.enter__title.enter__title--link.js-popup-link(data-link="registration") Регистрация
+	form.form.js-form(action="#" method="GET")
+		.form__block
+			.form__line
+				+form-field({
+					input: true,
+					label: 'Email',
+					type: 'email',
+					name: 'email',
+					msg: '',
+					req: true,
+				})
+			.form__line
+				+form-field({
+					input: true,
+					label: 'Пароль',
+					type: 'password',
+					name: 'password',
+					msg: '',
+					req: true,
+				})
+			.form__line.form__line--check
+				+form-checkbox({ text:'Соглашаюсь с <a href="#" target="_blank" class="link link--blue-bor">условиями</a> обработки данных', checked: true, clCheck: 'js-checkbox-rules'})
+			.form__line
+				button.btn.btn--large.btn--blue.js-form-submit(type="submit") 
+					span Войти
+

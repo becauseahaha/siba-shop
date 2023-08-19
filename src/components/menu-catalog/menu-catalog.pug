@@ -132,7 +132,7 @@ mixin menu-catalog-item(data)
 
 mixin menu-catalog-unit(props)
 	.menu-catalog-list__unit
-		h6.menu-catalog-list__name=props.name
+		a.menu-catalog-list__name(href="#")=props.name
 		.menu-catalog-list__list
 			block  
 

@@ -3,9 +3,19 @@
 	position: relative
 	.slider-arrow 
 		opacity: 0 
-		transition: $transition
+		transition: opacity 0.25s
 		top: 39% 
-		transform: none 
+		transform: none
+		position: static
+		padding: 0
+		&__item 
+			position: absolute 
+			top: 39%
+			z-index: 3
+			&--prev 
+				left: 10px 
+			&--next 
+				right: 10px 
 		+bp(1100px)
 			top: 30%
 	&:hover 

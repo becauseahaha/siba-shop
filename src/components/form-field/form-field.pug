@@ -15,7 +15,11 @@ mixin form-field(props)
 				class=props.cl,
 				minlength=props.min,
 				required=props.req,
-				class=props.cl
+				class=props.cl, 
+				id=props.id, 
+				data-pristine-equals=props.eql,
+				data-pristine-equals-message=props.eqlMsg
+
 			)
 		if props.textarea
 			textarea.form-field__input.js-input(

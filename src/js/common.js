@@ -107,7 +107,8 @@ const catalogMenu = () => {
 //searh list show-hide 
 const search = () => {
 	const openSearch = D.querySelectorAll('.js-open-search'),
-			listSearch = D.querySelector('.js-list-search');
+			listSearch = D.querySelector('.js-list-search'),
+			closeSearch = D.querySelectorAll('.js-close-search');
 
 			openSearch.forEach(el => {
 				el.addEventListener('keyup', () =>{
@@ -115,10 +116,26 @@ const search = () => {
 					if (val >= 3) {
 						listSearch.classList.add('is-active')
 						header.classList.add('is-active');
+						el.closest('.js-search-unit').classList.add('is-active');
 					} else {
 						listSearch.classList.remove('is-active')
 						header.classList.remove('is-active');
+
+						let unit = el.closest('.js-search-unit');
+						unit.classList.remove('is-active');
 					}
+				})
+			})
+
+			closeSearch.forEach(current => {
+				current.addEventListener('click', (e) => {
+					e.preventDefault();
+					listSearch.classList.remove('is-active')
+					header.classList.remove('is-active');
+
+					let unit = current.closest('.js-search-unit');
+					unit.classList.remove('is-active');
+					unit.reset();
 				})
 			})
 
@@ -164,6 +181,8 @@ const city = () => {
 	})
 
 }
+
+
 D.addEventListener("DOMContentLoaded", function() {
 
 	fixedHeader();

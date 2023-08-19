@@ -6,7 +6,7 @@
 	&--top-right
 		position: absolute 
 		right: 0 
-		top: -80px
+		top: -77px
 	
 	&--center 
 		position: absolute 
@@ -33,7 +33,7 @@
 		cursor: pointer
 		position: relative
 		overflow: hidden
-		transition: 0.4s
+		transition: opacity 0.4s, border-color 0.4s, background-color 0.4s
 		border: 1px solid $gray2
 		background-color: $white
 		&.swiper-button-disabled
@@ -73,7 +73,8 @@
 .slider-pagination
 	width: 100% 
 	position: absolute 
-	bottom: 15px
+	bottom: 0px
+	padding: 15px 0
 	left: 0 
 	z-index: 3
 	display: flex
@@ -88,7 +89,7 @@
 		background-color: $gray4
 		border-radius: 5px
 		cursor: pointer
-		transition: 0.3s 
+		transition: background-color 0.3s 
 		&:hover 
 			background-color: $gray
 	.swiper-pagination-bullet-active

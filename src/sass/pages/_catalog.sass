@@ -59,10 +59,19 @@
 		display: flex 
 	&__btn-submit 
 		margin-right: 5px
+	&__sort-mobile,
+	&__btn-mobile
+		display: none
+	&__filter-mobile
+		display: none
 	
-	+bp($bp-large2)
+	+bp($bp-large)
 		&__list 
 			grid-template-columns: repeat(3, 1fr)
+
+	+bp(1024px)
+		&__list 
+			grid-template-columns: repeat(2, 1fr)
 	
 	+bp($bp-medium)
 		display: block
@@ -80,17 +89,96 @@
 			opacity: 0 
 			pointer-events: none 
 			transform: translateY(-100%)
+			max-height: 100% 
+			overflow-y: auto
+			padding-bottom: 120px
 			&.is-active 
-				opacity: 0
+				opacity: 1
 				transform: none
+				pointer-events: auto
 				transition: $transition
 
+		&__filter-mobile 
+			display: block 
+			position: relative 
+			margin-bottom: 15px 
+			margin-left: -5px
+			width: calc(100% + 10px)
+			span 
+				display: inline-block
+			.btn 
+				width: 100% 
+				height: 50px
+				margin-botom: 15px
+				justify-content: flex-start
+				padding: 0 10px 
+				svg 
+					margin-right: 12px
+		&__close 
+			width: 34px 
+			height: 34px
+			+flex_center_b 
+			border-radius: 4px
+			+center('v')
+			right: 8px
+			background-color: $gray5
 
+			svg 
+				width: 16px 
+				height: 16px
+				margin-right: 0 !important
+
+		&__list 
+			grid-template-columns: repeat(3, 1fr)
+
+		&__sort-mobile
+			display: block
+			min-width: 270px
+
+		&__btn-mobile
+			display: inline-flex
+
+		&__sort-list 
+			display: none
+		&__sort 
+			padding: 0 
+			background-color: transparent
+			position: relative
+		&__result 
+			margin-left: auto 
+			margin-right: 30px
+		&__line
+			margin-bottom: 20px
 	
-	+bp($bp-small2)
+	+bp(730px)
 		&__list 
 			grid-template-columns: repeat(2, 1fr)
 			padding-bottom: 0
 
+	+bp($bp-small2)
+		&__btn-mobile
+			padding: 0 
+			width: 30px 
+			height: 30px
+			flex-shrink: 0
+			background-color: transparent 
+			position: absolute 
+			top: -70px 
+			right: 0
+			span 
+				display: none 
+			svg 
+				stroke: $blue 
+			&:hover 
+				&:before 
+					display: none
+		&__result 
+			display: none 
+		&__sort-mobile
+			width: 100%
+
+	+bp($bp-small)
+		&__btn-mobile 
+			top: -52px
 
 

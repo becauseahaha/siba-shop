@@ -3,7 +3,7 @@
 	pointer-events: none 
 	transform: translateX(-100px)
 	&.is-active 
-		transition: 0.35s ease-in-out 
+		transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out 
 		transform: translateY(0)
 		opacity: 1 
 		pointer-events: auto
@@ -48,7 +48,7 @@
 			+flex_center_b 
 			border-radius: 5px 
 			margin-bottom: 10px 
-			transition: 0.4s ease
+			transition: transform 0.4s ease
 			+transition
 			&:hover 
 				transform: scale(0.95)
@@ -69,6 +69,7 @@
 			font-size: rem(14px)
 		
 		&__name 
+			display: inline-block
 			font-size: inherit
 			margin-bottom: 16px 
 			font-weight: 500
@@ -137,7 +138,7 @@
 					top: 26px 
 					right: 0
 					transform: rotate(180deg)
-					transition: 0.3s 
+					transition: transform 0.3s 
 
 				&.is-active 
 						&:after 

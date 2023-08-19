@@ -16,6 +16,7 @@
 	letter-spacing: 1.12px
 	background-color: $orange
 	border-radius: 7px 
+	transition: color 0.25s ease
 	&:before 
 		content: ''
 		width: 100% 
@@ -24,7 +25,7 @@
 		bottom: 0 
 		left: 0 
 		background-color: $orange2
-		transition: $transition
+		transition: transform 0.25s ease
 		transform-origin: 50% 100% 
 		transform: scaleY(0)
 	span,
@@ -107,7 +108,7 @@
 			top: 0 
 			left: 0
 			opacity: 0 
-			transition: $transition 
+			transition: opacity 0.25s ease
 		&:hover
 			.btn-play__hov 
 				opacity: 1
@@ -151,7 +152,7 @@
 			padding: 0 
 			justify-content: center 
 			width: 34px 
-			heigth: 34px
+			height: 34px
 			span 
 				display: none
 			svg 

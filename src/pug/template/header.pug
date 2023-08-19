@@ -14,14 +14,14 @@ mixin header(props)
 						+svg('close')
 					nav.header__nav 
 						ul.header__list
-							li.header__item: a.link.link--default(href="#") О компании
+							li.header__item: a.link.link--default.is-active(href="#") О компании
 							li.header__item: a.link.link--default(href="#") Оплата и доставка
 							li.header__item: a.link.link--default(href="#") Гарантия и сопровождение
 							li.header__item: a.link.link--default(href="#") Обзоры
 							li.header__item: a.link.link--default(href="#") Статьи
 							li.header__item: a.link.link--default(href="#") Новости
 							li.header__item: a.link.link--default(href="#") Контакты
-					a.header__lk.link.link--default.link--arrow(href="#")
+					a.header__lk.link.link--default.link--arrow.js-popup-link(href="#" data-link="enter")
 						+svg('lk')
 						span Личный кабинет
 					a.btn.btn--middle.header__mobile-btn(href="#") 
@@ -41,7 +41,7 @@ mixin header(props)
 						+svg('arrow-bottom')
 					.header__part
 						address.header__address г. Москва, 4-й Лихачёвский переулок, 4с2
-						a.header__phone(href="tel:+74951208137") +7 (495) 120-81-37
+						a.header__phone.link.link--bor.link--bor-white.link--white(href="tel:+74951208137") +7 (495) 120-81-37
 						span.header__inform Офис: 08:00-18:00, касса 08:00-17:00 
 					a.btn.btn--middle.btn--mobile.header__btn(href="#") 
 						span Задать вопрос
@@ -59,7 +59,7 @@ mixin header(props)
 					.header__hide-block 
 						a.header__phone(href="tel:+74951208137") +7 (495) 120-81-37
 						span.header__inform Офис: 08:00-18:00, касса 08:00-17:00 
-					.header__basket 
+					.header__basket.js-basket-total 
 						+svg('basket').header__basket-icon 
 						.header__basket-name Корзина 
 						.header__price 
@@ -112,7 +112,7 @@ mixin header(props)
 
 
 mixin header-search()
-	form.header__search(action="#" name="form-search")
+	form.header__search.js-search-unit(action="#" name="form-search")
 		+form-field({
 			input: true,
 			label: 'Я ИЩУ...',
@@ -122,5 +122,8 @@ mixin header-search()
 			req: true,
 			cl: 'js-open-search'
 		}).form-field--search
-		button.btn.btn--blue.btn--icon.header__search-btn(type="submit")
-			+svg('search')(width="24" height="24")
+		.header__search-buttons
+			button.btn.btn--blue.btn--icon.header__search-btn(type="submit")
+				+svg('search')(width="24" height="24")
+			button.btn.btn--blue.btn--icon.header__search-btn.header__search-btn-hide.js-close-search(type="submit")
+				+svg('close')(width="17" height="17")

@@ -16,7 +16,7 @@
 		pointer-events: none 
 		background-color: $dark 
 		opacity: 0 
-		transition: 0.3s
+		transition: opacity 0.3s
 		z-index: -1
 	&.is-active 
 		.header__data
@@ -47,12 +47,10 @@
 		line-height: 1
 		&:after 
 			display: none 
-		
-		.link
-			&:hover,
-			&.is-active
-				font-weight: 600
-				color: inherit
+		&.is-active 
+			color: $orange
+			&:hover 
+				color: $orange
 	
 	&__about
 		background-color: $blue 
@@ -90,7 +88,7 @@
 			width: 14px
 			height: 7px
 			fill: transparent
-			transition: 0.3s
+			transition: transform 0.3s
 		&.is-active 
 			svg 
 				transform: rotate(180deg)
@@ -102,8 +100,6 @@
 		font-size: rem(12px)
 	&__phone 
 		font-weight: 600
-		&:hover 
-			color: $orange
 	 
 	&__address, 
 	&__inform, 
@@ -119,7 +115,7 @@
 		flex-grow: 1
 		position: relative 
 		margin: 0 30px 0 12px
-		transition: 0.25s
+		transition: opacity 0.25s
 	&__search-btn 
 		position: absolute 
 		right: 0 
@@ -136,13 +132,17 @@
 				stroke: $orange 
 			.header__price
 				color: $orange
+		&.active 
+			.header__basket-icon 
+				animation: fly_icon 0.5s ease-in-out
+				animation-delay: 0.6s
 	&__basket-icon 
 		width: 36px 
 		height: 36px
 		+center('v')
 		left: 0
 		fill: transparent
-		transition: 0.25s
+		transition: color 0.25s
 		stroke-width: 1.2px 
 		stroke: $baseTxt
 	&__basket-name
@@ -155,7 +155,7 @@
 		font-weight: 600 
 		color: $blue
 		letter-spacing: 1.12px
-		transition: 0.25s
+		transition: color 0.25s
 		white-space: nowrap
 		span 
 			padding-left: 4px
@@ -164,7 +164,7 @@
 	&__btn 
 		flex-shrink: 0
 	&__data 
-		transition: 0.3s
+		transition: color 0.3s
 	&__top,
 	&__data 
 		position: relative 
@@ -172,21 +172,31 @@
 		background-color: $white
 	&__btn-close 
 		opacity: 0 
-		transition: 0.3s 
+		transition: opacity 0.3s 
 		position: absolute !important
 		top: 50% 
-		transform: translateY(-50%)
+		transform: translateY(-52%)
 		right: 30px
-		width: 15px 
-		height: 15px 
+		width: 17px 
+		height: 17px 
 		stroke: $white
 		stroke-width: 2px
 	&__btn-catalog
 		&.is-active
 			.header__btn-close
 				opacity: 1
+				right: 25px
 			.header__icon-catalog
 				opacity: 0
+	&__search.is-active 
+		.header__search-btn-hide
+			display: block
+	&__search-btn-hide 
+		display: none
+		z-index: 3
+		svg 
+			stroke: $white 
+			stroke-width: 2px
 	
 	&.is-fixed 
 		position: fixed
@@ -316,7 +326,7 @@
 			opacity: 0 
 			pointer-events: none 
 			transform: translate3d(0,50%,0)
-			transition: $transition
+			transition: opacity 0.25s ease, transform 0.25s ease
 			&.is-active 
 				opacity: 1 
 				transform: translate3d(0,0,0)
@@ -404,7 +414,7 @@
 	opacity: 0  
 	pointer-events: none 
 	&.is-active 
-		transition: 0.5s
+		transition: opacity 0.5s
 		opacity: 1 
 		pointer-events: auto
 	&__list 
@@ -430,3 +440,14 @@
 				svg 
 					fill: $blue
 		
+@keyframes fly_icon
+    0%
+        transform: translateX(3px) translateY(-50%)
+    25%
+        transform: translateX(-3px) translateY(-50%)
+    50%
+        transform: translateX(3px) translateY(-50%)
+    75%
+        transform: translateX(-3px) translateY(-50%)
+    100%
+        transform: translateX(0px) translateY(-50%)

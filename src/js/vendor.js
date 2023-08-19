@@ -11,8 +11,3 @@ window.H = document.querySelector('html');
 window.B = document.querySelector('body');
 window.Pristine = Pristine;
 window.NiceSelect = NiceSelect;
-
-
-
-
-

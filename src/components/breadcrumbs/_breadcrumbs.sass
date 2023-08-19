@@ -14,7 +14,7 @@
 		font-size: rem(12px)
 		font-weight: 400
 		margin: 5px 30px 5px 0
-		transition: .25s
+		transition: color .25s
 		color: $gray
 		&:not(:last-child):after
 			content: '/'
@@ -32,6 +32,9 @@
 		&--back
 			padding-left: 20px
 			font-size: 13px
+
+	+bp($bp-small)
+		padding-bottom: 19px
 			
 
 

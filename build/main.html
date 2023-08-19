@@ -8,7 +8,7 @@
     </title>
     <link rel="icon" href="">
     <link rel="icon" href="" sizes="16x16">
-    <link rel="stylesheet" href="css/main.css?v=1692349870629">
+    <link rel="stylesheet" href="css/main.css?v=1692453862718">
   </head>
   <body>
     <div class="page js-page">
@@ -24,7 +24,7 @@
               </div>
               <nav class="header__nav"> 
                 <ul class="header__list">
-                  <li class="header__item"><a class="link link--default" href="#">О компании</a></li>
+                  <li class="header__item"><a class="link link--default is-active" href="#">О компании</a></li>
                   <li class="header__item"><a class="link link--default" href="#">Оплата и доставка</a></li>
                   <li class="header__item"><a class="link link--default" href="#">Гарантия и сопровождение</a></li>
                   <li class="header__item"><a class="link link--default" href="#">Обзоры</a></li>
@@ -32,7 +32,7 @@
                   <li class="header__item"><a class="link link--default" href="#">Новости</a></li>
                   <li class="header__item"><a class="link link--default" href="#">Контакты</a></li>
                 </ul>
-              </nav><a class="header__lk link link--default link--arrow" href="#">
+              </nav><a class="header__lk link link--default link--arrow js-popup-link" href="#" data-link="enter">
                 <svg>
                   <use xlink:href="images/sprites.svg#lk"></use>
                 </svg><span>Личный кабинет</span></a><a class="btn btn--middle header__mobile-btn" href="#"> <span>Задать вопрос</span></a>
@@ -57,7 +57,7 @@
                 </svg>
               </div>
               <div class="header__part">
-                <address class="header__address">г. Москва, 4-й Лихачёвский переулок, 4с2</address><a class="header__phone" href="tel:+74951208137">+7 (495) 120-81-37</a><span class="header__inform">Офис: 08:00-18:00, касса 08:00-17:00 </span>
+                <address class="header__address">г. Москва, 4-й Лихачёвский переулок, 4с2</address><a class="header__phone link link--bor link--bor-white link--white" href="tel:+74951208137">+7 (495) 120-81-37</a><span class="header__inform">Офис: 08:00-18:00, касса 08:00-17:00 </span>
               </div><a class="btn btn--middle btn--mobile header__btn" href="#"> <span>Задать вопрос</span></a>
             </div>
             <div class="header-city js-city-block">
@@ -130,20 +130,27 @@
                 <svg class="header__btn-close">
                   <use xlink:href="images/sprites.svg#close"></use>
                 </svg></a><a class="btn btn--blue header__btn-action" hrfe="#"> <span>акции</span></a>
-              <form class="header__search" action="#" name="form-search">
+              <form class="header__search js-search-unit" action="#" name="form-search">
                 <div class="form-field form-group form-field--search">
                   <div class="form-field__label">Я ИЩУ...</div>
                   <input class="form-field__input js-input js-open-search js-open-search" type="search" name="search" data-pristine-required-message="" required="required"/>
                   <div class="form-field__mask"></div>
                 </div>
-                <button class="btn btn--blue btn--icon header__search-btn" type="submit">
-                  <svg width="24" height="24">
-                    <use xlink:href="images/sprites.svg#search"></use>
-                  </svg>
-                </button>
+                <div class="header__search-buttons">
+                  <button class="btn btn--blue btn--icon header__search-btn" type="submit">
+                    <svg width="24" height="24">
+                      <use xlink:href="images/sprites.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--icon header__search-btn header__search-btn-hide js-close-search" type="submit">
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprites.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
               </form>
               <div class="header__hide-block"> <a class="header__phone" href="tel:+74951208137">+7 (495) 120-81-37</a><span class="header__inform">Офис: 08:00-18:00, касса 08:00-17:00 </span></div>
-              <div class="header__basket"> 
+              <div class="header__basket js-basket-total"> 
                 <svg class="header__basket-icon">
                   <use xlink:href="images/sprites.svg#basket"></use>
                 </svg>
@@ -192,8 +199,7 @@
                   </div>
                   <div class="menu-catalog-list__content js-catalog-menu__mobile-content">
                     <div class="menu-catalog-list__grid"> 
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Кофе</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофе</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -201,8 +207,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Растворимые ингредиенты</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Растворимые ингредиенты</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молоко</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Горячий шоколад</a></div>
@@ -210,8 +215,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Сахар и Сироп</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Сливки</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Сливки</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Выпечка</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Печенье, пряники и вафли</a></div>
@@ -220,8 +224,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Фруктово злаковые батончики</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Сливки</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Сливки</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Стаканы пластиковые</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Печенье, пряники и вафли</a></div>
@@ -230,8 +233,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Крышки</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Напитки</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Напитки</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Вода</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Соки</a></div>
@@ -241,8 +243,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Кисломолочные</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Еда</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Еда</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Лапша, пюре, каша б/п</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Сендвичи и роллы</a></div>
@@ -266,8 +267,7 @@
                   </div>
                   <div class="menu-catalog-list__content js-catalog-menu__mobile-content">
                     <div class="menu-catalog-list__grid"> 
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Кофе</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофе</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Кофейные автоматы</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -275,8 +275,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Торговые автоматы</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Торговые автоматы</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -284,8 +283,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Кофемашины</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофемашины</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -293,8 +291,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Доп. Оборудование</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Доп. Оборудование</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -319,8 +316,7 @@
                   </div>
                   <div class="menu-catalog-list__content js-catalog-menu__mobile-content">
                     <div class="menu-catalog-list__grid">
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Кофемашины</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофемашины</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -328,8 +324,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Доп. Оборудование</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Доп. Оборудование</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -337,8 +332,7 @@
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
                         </div>
                       </div>
-                      <div class="menu-catalog-list__unit">
-                        <h6 class="menu-catalog-list__name">Кофе</h6>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофе</a>
                         <div class="menu-catalog-list__list">
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
                           <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
@@ -358,17 +352,24 @@
         <div class="header-search modal js-list-search"> 
           <div class="wrapper">
             <div class="header-search__mobile">
-              <form class="header__search" action="#" name="form-search">
+              <form class="header__search js-search-unit" action="#" name="form-search">
                 <div class="form-field form-group form-field--search">
                   <div class="form-field__label">Я ИЩУ...</div>
                   <input class="form-field__input js-input js-open-search js-open-search" type="search" name="search" data-pristine-required-message="" required="required"/>
                   <div class="form-field__mask"></div>
                 </div>
-                <button class="btn btn--blue btn--icon header__search-btn" type="submit">
-                  <svg width="24" height="24">
-                    <use xlink:href="images/sprites.svg#search"></use>
-                  </svg>
-                </button>
+                <div class="header__search-buttons">
+                  <button class="btn btn--blue btn--icon header__search-btn" type="submit">
+                    <svg width="24" height="24">
+                      <use xlink:href="images/sprites.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--icon header__search-btn header__search-btn-hide js-close-search" type="submit">
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprites.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
               </form>
             </div>
             <div class="header-search__list"> 
@@ -497,21 +498,21 @@
         </div>
       </header>
       <main class="main" id="main">
-        <section class="banner-grid sec"> 
+        <section class="banner-grid sec">
           <div class="wrapper">
-            <div class="banner-grid__part"> 
+            <div class="banner-grid__part">
               <div class="banner swiper-container js-banner banner-grid__left">
                 <div class="swiper-wrapper"> 
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
-                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
+                  <div class="swiper-slide"> <a class="banner__image" style="background-image: url('images/products/banner.jpg')" href="#"></a></div>
                 </div>
                 <div class="js-banner__pagination slider-pagination"></div>
               </div>
@@ -562,23 +563,9 @@
                   <div class="products__slider swiper-container js-slider"> 
                     <div class="swiper-wrapper products__swiper-wrapper"> 
                       <div class="swiper-slide products__item">
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-1.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-1.png" alt=""/><img src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -596,7 +583,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -606,21 +593,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item">
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -638,7 +613,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -648,25 +623,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-3.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-1.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-3.png" alt=""/><img src="./images/products/product-1.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -684,7 +643,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -694,21 +653,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-4.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-4.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -726,7 +673,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -736,23 +683,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-5.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-5.png" alt=""/><img src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -770,7 +703,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -780,23 +713,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item">
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-4.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-2.png" alt=""/><img src="./images/products/product-4.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -814,7 +733,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -824,21 +743,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-5.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-5.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -856,7 +763,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -866,21 +773,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item">
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -898,7 +793,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -926,21 +821,9 @@
                   <div class="products__slider swiper-container js-slider"> 
                     <div class="swiper-wrapper products__swiper-wrapper"> 
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-4.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-4.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -958,7 +841,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -968,23 +851,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-1.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-1.png" alt=""/><img src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -1002,7 +871,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -1012,21 +881,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item">
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -1044,7 +901,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -1054,25 +911,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-3.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-1.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-3.png" alt=""/><img src="./images/products/product-1.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -1090,7 +931,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -1100,23 +941,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-5.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-5.png" alt=""/><img src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -1134,7 +961,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -1144,23 +971,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-4.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-2.png" alt=""/><img src="./images/products/product-4.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -1178,7 +991,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -1188,21 +1001,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item"> 
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-5.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-5.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -1220,7 +1021,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -1230,21 +1031,9 @@
                         </div>
                       </div>
                       <div class="swiper-slide products__item">
-                        <div class="product">
-                          <div class="product-icon">Хит</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                              </div>
-                            </div>
-                            <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#next"></use>
-                              </svg>
-                            </div>
-                            <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                              <svg>
-                                <use xlink:href="images/sprites.svg#prev"></use>
-                              </svg>
+                        <div class="product js-product">
+                          <div class="product-icon">Хит</div><a class="product__image" href="#">
+                            <div class="product__image-block"><img class="js-product__img" src="./images/products/product-2.png" alt=""/>
                             </div></a>
                           <div class="product__desc"><a class="product__desc-wrap" href="#">
                               <div class="product__about">
@@ -1262,7 +1051,7 @@
                                 </div>
                                 <div class="counter__item js-counter__plus"></div>
                               </div>
-                              <div class="btn btn--blue btn--small btn--arrow product__btn">
+                              <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                                 <svg>
                                   <use xlink:href="images/sprites.svg#basket"></use>
                                 </svg><span>в корзину</span>
@@ -1346,21 +1135,9 @@
               <div class="products__slider swiper-container js-slider"> 
                 <div class="swiper-wrapper products__swiper-wrapper"> 
                   <div class="swiper-slide products__item"> 
-                    <div class="product">
-                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide product__slide"><img src="./images/products/product-6.png" alt=""/>
-                          </div>
-                        </div>
-                        <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#next"></use>
-                          </svg>
-                        </div>
-                        <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#prev"></use>
-                          </svg>
+                    <div class="product js-product">
+                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-6.png" alt=""/>
                         </div></a>
                       <div class="product__desc"><a class="product__desc-wrap" href="#">
                           <div class="product__about">
@@ -1379,7 +1156,7 @@
                             </div>
                             <div class="counter__item js-counter__plus"></div>
                           </div>
-                          <div class="btn btn--blue btn--small btn--arrow product__btn">
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                             <svg>
                               <use xlink:href="images/sprites.svg#basket"></use>
                             </svg><span>в корзину</span>
@@ -1389,21 +1166,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide products__item"> 
-                    <div class="product">
-                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide product__slide"><img src="./images/products/product-7.png" alt=""/>
-                          </div>
-                        </div>
-                        <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#next"></use>
-                          </svg>
-                        </div>
-                        <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#prev"></use>
-                          </svg>
+                    <div class="product js-product">
+                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-7.png" alt=""/>
                         </div></a>
                       <div class="product__desc"><a class="product__desc-wrap" href="#">
                           <div class="product__about">
@@ -1422,7 +1187,7 @@
                             </div>
                             <div class="counter__item js-counter__plus"></div>
                           </div>
-                          <div class="btn btn--blue btn--small btn--arrow product__btn">
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                             <svg>
                               <use xlink:href="images/sprites.svg#basket"></use>
                             </svg><span>в корзину</span>
@@ -1432,25 +1197,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide products__item"> 
-                    <div class="product">
-                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide product__slide"><img src="./images/products/product-8.png" alt=""/>
-                          </div>
-                          <div class="swiper-slide product__slide"><img src="./images/products/product-2.png" alt=""/>
-                          </div>
-                          <div class="swiper-slide product__slide"><img src="./images/products/product-5.png" alt=""/>
-                          </div>
-                        </div>
-                        <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#next"></use>
-                          </svg>
-                        </div>
-                        <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#prev"></use>
-                          </svg>
+                    <div class="product js-product">
+                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-8.png" alt=""/><img src="./images/products/product-2.png" alt=""/>
                         </div></a>
                       <div class="product__desc"><a class="product__desc-wrap" href="#">
                           <div class="product__about">
@@ -1469,7 +1218,7 @@
                             </div>
                             <div class="counter__item js-counter__plus"></div>
                           </div>
-                          <div class="btn btn--blue btn--small btn--arrow product__btn">
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                             <svg>
                               <use xlink:href="images/sprites.svg#basket"></use>
                             </svg><span>в корзину</span>
@@ -1480,21 +1229,9 @@
                   </div>
                   <div class="swiper-slide products__item"><a class="product-banner" href="#"><img src="./images/banner-1.jpg" alt=""/></a></div>
                   <div class="swiper-slide products__item"> 
-                    <div class="product">
-                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide product__slide"><img src="./images/products/product-9.png" alt=""/>
-                          </div>
-                        </div>
-                        <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#next"></use>
-                          </svg>
-                        </div>
-                        <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#prev"></use>
-                          </svg>
+                    <div class="product js-product">
+                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-9.png" alt=""/>
                         </div></a>
                       <div class="product__desc"><a class="product__desc-wrap" href="#">
                           <div class="product__about">
@@ -1513,7 +1250,7 @@
                             </div>
                             <div class="counter__item js-counter__plus"></div>
                           </div>
-                          <div class="btn btn--blue btn--small btn--arrow product__btn">
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                             <svg>
                               <use xlink:href="images/sprites.svg#basket"></use>
                             </svg><span>в корзину</span>
@@ -1523,21 +1260,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide products__item">
-                    <div class="product">
-                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image-slider swiper-container js-product-slider" href="#">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide product__slide"><img src="./images/products/product-7.png" alt=""/>
-                          </div>
-                        </div>
-                        <div class="product__arrows-item product__arrows-item--next js-product-slider__next swiper-button-next">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#next"></use>
-                          </svg>
-                        </div>
-                        <div class="product__arrows-item js-product-slider__prev swiper-button-prev">
-                          <svg>
-                            <use xlink:href="images/sprites.svg#prev"></use>
-                          </svg>
+                    <div class="product js-product">
+                      <div class="product-icon product-icon--sale">Sale</div><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-7.png" alt=""/>
                         </div></a>
                       <div class="product__desc"><a class="product__desc-wrap" href="#">
                           <div class="product__about">
@@ -1556,7 +1281,7 @@
                             </div>
                             <div class="counter__item js-counter__plus"></div>
                           </div>
-                          <div class="btn btn--blue btn--small btn--arrow product__btn">
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
                             <svg>
                               <use xlink:href="images/sprites.svg#basket"></use>
                             </svg><span>в корзину</span>
@@ -1595,22 +1320,28 @@
         </section>
         <section class="services sec sec--bottom">
           <div class="wrapper"> 
-            <div class="services__grid"> <a class="b-services" href="#">
+            <div class="services__grid"> 
+              <div class="b-services">
                 <div class="b-services__image" style="background-image: url(images/s-1.jpg)"><img src="./images/person-1.png" alt=""/>
                 </div>
                 <div class="b-services__name">
                   <h6 class="h6-title">Бесплатная доставка при заказе от 15 000 рублей</h6>
-                </div></a><a class="b-services" href="#">
+                </div>
+              </div>
+              <div class="b-services">
                 <div class="b-services__image" style="background-image: url(images/s-2.jpg)"><img src="./images/person-2.png" alt=""/>
                 </div>
                 <div class="b-services__name">
                   <h6 class="h6-title">Бесплатная настройка автоматов под клиента</h6>
-                </div></a><a class="b-services" href="#">
+                </div>
+              </div>
+              <div class="b-services">
                 <div class="b-services__image" style="background-image: url(images/s-3.jpg)"><img src="./images/person-3.png" alt=""/>
                 </div>
                 <div class="b-services__name">
                   <h6 class="h6-title">Бесплатные консультации и обучениепо работе с оборудованием</h6>
-                </div></a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -2099,9 +1830,9 @@
                   <h6 class="h6-title">Сиба-вендинг</h6>
                 </div>
                 <ul class="footer__list"> 
-                  <li class="footer__list-item"><a class="footer__link" href="#">О компании</a></li>
-                  <li class="footer__list-item"><a class="footer__link" href="#">Оплата и доставка</a></li>
-                  <li class="footer__list-item"><a class="footer__link" href="#">Гарантия и сопровождение</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">О компании</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Оплата и доставка</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Гарантия и сопровождение</a></li>
                 </ul>
               </div>
               <div class="footer__column-unit"> 
@@ -2109,11 +1840,11 @@
                   <h6 class="h6-title">Каталог</h6>
                 </div>
                 <ul class="footer__list"> 
-                  <li class="footer__list-item"><a class="footer__link" href="#">Вендинговые автоматы</a></li>
-                  <li class="footer__list-item"><a class="footer__link" href="#">Ингредиенты для вендинговых автоматов</a></li>
-                  <li class="footer__list-item"><a class="footer__link" href="#">Кофемашины для бизнеса</a></li>
-                  <li class="footer__list-item"><a class="footer__link" href="#">Доп. оборудование для вендинга</a></li>
-                  <li class="footer__list-item"><a class="footer__link" href="#">Запчасти и ремонт</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Вендинговые автоматы</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Ингредиенты для вендинговых автоматов</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Кофемашины для бизнеса</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Доп. оборудование для вендинга</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Запчасти и ремонт</a></li>
                 </ul>
               </div>
             </div>
@@ -2191,6 +1922,84 @@
               <div class="popup js-popup" data-block="fetch-content">
                 <div class="js-fetch-wrapper"></div>
               </div>
+              <div class="popup js-popup" data-block="enter">
+                <div class="enter__top"> 
+                  <h3 class="enter__title">Вход </h3>
+                  <h3 class="enter__title enter__title--link js-popup-link" data-link="registration">Регистрация</h3>
+                </div>
+                <form class="form js-form" action="#" method="GET">
+                  <div class="form__block">
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Email</div>
+                            <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Пароль</div>
+                            <input class="form-field__input js-input" type="password" name="password" data-pristine-required-message="" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line form__line--check">
+                          <label class="form-checkbox form-group">
+                            <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"><span class="form-checkbox__text">Соглашаюсь с <a href="#" target="_blank" class="link link--blue-bor">условиями</a> обработки данных</span></span>
+                          </label>
+                    </div>
+                    <div class="form__line">
+                      <button class="btn btn--large btn--blue js-form-submit" type="submit"> <span>Войти</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="popup js-popup" data-block="registration">
+                <div class="enter__top"> 
+                  <h3 class="enter__title">Регистрация</h3>
+                  <h3 class="enter__title enter__title--link js-popup-link" data-link="enter">Вход</h3>
+                </div>
+                <form class="form js-form" action="#" method="GET">
+                  <div class="form__block">
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Ваше имя</div>
+                            <input class="form-field__input js-input" type="text" name="name" data-pristine-required-message="Обязательное поле" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Email</div>
+                            <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Придумайте Пароль</div>
+                            <input class="form-field__input js-input" type="password" name="password" data-pristine-required-message="" required id="pwd">
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Пароль еще раз</div>
+                            <input class="form-field__input js-input" type="password" name="password" data-pristine-required-message="" required data-pristine-equals="#pwd" data-pristine-equals-message="Пароли не совпадают!">
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line form__line--check">
+                          <label class="form-checkbox form-group">
+                            <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"><span class="form-checkbox__text">Соглашаюсь с <a href="#" target="_blank" class="link link--blue-bor">условиями</a> обработки данных</span></span>
+                          </label>
+                    </div>
+                    <div class="form__line">
+                      <button class="btn btn--large btn--blue js-form-submit" type="submit"> <span>зарегистрироваться</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
               <div class="popup js-popup" data-block="feedback">
                 <h2 class="popup__name">Написать нам </h2>
                 <form class="form js-form" action="#" method="GET" data-thank="#popup-thank" style="max-width: 500px">
@@ -2223,7 +2032,7 @@
                   </div>
                   <div class="form__line">
                         <label class="form-checkbox form-group">
-                          <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"><span class="form-checkbox__text">Принимаю условия &lt;a href=&quot;#&quot; target=&quot;_blank&quot; class=&quot;link link--blue&quot;&gt;использования информации&lt;/a&gt;</span></span>
+                          <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"><span class="form-checkbox__text">Принимаю условия <a href="#" target="_blank" class="link link--blue">использования информации</a></span></span>
                         </label>
                   </div>
                   <div class="form__line">
@@ -2245,7 +2054,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1692349870639"></script>
-    <script src="js/main.js?v=1692349870639"></script>
+    <script src="js/vendor.js?v=1692453862734"></script>
+    <script src="js/main.js?v=1692453862734"></script>
   </body>
 </html>

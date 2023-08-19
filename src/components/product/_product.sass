@@ -1,41 +1,32 @@
 .product 
 	position: relative
-	padding-bottom: 80px
 	width: 100% 
-	&__image-slider
-		display: block
-		overflow: hidden 
+	+bp(1399px , 'min')
+		max-width: 256px
+	&__image
+		+flex_center_b
+		overflow: hidden
 		width: 100%
 		padding: 73px 0 57px
 		border-radius: 7px
 		background-color: $gray2
-		.swiper-slide 
-			width: 100% !important
-	&__arrows-item 
-		position: absolute 
-		top: 50%
-		left: 4px 
-		width: 24px
-		height: 24px
-		cursor: pointer
-		z-index: 3
-		opacity: 0 
-		pointer-events: none
-		transition: 0.25s
-		display: flex 
-		align-items: center 
-		justify-content: center
-		&--next
-			left: auto 
-			right: 4px 
-		svg 
-			width: 10px
-			height: 14px
-			stroke: $baseTxt 
-			stroke-width: 2px
-			fill: transparent
-		&.is-hide
-			display: none
+
+	&__image-block
+		position: relative
+		height: 240px
+		+bp($bp-large2)
+			height: auto
+		img 
+			position: absolute 
+			+center('both')
+			transition: opacity 0.1s ease
+			max-height: 100%
+			opacity: 0 
+			&:first-child 
+				position: static
+				transform: none
+				opacity: 1
+	
 		
 	&__slide 
 		max-height: 240px
@@ -47,14 +38,10 @@
 		background-color: $white
 		padding: 0 8px
 		border-radius: 7px 
-		position: absolute 
-		bottom: 0 
-		left: 0 
-		right: 0 
+		position: relative
 		z-index: 3
-		overflow: hidden 
-		transition: 0.25s
-		height: 80px
+		transition: opacity 4s, transform 0.3s
+		position: relative
 	&__desc-wrap
 		display: flex 
 		padding: 12px 0 5px
@@ -97,11 +84,20 @@
 			opacity: 0.8
 			margin-top: 4px 
 	&__data 
-		display: none
+		display: flex 
+		position: absolute
+		left: 0px 
+		right: 0px 
+		height: 47px
+		padding: 6px 8px
+		opacity: 0 
+		transition: opacity 0.4s
 		align-items: center
 		justify-content: space-between
 		align-items: center 
 		padding-bottom: 11px
+		background-color: $white
+		border-radius: 0 0 7px 7px
 	&__btn 
 		margin-left: 5px
 	
@@ -130,15 +126,25 @@
 		
 		~ .product-icon--sale
 				top: 44px
+	+bp(730px)
+		z-index: 0 !important
 	
 	+bp(577px, 'min')
 	
-		&:hover 
+		&:hover
+			.product__image-block 
+				img  
+					&:first-child 
+						opacity: 0
+					&:last-child 
+						opacity: 1
 			.product__desc
-				height: auto
+				transform: translateY(-47px)
+				border-radius: 7px 7px 0 0
 				box-shadow: 0px 10px 25px 0px rgba(0, 39, 83, 0.08), 0px 3px 10px 0px rgba(0, 39, 83, 0.03)
-			.product__data 
-				display: flex
+			.product__data  
+				opacity: 1
+				box-shadow: 0px 10px 25px 0px rgba(0, 39, 83, 0.08), 0px 3px 10px 0px rgba(0, 39, 83, 0.03)
 			.product__arrows-item
 				opacity: 1 
 				pointer-events: auto
@@ -151,9 +157,6 @@
 			padding: 30px 0
 		&__slide 
 			height: 130px 
-		&__desc 
-			position: static 
-			height: auto
 		&__desc-wrap 
 			display: block
 			padding-top: 7px
@@ -166,6 +169,13 @@
 				&:first-child 
 					padding-left: 0 
 		&__data 
+			opacity: 1
+			bottom: -10px
+			left: auto 
+			right: 10px
+			height: 36px 
+			width: 34px
+			padding: 0
 			display: flex 
 			.counter 
 				display: none
@@ -180,10 +190,28 @@
 			line-height: rem(15px)
 			height: auto
 		
+.flying-img
+    position: absolute
+    animation: fly_to_cart 1s ease-in-out
+
+@keyframes fly_to_cart
+    0%
+        left: 0
+        top: 0
+    45%, 50%
+        left: var(--left)
+        top: 60px
+    80%, 90%
+        left: var(--left)
+        top: var(--top)
+        transform: scale(.2)
+    100%
+        left: calc(var(--left) + 40px)
+        top: var(--top)
+        transform: scale(.2)
+        opacity: 0
 
 
-		
-
-
+    
 
 	

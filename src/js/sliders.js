@@ -89,40 +89,40 @@ D.addEventListener("DOMContentLoaded", function () {
 	})
 
 	//product slider 
-	const productSlider = D.querySelectorAll('.js-product-slider');
-	productSlider.forEach(el => {
-		const swiper = new Swiper(el, {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			speed: 400,
-			effect: "creative",
-			creativeEffect: {
-				prev: {
-					shadow: false,
-					translate: [0, 0, -800],
-					rotate: [180, 0, 0],
-				},
-				next: {
-					shadow: false,
-					translate: [0, 0, -800],
-					rotate: [-180, 0, 0],
-				},
-			},
-			navigation: {
-				nextEl: ".js-product-slider__next",
-				prevEl: ".js-product-slider__prev",
-			},
-		});
-	})
+	// const productSlider = D.querySelectorAll('.js-product-slider');
+	// productSlider.forEach(el => {
+	// 	const swiper = new Swiper(el, {
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 0,
+	// 		speed: 400,
+	// 		effect: "creative",
+	// 		creativeEffect: {
+	// 			prev: {
+	// 				shadow: false,
+	// 				translate: [0, 0, -800],
+	// 				rotate: [180, 0, 0],
+	// 			},
+	// 			next: {
+	// 				shadow: false,
+	// 				translate: [0, 0, -800],
+	// 				rotate: [-180, 0, 0],
+	// 			},
+	// 		},
+	// 		navigation: {
+	// 			nextEl: ".js-product-slider__next",
+	// 			prevEl: ".js-product-slider__prev",
+	// 		},
+	// 	});
+	// })
 
-	productSlider.forEach(current => {
-		const countSlide = current.querySelectorAll('.product__slide').length;
+	// productSlider.forEach(current => {
+	// 	const countSlide = current.querySelectorAll('.product__slide').length;
 
-		if (countSlide <= 1) {
-			current.querySelector('.js-product-slider__next').classList.add('is-hide')
-			current.querySelector('.js-product-slider__prev').classList.add('is-hide')
-		}
-	})
+	// 	if (countSlide <= 1) {
+	// 		current.querySelector('.js-product-slider__next').classList.add('is-hide')
+	// 		current.querySelector('.js-product-slider__prev').classList.add('is-hide')
+	// 	}
+	// })
 
 		//banner slider 
 		const videoSlider = D.querySelectorAll('.js-video-slider');

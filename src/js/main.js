@@ -8,5 +8,7 @@ import './ui-elements/ckeckbox-rules'
 import './ui-elements/counter'
 import './form'
 import './popup'
+import './basket'
+import './filter'
 
 

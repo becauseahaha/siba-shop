@@ -17,6 +17,14 @@ block content
 			.catalog
 				.catalog__content
 					.catalog__sort
+						.catalog__sort-mobile
+							+select({
+								className: 'js-select',
+								name: 'region',
+								label: 'Сортировать по: названию',
+								options: ['Сортировать по: название', 'Сортировать по: цене', 'Сортировать по: отзывам'],
+								optionsValue: ['0', '1', '2']
+							})
 						.catalog__sort-list 
 							span.catalog__sort-name Сортировать по:
 							a.catalog__sort-item.is-active(href="#") названию
@@ -26,6 +34,10 @@ block content
 							span Найдено
 							span 44
 							span товара
+						
+						a.btn.btn--blue.btn--arrow.catalog__btn-mobile.js-open-filter(href="#")
+							+svg('Filter') 
+							span Фильтры
 					.catalog__list
 						+product({
 							hit: true, 
@@ -113,7 +125,13 @@ block content
 							price: '100 000'
 						})
 					+pagination()
-				.catalog__filter
+				.catalog__filter.js-filter
+					.catalog__filter-mobile.js-close-filter 
+						.btn.btn--blue.btn--large.btn--arrow
+							+svg('Filter')
+							span Фильтры 
+							.catalog__close 
+								+svg('close')
 					form.catalog__form(action="#")
 						.catalog__line.catalog__line--full
 							+select({
