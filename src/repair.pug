@@ -1,13 +1,21 @@
 extends pug/base
 include components/repair-item/repair-item
 
+
 append vars
 	- title = 'Карточка товара'
 
 block content
+	.breadcrumbs
+		.wrapper 
+			.breadcrumbs__list
+				a.link.breadcrumbs__link(href='#!') Каталог
+				a.link.breadcrumbs__link(href='#!') Запчасти и ремонт
+				a.link.breadcrumbs__link.breadcrumbs__link--current(href='#!') Снековые вендинговые автоматы
 	.repair
 		.wrapper
 			.repair__img
+				.magnify-wrapper
 				img(class="magnify" src='images/repair_img.png' alt='схема кофемашины')
 			.repair-content 
 				.repair__title Диспенсер стаканов для CANTO

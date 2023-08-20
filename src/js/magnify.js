@@ -1,7 +1,8 @@
 const magnify = (function () {
   const img = document.body.querySelector(".magnify");
   const glass = document.createElement("div");
-  const glassDimension = 200; // dimension of magnifier glass in PX
+  const imgWrapper = document.body.querySelector('.magnify-wrapper');
+  const glassDimension = 150; // dimension of magnifier glass in PX
 
   let isVisible = false; // flag to use on mousemove event
 
@@ -13,12 +14,12 @@ const magnify = (function () {
   document.body.append(glass);
 
   // show - hide glass
-  img.addEventListener("mouseover", () => {
+  imgWrapper.addEventListener("mouseover", () => {
     glass.style.display = "block";
     isVisible = true;
   });
 
-  img.addEventListener("mouseout", () => {
+  imgWrapper.addEventListener("mouseout", () => {
     glass.style.display = "none";
     isVisible = false;
   });
@@ -41,18 +42,18 @@ const magnify = (function () {
   // smartphones and tablets (not working on codepen.)
 
   // mobile views:
-  img.addEventListener("pointerover", () => {
+  imgWrapper.addEventListener("pointerover", () => {
     glass.style.display = "block";
     isVisible = true;
   });
 
-  img.addEventListener("pointerout", () => {
+  imgWrapper.addEventListener("pointerout", () => {
     glass.style.display = "none";
     isVisible = false;
   });
 
   // mobile version:
-  img.addEventListener("pointermove", (evt) => {
+  imgWrapper.addEventListener("pointermove", (evt) => {
     if (isVisible) {
       const mouseX = evt.clientX;
       const mouseY = evt.clientY;

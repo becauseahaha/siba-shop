@@ -19,5 +19,5 @@ mixin repairItem(props)
             path(d='M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10' stroke='white' stroke-width='1.5' stroke-linecap='round')
     if props.sale === 1
       .repair-item__sale
-        a.repair-item__sale-btn 
+        .repair-item__sale-btn.js-popup-link(data-link="popup-goods") 
           span есть дешевле

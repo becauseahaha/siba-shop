@@ -84,6 +84,8 @@
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 50px 32px
+    @media(max-width: 1200px)
+      gap: 24px
 
     +bp($bp-tablet)
       gap: 30px 21px
@@ -265,6 +267,7 @@
         line-height: 1.8
         letter-spacing: 1.26px
         font-weight: 500
+        text-transform: uppercase
         +bp($bp-small)
           font-size: 16px
           letter-spacing: 1.12px
