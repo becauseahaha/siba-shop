@@ -10,5 +10,7 @@ import './form'
 import './popup'
 import './basket'
 import './filter'
+import './animation'
+import './magnify'
 
 

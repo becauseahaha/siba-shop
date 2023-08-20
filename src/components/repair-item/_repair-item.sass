@@ -1,0 +1,122 @@
+.repair-item
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 30px 20px 20px 25px
+  background: #f7f8fa
+  cursor: pointer
+  position: relative
+
+  &:hover
+    box-shadow: 0px 10px 48px 0px rgba(0, 39, 83, 0.08), 0px 3px 10px 0px rgba(0, 39, 83, 0.03)
+
+    .repair-item__sale
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      transition: all ease-in 0.1s
+      box-shadow: 0px 5px 7px -2px rgba(34, 60, 80, 0.2)
+
+.repair-item__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  padding-bottom: 12px
+
+
+.repair-item__number
+  font-size: 15px
+  font-style: normal
+  font-weight: 500
+  line-height: 130%
+  letter-spacing: 0.45px
+  color: #0057b8
+
+.repair-item__code
+  font-size: 13px
+  font-style: normal
+  font-weight: 400
+  line-height: 120%
+  color: #878d93
+
+.repair-item__title
+  max-width: 220px
+  font-size: 15px
+  font-style: normal
+  font-weight: 500
+  line-height: 130%
+  letter-spacing: 0.45px
+
+.repair-item__bottom
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  margin-top: 32px
+
+.repair-item__counter
+  display: none
+  &.is-show
+    display: block
+
+.repair-item__price
+  &-current
+    font-size: 15px
+    line-height: 1.3
+    letter-spacing: .45px
+  &-old
+    font-size: 13px
+    line-height: 1.2
+    color: #878D93
+    margin-top: 3px
+
+.repair-item__add
+  padding: 7px 8px 6px 8px
+  background-color: #0057b8
+  border-radius: 7px
+  cursor: pointer
+  border: none
+  &.is-hidden
+    display: none
+
+.repair-item__sale-btn
+  padding: 12px
+  border-radius: 7px
+  border: 1px solid #ff671f
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  span
+    font-size: 13px
+    font-weight: 500
+    line-height: 140%
+    text-transform: uppercase
+    color: #252525
+
+  &:hover
+    position: relative
+    background: #ff671f
+    span 
+      color: #FFF
+
+  @media (max-width: 1389px)
+    padding: 13px 50px
+
+.repair-item__action
+  display: flex
+  gap: 4px
+
+.repair-item__sale
+  background: #f7f8fa
+  position: absolute
+  top: 205px
+  width: 100%
+  left: 0px
+  padding-left: 25px
+  padding-right: 20px
+  padding-bottom: 25px
+  display: none
+  z-index: 1

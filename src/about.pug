@@ -1,0 +1,119 @@
+extends pug/base
+
+include components/partners/partners
+include components/advantages-item/advantages-item
+
+
+append vars
+	- title = 'Главная'
+
+block content
+	section.about-hero
+			.about-hero__bg
+			.about-hero__mask
+				video.about-hero__video(preload='auto' muted='' playsinline='' width='1920' height='1080')
+					source(src='images/video/video.mp4' type='video/mp4')
+					//- source(src='/wp-content/uploads/kafeaterra-splash_4150ms_landscape-1080p.webm' type='video/webm')
+				.about-hero__poster
+					.about-hero__poster-img(data-animation='zoom')
+						img(src='https://kafeaterra.gr/wp-content/uploads/Home_Video-Poster_Landscape-16x9.webp' width='1920' height='1080' alt='Kafeaterra-Overview' data-animation='image-scale')
+				h2.about-hero__title
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='-0.1' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(1.0416666666667vw)')
+						span.odd(data-animation='chars' data-delay='.7')
+							| Новые 
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='0.9' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(-4.9583333333333vw)')
+						span.even(data-animation='chars' data-delay='.7')
+							| возможности
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='-2.5' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(-12.958333333333vw)')
+						span.odd(data-animation='chars' data-delay='.7')
+							| с СИБА-
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='1.8' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(15.833333333333vw)')
+						span.even(data-animation='chars' data-delay='.7')
+							| Вендинг
+			.about-hero__title.about-hero__title--black
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='-0.1' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(1.0416666666667vw)')
+						span.odd(data-animation='chars' data-delay='.7')
+							| Новые 
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='0.9' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(-4.9583333333333vw)')
+						span.even(data-animation='chars' data-delay='.7')
+							| возможности
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='-2.5' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(-12.958333333333vw)')
+						span.odd(data-animation='chars' data-delay='.7')
+							| с СИБА-
+					span.a-center(data-scroll='' data-scroll-position='top' data-scroll-direction='horizontal' data-scroll-speed='1.8' data-scroll-class='appear' data-scroll-repeat='true' data-scroll-target='#st-direction' style='transform: translateX(15.833333333333vw)')
+						span.even(data-animation='chars' data-delay='.7')
+							| Вендинг
+
+	section.about-company 
+		.wrapper 
+			.about-company__info 
+				.about-company__img 
+					img(src="images/about/about-img.jpg", alt="")
+				.about-company__desc 
+					.about-company__title СИБА-Вендинг – надежный партнер с 1999 года
+					.about-company__text Один из крупнейших поставщиков на рынке вендингового оборудования для приготовления кофе и продажи штучного товара. За время работы наша компания собрала в своем предложении все необходимое для работы вендора (оборудование, ингредиенты, запчасти). 
+			.about-company__advantages 
+				+advantages-item({title: 'Складские мощности более 11 000 кв.м.', logo: 'advantages-1'})
+				+advantages-item({title: 'Офисы продаж: Москва, Санкт-Петербург, Екатеринбург', logo: 'advantages-2'})
+				+advantages-item({title: 'Собственная торговая марка растворимых ингредиентов «Tazzamia»', logo: 'advantages-3'})
+				+advantages-item({title: 'Прямые контракты с ведущими итальянскими производителями', logo: 'advantages-4'})
+				+advantages-item({title: 'Свой сервисный центр по настройке и ремонту оборудования', logo: 'advantages-5'})
+	section.director 
+		.wrapper 
+			.director-content 
+				bloqoute.director-quote 
+					.director-quote__content
+						.director-quote__icon 
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" viewBox="0 0 24 30" fill="none">
+								<path d="M0 15L11.3898 0H13.0983L1.70847 15L13.0983 30H11.3898L0 15ZM10.9017 15L22.2915 0H24L12.6102 15L24 30H22.2915L10.9017 15Z" fill="#252525"/>
+							</svg>
+						p Независимо от того являетесь Вы вендором или еще только рассматриваете данный бизнес для себя, мы готовы стать надежным партнером для вас.
+					.director-info 	
+						.director__photo 
+							img(src="images/director.png", alt="")
+						.director__info 
+							.director__name Александр Иванов
+							.director__post Генеральный директор
+	+partners()
+		+partners-item({color: '#DA702D', logo: 'logo-1'})
+		+partners-item({color: '#000000', logo: 'logo-2'})
+		+partners-item({color: '#EE2E24', logo: 'logo-3'})
+		+partners-item({color: '#59B767', logo: 'logo-4'})
+		+partners-item({color: '#A7827A', logo: 'logo-5'})
+		+partners-item({color: '#EE2E24', logo: 'logo-6'})
+		+partners-item({color: '#7A3223', logo: 'logo-7'})
+		+partners-item({color: '#004F95', logo: 'logo-8'})
+	section.about-advantages 
+		.wrapper 
+			.about-advantages__info 
+				.about-advantages__title Преимущества покупки аппаратов в нашей компании
+				.about-advantages__text Компания «СИБА-Вендинг» предлагает широкий ассортимент вендинговых аппаратов разного типа и функциональности. К основным преимуществам покупки торговых автоматов в нашей компании относится:
+				.about-advantages__list 
+					.about-advantages__list-item 
+						+svg('shield')
+						span вандалоустойчивое исполнение
+					.about-advantages__list-item 
+						+svg('filter')
+						span интуитивно понятный интерфейс
+					.about-advantages__list-item
+						+svg('coffee') 
+						span надежность и длительный срок службы
+			.about-advantages__img 
+				img(src="images/about/about-advantages.png", alt="")
+	section.about-services 
+		img(src="images/about/about-services-decor.svg", alt="").about-services__decor
+		.wrapper 
+			.about-services__content 
+				.about-services__img 
+					img(src="images/about/about-services.png", alt="")
+				.about-services__info 
+					.about-services__text Мы предлагаем не только возможность купить такие аппараты и ингредиенты к ним, но и получить профессиональную консультацию по выбору, сервисное обслуживание и ремонтные работы.
+					.about-services__btn.btn.btn--large.btn--outline 
+						span Подробнее
+			.about-services__action 
+				a(href="").about-services__link
+					+svg('vedomost')
+					span Сводная ведомость
+				a(href="").about-services__link
+					+svg('sout')
+					span СОУТ

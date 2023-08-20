@@ -1,0 +1,23 @@
+include ../counter/counter
+
+mixin repairItem(props)
+  .repair-item
+    .repair-item__wrapper
+      .repair-item__number= `№ ${props.number}`
+      .repair-item__code= `Артикул ${props.articul}`
+    .repair-item__title= props.name
+    .repair-item__bottom
+      .repair-item__price
+        .repair-item__price-current= props.price
+        .repair-item__price-old= props.oldprice
+      .repair-item__action
+        .repair-item__counter
+          +counter({val: 1})
+        button.repair-item__add
+          svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+            rect(x='4' y='7' width='16' height='13' rx='4' stroke='white' stroke-width='1.5')
+            path(d='M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10' stroke='white' stroke-width='1.5' stroke-linecap='round')
+    if props.sale === 1
+      .repair-item__sale
+        a.repair-item__sale-btn 
+          span есть дешевле

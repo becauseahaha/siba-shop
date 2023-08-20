@@ -1,0 +1,473 @@
+.about-company
+  background: #0057B8
+  padding: 120px 0 200px
+  
+  +bp($bp-large2) 
+    padding: 90px 0 95px
+  
+  +bp($bp-tablet)
+    padding: 70px 0
+  
+  +bp($bp-small)
+    padding: 50px 0
+
+  &__info
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 90px
+    margin-bottom: 100px
+
+    +bp($bp-large2)
+      margin-bottom: 50px
+
+    +bp($bp-tablet)
+      flex-direction: column-reverse
+      gap: 70px
+      margin-bottom: 40px
+
+    +bp($bp-small)
+      gap: 40px
+  
+  &__img
+    max-width: 550px
+    width: 100%
+
+    +bp($bp-large2)
+      max-width: 480px
+    
+    +bp($bp-tablet)
+      max-width: 100%
+
+    img 
+      display: block
+      width: 100%
+      border-radius: 7px
+  
+  &__desc
+      max-width: 670px
+      width: 100%
+
+      +bp($bp-large2)
+
+
+  &__title
+      color: $white
+      font-size: 40px
+      line-height: 1.3
+      margin-bottom: 30px
+      text-transform: uppercase
+      font-weight: 500
+      letter-spacing: 2px
+
+      +bp($bp-small)
+        font-size: 22px
+        margin-bottom: 20px
+
+  &__text 
+    padding-right: 24px
+    font-size: 24px
+    line-height: 1.3
+    font-weight: 300
+    color: $white
+    letter-spacing: 0.48px
+
+    +bp($bp-small)
+      font-size: 14px
+  
+  &__advantages 
+    display: flex
+    align-items: flex-start
+    gap: 60px
+
+    +bp($bp-large2)
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 50px 32px
+
+    +bp($bp-tablet)
+      gap: 30px 21px
+
+    +bp($bp-small)
+      gap: 34px
+      grid-template-columns: 1fr
+
+
+.director
+  padding: 156px 0 201px
+
+  +bp($bp-large2)
+    padding: 120px 0 127px
+
+  +bp($bp-small)
+    padding: 40px 0 48px
+
+  .wrapper
+    position: relative
+
+  &-info
+    margin-top: 55px
+
+    +bp($bp-tablet)
+      display: flex
+      align-items: center
+      margin-top: 40px
+    
+    +bp($bp-small)
+      margin-top: 30px
+  
+  &__photo
+    position: absolute
+    right: 50px
+    top: -220px
+    max-width: calc(100% - 720px)
+
+    img 
+      border-radius: 7px
+
+    +bp($bp-large2)
+      top: -150px
+    
+    +bp($bp-tablet)
+      position: static
+      width: 50px
+      height: 50px
+      max-width: initial
+      margin-right: 20px
+  
+  &-quote
+    display: block
+
+    max-width: 595px
+    width: 100%
+
+    +bp($bp-tablet)
+      width: 100%
+
+    +bp($bp-small)
+      padding-left: 0
+
+    &__icon
+      position: absolute
+      left: 0
+      top: 10px
+      +bp($bp-small)
+        margin-bottom: 30px
+        position: static
+    p
+      font-size: 30px
+      line-height: 1.6
+      letter-spacing: 0.6px
+      margin: 0
+      font-weight: 300
+
+      +bp($bp-small)
+        font-size: 20px
+        letter-spacing: 0.4px
+    &__content
+      padding-left: 103px
+      position: relative
+      +bp($bp-tablet)
+        width: 100%
+        padding-left: 80px
+      +bp($bp-small)
+        padding-left: 0
+  &__info
+    padding-left: 103px
+    +bp($bp-tablet)
+      padding-left: 80px
+    +bp($bp-tablet)
+      padding-left: 0
+  &__name
+    font-size: 15px
+    font-weight: 500
+    line-height: 1.2
+    color: #252525
+    margin-bottom: 3px
+  
+  &__post
+    font-size: 13px
+    color: #878D93
+    line-height: 1.2
+
+
+.about-advantages
+    padding: 120px 0
+    background: #F2F5F7
+    +bp($bp-large2)
+      padding: 70px 0
+    +bp($bp-small)
+      padding: 50px 0 45px
+    
+    .wrapper
+      display: flex
+      align-items: stretch
+      justify-content: space-between
+      gap: 90px
+      +bp($bp-large2)
+        gap: 100px
+      +bp($bp-medium)
+        flex-direction: column
+        gap: 80px
+      +bp($bp-medium)
+        gap: 50px
+    &__info
+      max-width: 600px
+      width: 100%
+    &__img
+        max-width: 670px
+        width: 100%
+        +bp($bp-medium)
+          max-width: 100%
+        img
+          height: 100%
+          width: 100%
+          object-fit: cover
+          border-radius: 7px
+          +bp($bp-medium)
+            height: 490px
+          +bp($bp-small)
+            height: 200px
+    &__title
+      font-size: 40px
+      margin-bottom: 30px
+      line-height: 1.1
+      letter-spacing: 1.2px
+      +bp($bp-small)
+        font-size: 32px
+        line-height: 1.1
+        letter-spacing: 0.96px
+        margin-bottom: 20px
+    &__text
+      font-size: 24px
+      line-height: 1.6
+      letter-spacing: 0.48px
+      font-weight: 300
+      margin-bottom: 90px
+      +bp($bp-small)
+        margin-bottom: 40px
+        font-size: 14px
+        letter-spacing: 0.28px
+    &__list-item
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      &:last-of-type
+        margin-bottom: 0
+      svg
+        display: block
+        width: 40px
+        height: 40px
+        margin-right: 20px
+        fill: transparent 
+      span
+        font-size: 18px
+        line-height: 1.8
+        letter-spacing: 1.26px
+        font-weight: 500
+        +bp($bp-small)
+          font-size: 16px
+          letter-spacing: 1.12px
+
+.about-services
+  padding: 120px 0
+  position: relative
+  +bp($bp-large2)
+    padding: 70px 0
+  +bp($bp-tablet)
+    padding: 50px 0
+  &__decor
+    position: absolute
+    right: 30px
+    bottom: 180px
+    @media(max-width: 1600px)
+      bottom: 220px
+    @media(max-width: 1200px) 
+      display: none
+  &__content
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 90px
+    margin-bottom: 120px
+    +bp($bp-large2)
+      margin-bottom: 70px
+    +bp($bp-medium)
+      flex-direction: column-reverse
+      gap: 0
+    +bp($bp-tablet)
+      margin-bottom: 50px
+  &__info
+    max-width: 640px
+    width: 100%
+    padding-top: 50px
+    +bp($bp-large2)
+      padding-top: 40px
+    +bp($bp-medium)
+      max-width: 100%
+      padding-top: 0
+  &__text
+    font-size: 30px
+    line-height: 1.6
+    letter-spacing: 0.6px
+    margin-bottom: 50px
+    +bp($bp-tablet)
+      font-size: 20px
+      letter-spacing: 0.4px
+      margin-bottom: 24px
+  &__img
+    max-width: 555px
+    width: 100%
+    +bp($bp-medium)
+      margin: -60px 0 0 auto
+    +bp($bp-tablet)
+      margin: 40px 0 0 0
+      max-width: 100%
+    img
+      border-radius: 7px
+      +bp($bp-tablet)
+        width: 100%
+  &__action
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 15px
+    +bp($bp-medium)
+      gap: 20px
+    +bp($bp-tablet)
+      flex-direction: column
+      align-items: center
+      gap: 10px
+  &__link
+    max-width: 442px
+    width: 100%
+    padding: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 24px
+    border: 1px solid #0057B8
+    border-radius: 7px
+    cursor: pointer
+    &:hover
+      background: #0057b8
+      color: #FFF
+      span
+        color: #FFF
+      svg
+        color: #FFF
+    +bp($bp-medium)
+      padding: 14px
+      max-width: 300px
+    +bp($bp-tablet)
+      padding: 9px
+      max-width: 100%
+      width: 100%
+      gap: 10px
+    span
+      color: #0057B8
+      font-size: 18px
+      line-height: 1.2
+      letter-spacing: 1.26px
+      font-weight: 500
+      text-transform: uppercase
+      padding-bottom: 1px
+      border-bottom: 1px solid #0057B8
+      +bp($bp-medium) 
+        font-size: 14px
+        letter-spacing: 0.98px
+    svg 
+      display: block
+      width: 30px
+      height: 30px
+      color: #0057B8
+
+.about-hero
+  height: 100vh
+  margin-top: -175px
+  position: relative
+  z-index: 10
+  +bp($bp-tablet)
+    margin-top: -40px
+
+
+
+.about-hero__mask
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+  -webkit-clip-path: inset(50%)
+  clip-path: inset(50% 0%)
+  z-index: 10
+  opacity: 1
+
+.about-hero__bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+  z-index: 9
+  background: url('../images/blue-circle.png') top right / 25% no-repeat, url('../images/orange-circle.png') left 700px / 700px no-repeat
+  +bp($bp-large2) 
+    background: url('../images/blue-circle.png') top right / 30% no-repeat, url('../images/orange-circle.png') left 500px / 400px no-repeat
+  +bp($bp-tablet)
+    background: url('../images/blue-circle.png') top right / 30% no-repeat, url('../images/orange-circle.png') calc(100% - 500px) 450px / 400px no-repeat
+  +bp($bp-small)
+    background: url('../images/blue-circle.png') top right / 50% no-repeat, url('../images/orange-circle.png') calc(100% - 160%) 550px / 60% no-repeat
+
+.about-hero
+  &__video
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: inline
+    zoom: 1
+    max-width: 100%
+    width: 100%
+    height: 100vh
+    z-index: -2
+    object-fit: cover
+  &__poster
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    &.is-hidden
+        opacity: 0
+    img
+      height: 100%
+      left: 0
+      -o-object-fit: cover
+      object-fit: cover
+      position: absolute
+      top: 0
+      width: 100%
+      background-size: cover
+      background-position: 50% 50%
+  &__title
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-size: 7.625vw
+    line-height: 6.035vw
+    letter-spacing: -.02em
+    text-transform: uppercase
+    color: #FFF
+    &--black
+      color: #000
+      padding-top: 60px
+    > span 
+      margin: 5px 0
+    
