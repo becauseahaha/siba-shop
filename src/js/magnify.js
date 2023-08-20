@@ -1,70 +1,45 @@
-const magnify = (function () {
-  const img = document.body.querySelector(".magnify");
-  const glass = document.createElement("div");
-  const imgWrapper = document.body.querySelector('.magnify-wrapper');
-  const glassDimension = 150; // dimension of magnifier glass in PX
+HTMLImageElement.prototype.zoomer = function(magnification, magnifierSize) {
+  var imgTarget = this,
+    targetStyle = imgTarget.style,
+    creeLoupe = function(e) {
+      var bodyElt = document.body,
+        loupe = bodyElt.appendChild( document.createElement('div') ),
+        styleLoupe = loupe.style,
+        bBox = imgTarget.getBoundingClientRect(),     
+        imagePos = {
+            top: bBox.top + bodyElt.scrollTop,
+            left: bBox.left + bodyElt.scrollLeft
+        },
+        magnifyOffset = parseInt( magnifierSize ) / 2,
+        [ rightSide, bottomSide ] = [ +(imagePos.left + imgTarget.width), +(imagePos.top + imgTarget.height) ],
+        moveLoupe = function(e) {
 
-  let isVisible = false; // flag to use on mousemove event
+          if ( e.pageX < +(imagePos.left - magnifyOffset / 2) 
+            || e.pageX > +(rightSide + magnifyOffset / 2) 
+            || e.pageY < +(imagePos.top - magnifyOffset / 2) 
+            || e.pageY > +(bottomSide + magnifyOffset / 2)) {
+            bodyElt.removeChild( loupe );
+            document.removeEventListener('mousemove', moveLoupe);
+          } else {
+            [styleLoupe.left, styleLoupe.top] = [e.pageX, e.pageY].map( n => `${n - magnifyOffset}px` );
+            styleLoupe.backgroundPosition = [e.pageX - imagePos.left, e.pageY - imagePos.top].map( x => `${ -x * magnification + magnifyOffset / 2 }px` ).join(' ');
+          }
+        };
+      
+      loupe.classList.add('magnify');
+      
+      styleLoupe.backgroundSize = [imgTarget.width, imgTarget.height].map( x => `${x * magnification}px` ).join(' ');
+      styleLoupe.backgroundImage = `url(${imgTarget.src})`;
+      [styleLoupe.width, styleLoupe.height] = [magnifierSize, magnifierSize];
 
-  // magnifier glass
-  glass.classList.add("glass");
-  glass.style.width = `${glassDimension}px`;
-  glass.style.height = `${glassDimension}px`;
-  glass.style.backgroundImage = `url(${img.src})`;
-  document.body.append(glass);
+      document.addEventListener('mousemove', moveLoupe);
 
-  // show - hide glass
-  imgWrapper.addEventListener("mouseover", () => {
-    glass.style.display = "block";
-    isVisible = true;
-  });
+      return loupe;
+    };
+  
+  this.addEventListener('mouseover', creeLoupe);
+  
+  return this;
+}
 
-  imgWrapper.addEventListener("mouseout", () => {
-    glass.style.display = "none";
-    isVisible = false;
-  });
-
-  window.addEventListener("mousemove", (evt) => {
-    if (isVisible) {
-      const mouseX = evt.clientX;
-      const mouseY = evt.clientY;
-
-      const bgX = (100 * (mouseX - img.offsetLeft)) / img.clientWidth;
-      const bgY = (100 * (mouseY - img.offsetTop)) / img.clientHeight;
-
-      glass.style.left = `${mouseX - glassDimension / 2}px`;
-      glass.style.top = `${mouseY - glassDimension / 2}px`;
-
-      glass.style.backgroundPosition = `${bgX}% ${bgY}%`;
-    }
-  });
-
-  // smartphones and tablets (not working on codepen.)
-
-  // mobile views:
-  imgWrapper.addEventListener("pointerover", () => {
-    glass.style.display = "block";
-    isVisible = true;
-  });
-
-  imgWrapper.addEventListener("pointerout", () => {
-    glass.style.display = "none";
-    isVisible = false;
-  });
-
-  // mobile version:
-  imgWrapper.addEventListener("pointermove", (evt) => {
-    if (isVisible) {
-      const mouseX = evt.clientX;
-      const mouseY = evt.clientY;
-
-      const bgX = (100 * (mouseX - img.offsetLeft)) / img.clientWidth;
-      const bgY = (100 * (mouseY - img.offsetTop)) / img.clientHeight;
-
-      glass.style.left = `${mouseX - glassDimension / 2}px`;
-      glass.style.top = `${mouseY - glassDimension / 2}px`;
-
-      glass.style.backgroundPosition = `${bgX}% ${bgY}%`;
-    }
-  });
-})();
+window.addEventListener( 'load', e => document.querySelector('.magnify-img').zoomer( 2, '180px' ) );

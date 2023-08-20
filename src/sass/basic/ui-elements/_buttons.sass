@@ -61,7 +61,14 @@
 			color: $white 
 			&:before 
 				background-color: $baseTxt
-	
+	&--outline
+		border: 1px solid rgba(34, 34, 34, 0.60)
+		background: transparent
+		color: $black
+		&:hover
+			color: $white
+			&::before
+				background: rgba(34, 34, 34, 0.60)
 	&--p-small 
 		padding: 0 8px
 		justify-content: center
