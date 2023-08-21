@@ -1,45 +1,50 @@
-HTMLImageElement.prototype.zoomer = function(magnification, magnifierSize) {
-  var imgTarget = this,
-    targetStyle = imgTarget.style,
-    creeLoupe = function(e) {
-      var bodyElt = document.body,
-        loupe = bodyElt.appendChild( document.createElement('div') ),
-        styleLoupe = loupe.style,
-        bBox = imgTarget.getBoundingClientRect(),     
-        imagePos = {
-            top: bBox.top + bodyElt.scrollTop,
-            left: bBox.left + bodyElt.scrollLeft
-        },
-        magnifyOffset = parseInt( magnifierSize ) / 2,
-        [ rightSide, bottomSide ] = [ +(imagePos.left + imgTarget.width), +(imagePos.top + imgTarget.height) ],
-        moveLoupe = function(e) {
+$(document).ready(function () {
+  var nativeWidth = 0;
+  var nativeHeight = 0;
 
-          if ( e.pageX < +(imagePos.left - magnifyOffset / 2) 
-            || e.pageX > +(rightSide + magnifyOffset / 2) 
-            || e.pageY < +(imagePos.top - magnifyOffset / 2) 
-            || e.pageY > +(bottomSide + magnifyOffset / 2)) {
-            bodyElt.removeChild( loupe );
-            document.removeEventListener('mousemove', moveLoupe);
-          } else {
-            [styleLoupe.left, styleLoupe.top] = [e.pageX, e.pageY].map( n => `${n - magnifyOffset}px` );
-            styleLoupe.backgroundPosition = [e.pageX - imagePos.left, e.pageY - imagePos.top].map( x => `${ -x * magnification + magnifyOffset / 2 }px` ).join(' ');
-          }
-        };
-      
-      loupe.classList.add('magnify');
-      
-      styleLoupe.backgroundSize = [imgTarget.width, imgTarget.height].map( x => `${x * magnification}px` ).join(' ');
-      styleLoupe.backgroundImage = `url(${imgTarget.src})`;
-      [styleLoupe.width, styleLoupe.height] = [magnifierSize, magnifierSize];
+  $(".magnifierWrap").mousemove(function (e) {
+    if (!nativeWidth && !nativeHeight) {
+      var imgObject = new Image();
+      imgObject.src = $(".smallImg").attr("src");
+      nativeWidth = imgObject.width;
+      nativeHeight = imgObject.height;
+    } else {
+      var magnifyOffset = $(this).offset();
+      var mouseX = e.pageX - magnifyOffset.left;
+      var mouseY = e.pageY - magnifyOffset.top;
 
-      document.addEventListener('mousemove', moveLoupe);
+      if (
+        mouseX < $(this).width() &&
+        mouseY < $(this).height() &&
+        mouseX > 0 &&
+        mouseY > 0
+      ) {
+        $(".magnifier").fadeIn(100);
+      } else {
+        $(".magnifier").fadeOut(100);
+      }
+      if ($(".magnifier").is(":visible")) {
+        var smallImgX =
+          Math.round(
+            (mouseX / $(".smallImg").width()) * nativeWidth -
+              $(".magnifier").width() / 2
+          ) * -1;
+        var smallImgY =
+          Math.round(
+            (mouseY / $(".smallImg").height()) * nativeHeight -
+              $(".magnifier").height() / 2
+          ) * -1;
+        var bgp = smallImgX + "px " + smallImgY + "px";
 
-      return loupe;
-    };
-  
-  this.addEventListener('mouseover', creeLoupe);
-  
-  return this;
-}
+        var largeImgX = mouseX - $(".magnifier").width() / 2;
+        var largeImgY = mouseY - $(".magnifier").height() / 2;
 
-window.addEventListener( 'load', e => document.querySelector('.magnify-img').zoomer( 2, '180px' ) );
+        $(".magnifier").css({
+          left: largeImgX,
+          top: largeImgY,
+          backgroundPosition: bgp,
+        });
+      }
+    }
+  });
+});
