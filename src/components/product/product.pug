@@ -32,3 +32,26 @@ mixin product(props)
 				.btn.btn--blue.btn--small.btn--arrow.product__btn.js-add-basket
 					+svg('basket')
 					span в корзину
+
+mixin product_horizontal(props)
+	.product-horizontal.swiper-slide
+		if props.hit 
+			.product-horizontal-icon Хит
+		if props.sale 
+			.product-horizontal-icon.product-horizontal-icon--sale Sale
+		.product-horizontal__image
+			+img(`products/${props.img}`)
+		.product-horizontal__desc
+			.product-horizontal__desc-wrap
+				.product-horizontal__about
+					h6.product-horizontal__name= props.name
+					small.product-horizontal__text= props.text
+				.product-horizontal__prices
+					.product-horizontal__price
+						span= props.price
+						span &#8381;
+			.product-horizontal__data
+				+counter({val: 1})
+				.btn.btn--blue.btn--small.btn--arrow.product-horizontal__btn
+					+svg('basket')
+					span В корзину

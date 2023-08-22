@@ -1,0 +1,289 @@
+extends pug/base
+include components/breadcrumbs/breadcrumbs
+include components/product/product
+include components/slider-arrow/slider-arrow
+include components/counter/counter
+include components/b-video/b-video
+
+
+append vars
+	- title = 'Карточка'
+
+block content
+
+	+breadcrumbs([
+		'Каталог',
+		'Венддинговые автоматы',
+		'Снековые вендинговые автоматы'
+	])
+
+	section.product-card.sec
+		.wrapper.product-card__container 
+			.product-card__gallery.card-gallery
+
+				.card-gallery__main
+					.card-gallery__icon Хит
+					.swiper#js-slider-product-card
+						.swiper-wrapper 
+							.swiper-slide#slide-0: img(src="images/products/product-1.png")
+							.swiper-slide#slide-1: img(src="images/products/product-2.png")
+							.swiper-slide#slide-2: img(src="images/products/product-3.png")
+					.card-gallery__figure-1
+					.card-gallery__figure-1_inner-1
+					.card-gallery__figure-1_inner-2
+					.card-gallery__figure-2
+					.card-gallery__figure-3
+					.card-gallery__figure-4
+					.card-gallery__figure-4_inner-1
+
+				.card-gallery__controls#js-slider-product-card-controls
+					button.card-gallery__control.is-active(data-slide="0")
+						img(src="images/products/s-1.png")
+					button.card-gallery__control(data-slide="1") 
+						img(src="images/products/s-2.png")
+					button.card-gallery__control(data-slide="2") 
+						img(src="images/products/s-3.png")
+
+			.product-card__details
+				h3.product-card__title Кофейный автомат OPERA
+
+				.product-card__vendor-details
+					.product-card__code Артикул: 142 121
+					.product-card__company 
+						img(src="images/partners/necta.png")
+
+				.product-card__description#product-card__description 
+					p Вендинговый автомат OPERA популярный кофейный аппарат от компании Evoca (Necta), который применяется для приготовления 18 разных видов напитков. Для их приготовления применяются растворимые компоненты и натуральный зерновой кофе, что делает его универсальным решением для установки в торговых центрах и офисах... 
+						button.product-card__description-btn.js-show-hide(data-target="product-card-hidden-description") Показать еще
+					.is-hidden#product-card-hidden-description
+						p Вендинговый автомат OPERA популярный кофейный аппарат от компании Evoca (Necta), который применяется для приготовления 18 разных видов напитков. Для их приготовления применяются растворимые компоненты и натуральный зерновой кофе, что делает его универсальным решением для установки в торговых центрах и офисах
+						p Вендинговый автомат OPERA популярный кофейный аппарат от компании Evoca (Necta), который применяется для приготовления 18 разных видов напитков. Для их приготовления применяются растворимые компоненты и натуральный зерновой кофе, что делает его универсальным решением для установки в торговых центрах и офисах
+				
+				mixin qualities-list-item(prop, val) 
+					.product-card__qualities-item 
+						span.product-card__qualities-item--grey= prop +': '
+						span= val
+
+				.product-card__qualities
+					.product-card__qualities-title Особенности
+					.product-card__qualities-list
+						+qualities-list-item('Кофемолка', 'регулируемая (от 7 до 15 г)')
+						+qualities-list-item('Капучинатор', 'автоматический')
+						+qualities-list-item('Количество напитков', 'до 32 напитков')
+						+qualities-list-item('Количество видов кофе', 'можно использовать 2 вида кофе')
+						+qualities-list-item('Экран', 'touch')
+
+				.product-card__controls 
+					.product-card__prices
+						.product-card__price 521 897,71 ₽
+						.product-card__price-foreign 6 030.00 €
+					.product-card__buy-quantity 
+						+counter({val: 1})
+					button.product-card__buy-btn.btn.btn--arrow.btn--blue(href='#')
+						+svg('basket')
+						span В корзину
+
+				.product-card__partner-stores
+					a(href="#").product-card__partner-stores-btn.product-card__partner-stores-btn--ozon Купить на
+						img.icon(src="images/ozon.svg")
+					a(href="#").product-card__partner-stores-btn.product-card__partner-stores-btn--wildberries Купить на
+						img.icon(src="images/wildberries.svg")
+				
+				.js-tab
+					.product-card__tabs.js-tab__list
+						button.product-card__tabs-item.js-tab__item.is-active(data-id="tab-details-1") Характеристики
+						button.product-card__tabs-item.js-tab__item(data-id="tab-details-2") Меню и настройки
+						button.product-card__tabs-item.js-tab__item(data-id="tab-details-3") Доставка
+
+					.js-tab__content
+						.product-card__tabs-container.js-tab__block#tab-details-1.is-active
+							.product-card__tab-details
+								.product-card__tab-details-title Параметры:
+								table.product-card__details-table 
+									tr: td Габариты ВхШхГ 
+										td 1830х717х874 мм
+									tr: td Вес
+										td 225 кг
+									tr: td Энергопотребление в режиме ожидания
+										td 76.5 Вт/ч
+									tr: td Пиковая мощность
+										td 2500 Вт
+									tr: td Тип оборудования
+										td Автоматическая
+							.product-card__tab-details
+								.product-card__tab-details-title Параметры:
+								table.product-card__details-table 
+									tr: td Габариты ВхШхГ 
+										td 1830х717х874 мм
+									tr: td Вес
+										td 225 кг
+									tr: td Энергопотребление в режиме ожидания
+										td 76.5 Вт/ч
+									tr: td Пиковая мощность
+										td 2500 Вт
+									tr: td Тип оборудования
+										td Автоматическая
+
+						.product-card__tabs-container.js-tab__block#tab-details-2 
+							.product-card__tab-details
+								.product-card__tab-details-title Меню и настройки:
+								p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+						.product-card__tabs-container.js-tab__block#tab-details-3 
+							.product-card__tab-details
+								.product-card__tab-details-title Доставка:
+								p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+				h4.product-card__videos-h4 Полезная информация
+				.product-card__videos 
+					+b-video({
+						cl: 'js-popup-link',
+						link: 'video', 
+						url: 'https://www.youtube.com/embed/hFj5L6sbX-o',
+						img: 'products/v-1.jpg', 
+						title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+						date: '26 июня 2023',
+						play: true
+					})
+					+b-video({
+						cl: 'b-video--news',
+						img: 'news/news-1.jpg', 
+						title: 'Итоги выставки Versus 2023', 
+						date: '26 июня 2023',
+					})
+
+	section.products-horizontal.sec.sec--small
+		.wrapper
+			h4.products-horizontal__title Дополнительно требуется
+
+				+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).products-horizontal__slider-navigation.is-active(id="slider-nav-buy-also-0")
+				+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).products-horizontal__slider-navigation(id="slider-nav-buy-also-1")
+
+			.products-horizontal__container.js-tab
+
+				.products-horizontal__tabs.js-tab__list
+					button.products-horizontal__tabs-item.js-tab__item.is-active(data-id="buy-also-0") Все
+					button.products-horizontal__tabs-item.js-tab__item(data-id="buy-also-1") Оборудование
+					button.products-horizontal__tabs-item.js-tab__item(data-id="buy-also-2") Купюроприемники
+					button.products-horizontal__tabs-item.js-tab__item(data-id="buy-also-3") Монетоприемники
+
+				.tabs-container.js-tab__content
+					.js-tab__block.is-active#buy-also-0
+						.swiper.js-slider-horizontal(data-navigation="slider-nav-buy-also-0")
+							.products-horizontal__products.swiper-wrapper
+								+product_horizontal({
+									hit: true,
+									img: 'product-4.png',
+									name: 'Снековый автомат', 
+									text: 'Артикул 142 364',
+									price: '100 000'
+								})
+								+product_horizontal({
+									img: 'product-4.png',
+									name: 'Кофе в зернах BOASI «Gran Crema»', 
+									text: 'Артикул 142 364',
+									price: '785'
+								})
+								+product_horizontal({
+									img: 'product-4.png',
+									name: 'Зерновая кофемашина Necta Koro Prime ES3', 
+									text: 'Артикул 142 364',
+									price: '215 000'
+								})
+								+product_horizontal({
+									img: 'product-4.png',
+									name: 'Kikko ES6', 
+									text: 'Артикул 142 364',
+									price: '100 000'
+								})
+
+					.js-tab__block#buy-also-1
+						.swiper.js-slider-horizontal(data-navigation="slider-nav-buy-also-1")
+							.products-horizontal__products.swiper-wrapper
+								+product_horizontal({
+									sale: true,
+									img: 'product-1.png',
+									name: 'Where does it come from?', 
+									text: 'Артикул 142 364',
+									price: '100 000'
+								})
+								+product_horizontal({
+									img: 'product-2.png',
+									name: 'Why do we use it?', 
+									text: 'Артикул 142 364',
+									price: '785'
+								})
+								+product_horizontal({
+									img: 'product-3.png',
+									name: 'Where can I get some?', 
+									text: 'Артикул 142 364',
+									price: '215 000'
+								})
+
+					.js-tab__block#buy-also-2
+					.js-tab__block#buy-also-3
+
+	section.products.sec.sec--line
+		.wrapper
+			.products__container
+				.products__tab.js-tab__list
+					h4.title.products__title С этим товаром приобретают
+				.products__slider.swiper-container.js-slider 
+					.swiper-wrapper.products__swiper-wrapper  
+						.swiper-slide.products__item 
+							+product({
+								sale: false, 
+								img: 'product-6.png',
+								name: 'Капсульная кофемашина CLASSY&MILK', 
+								text: 'Артикул 142 364',
+								price: '51 625',
+								priceOld: '57 625'
+							})
+						.swiper-slide.products__item 
+							+product({
+								sale: false, 
+								img: 'product-7.png',
+								name: 'Кофе в зернах LAVAZZA Espresso «Crema e Aroma»', 
+								text: 'Артикул 142 364',
+								price: '2 100',
+								priceOld: '3 100'
+							})
+						.swiper-slide.products__item 
+							+product({
+								sale: false, 
+								img: 'product-8.png',
+								img2: 'product-2.png',
+								img3: 'product-5.png',
+								name: 'Kikko ES6', 
+								text: 'Артикул 142 364',
+								price: '100 000',
+								priceOld: '130 000'
+							})
+						.swiper-slide.products__item 
+							+product({
+								sale: false, 
+								img: 'product-9.png',
+								name: 'Капсулы EP Aroma Club (коробка)', 
+								text: 'Артикул 142 364',
+								price: '4 500',
+								priceOld: '5 500'
+							})
+						.swiper-slide.products__item
+							+product({
+								sale: false, 
+								img: 'product-7.png',
+								name: 'Кофе в зернах LAVAZZA Espresso «Crema e Aroma»', 
+								text: 'Артикул 142 364',
+								price: '2 100',
+								priceOld: '3 100'
+							})
+						.swiper-slide.products__item
+							+product({
+								sale: false, 
+								img: 'product-7.png',
+								name: 'Кофе в зернах LAVAZZA Espresso «Crema e Aroma»', 
+								text: 'Артикул 142 364',
+								price: '2 100',
+								priceOld: '3 100'
+							})
+					+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).slider-arrow--top-right

@@ -1,8 +1,6 @@
 .breadcrumbs
-	color: $gray
-	letter-spacing: 0.36px
-	font-weight: 300
-	padding: 11px 0 42px
+	color: #4E88C4
+	margin-top: 11px
 
 	&__list
 		display: flex
@@ -13,28 +11,33 @@
 		position: relative
 		font-size: rem(12px)
 		font-weight: 400
-		margin: 5px 30px 5px 0
-		transition: color .25s
-		color: $gray
+		margin: 0 30px 0 0
+		transition: .25s
 		&:not(:last-child):after
 			content: '/'
 			position: absolute
 			right: -18px
-			color: $blue
 		&:last-child
 			border-color: transparent
 			pointer-events: none
-		&:first-child 
-			color: $blue
 		&:hover
-			color: $blue
+			color: $orange
 
 		&--back
+			display: none
 			padding-left: 20px
 			font-size: 13px
-
-	+bp($bp-small)
-		padding-bottom: 19px
 			
 
-
+	+bp($bp-tablet)
+		margin-top: 16px
+		&__list
+			display: none
+		&__link
+			font-size: rem(13px)
+			&:after
+				font-size: inherit
+			&--back
+				display: block
+				svg
+					margin-right: 7px

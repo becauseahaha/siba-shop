@@ -33,27 +33,51 @@ const mobileMenu = () => {
 
 //tabs
 const tabsInit = () => {
-	const tabs = D.querySelector(".js-tab"),
-			tabButton = D.querySelectorAll(".js-tab__item"),
-			contents = D.querySelectorAll(".js-tab__block");
 
-	if(tabButton.length) {
-		tabs.onclick = (e) => {
-			const id = e.target.dataset.id;
-			if (id) {
-				tabButton.forEach(btn => {
-					btn.classList.remove("is-active");
-				});
-				e.target.classList.add("is-active");
-	
-				contents.forEach(content => {
-					content.classList.remove("is-active");
-				});
-				const element = D.getElementById(id);
-				element.classList.add("is-active");
-			}
-		}
-	}
+	const tabs = D.querySelectorAll(".js-tab");
+
+	if (!tabs) return;
+
+	tabs.forEach((el) => {
+
+		const tabButtons = el.querySelectorAll(".js-tab__item"),
+			  contents   = el.querySelectorAll(".js-tab__block");
+
+		if (!tabButtons) return;
+		if (!contents)   return;
+
+		tabButtons.forEach((tab) => {
+			tab.addEventListener('click', (e) => {
+
+				const id = e.target.dataset.id;
+
+				if (id) {
+					tabButtons.forEach(btn => {
+						btn.classList.remove("is-active");
+					});
+					e.target.classList.add("is-active");
+		
+					contents.forEach(content => {
+						content.classList.remove("is-active");
+					});
+					const element = D.getElementById(id);
+					element.classList.add("is-active");
+
+					// Additional logic for product card buy also slider
+					let matches = id.match(/buy-also-(\d+)/);
+					if (matches) {
+						D.querySelectorAll('.products-horizontal__slider-navigation').forEach((nav) => {
+							nav.classList.remove('is-active');
+						})
+						if (D.getElementById('slider-nav-buy-also-'+matches[1])) {
+							D.getElementById('slider-nav-buy-also-'+matches[1]).classList.add('is-active');
+						}
+					}
+
+				}
+			})
+		})
+	})
 }
 
 
@@ -182,6 +206,18 @@ const city = () => {
 
 }
 
+const bindShowHide = () => {
+	D.querySelectorAll('.js-show-hide').forEach((el) => {
+		el.addEventListener('click', () => {
+			console.log(el)
+			let target = el.dataset.target;
+			if (D.getElementById(target)) {
+				D.getElementById(target).classList.remove('is-hidden');
+				el.remove();
+			}
+		})
+	})
+}
 
 D.addEventListener("DOMContentLoaded", function() {
 
@@ -191,6 +227,7 @@ D.addEventListener("DOMContentLoaded", function() {
 	tabsInit();
 	search();
 	city();
+	bindShowHide();
 
 	openMenu.addEventListener('click', mobileMenu);
 	closeMenu.addEventListener('click', mobileMenu);
