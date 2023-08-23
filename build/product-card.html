@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <title>Карточка товара
+    <title>Карточка
     </title>
     <link rel="icon" href="">
     <link rel="icon" href="" sizes="16x16">
-    <link rel="stylesheet" href="css/main.css?v=1692788890964">
+    <link rel="stylesheet" href="css/main.css?v=1692788890797">
   </head>
   <body>
     <div class="page js-page">
@@ -498,299 +498,654 @@
         </div>
       </header>
       <main class="main" id="main">
+        <!--start breadcrumbs-->
         <div class="breadcrumbs">
-          <div class="wrapper"> 
-            <div class="breadcrumbs__list"><a class="link breadcrumbs__link" href="#!">Каталог</a><a class="link breadcrumbs__link" href="#!">Запчасти и ремонт</a><a class="link breadcrumbs__link breadcrumbs__link--current" href="#!">Снековые вендинговые автоматы</a></div>
-          </div>
-        </div>
-        <div class="repair">
           <div class="wrapper">
-            <div class="repair__img magnifierWrap">
-              <div class="magnifier"></div><img class="smallImg" src="images/repair_img.png" alt="схема кофемашины">
+            <div class="breadcrumbs__list"><a class="link breadcrumbs__link" href="#!">Каталог</a><a class="link breadcrumbs__link" href="#!">Венддинговые автоматы</a><a class="link breadcrumbs__link breadcrumbs__link--current" href="#!">Снековые вендинговые автоматы</a>
             </div>
-            <div class="repair-content"> 
-              <div class="repair__title">Диспенсер стаканов для CANTO</div>
-              <div class="repair-list"> 
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
-                    </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
-                          </div>
-                          <div class="counter__item js-counter__plus"></div>
-                        </div>
-                      </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="repair-item__sale">
-                    <div class="repair-item__sale-btn js-popup-link" data-link="popup-goods"> <span>есть дешевле</span></div>
+          </div>
+          <div class="only-mobile"><a class="breadcrumbs__link breadcrumbs__link--back" href="#!"> 
+              <svg width="5" height="10">
+                <use xlink:href="images/sprites.svg#back"></use>
+              </svg><span>Назад</span></a></div>
+        </div>
+        <!--end breadcrumbs-->
+        <section class="product-card sec">
+          <div class="wrapper product-card__container"> 
+            <div class="product-card__gallery card-gallery">
+              <div class="card-gallery__main">
+                <div class="card-gallery__icon">Хит</div>
+                <div class="swiper" id="js-slider-product-card">
+                  <div class="swiper-wrapper"> 
+                    <div class="swiper-slide" id="slide-0"><img src="images/products/product-1.png"></div>
+                    <div class="swiper-slide" id="slide-1"><img src="images/products/product-2.png"></div>
+                    <div class="swiper-slide" id="slide-2"><img src="images/products/product-3.png"></div>
                   </div>
                 </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
+                <div class="card-gallery__figure-1"></div>
+                <div class="card-gallery__figure-1_inner-1"></div>
+                <div class="card-gallery__figure-1_inner-2"></div>
+                <div class="card-gallery__figure-2"></div>
+                <div class="card-gallery__figure-3"></div>
+                <div class="card-gallery__figure-4"></div>
+                <div class="card-gallery__figure-4_inner-1"></div>
+              </div>
+              <div class="card-gallery__controls" id="js-slider-product-card-controls">
+                <button class="card-gallery__control is-active" data-slide="0"><img src="images/products/s-1.png"></button>
+                <button class="card-gallery__control" data-slide="1"> <img src="images/products/s-2.png"></button>
+                <button class="card-gallery__control" data-slide="2"> <img src="images/products/s-3.png"></button>
+              </div>
+            </div>
+            <div class="product-card__details">
+              <h3 class="product-card__title">Кофейный автомат OPERA</h3>
+              <div class="product-card__vendor-details">
+                <div class="product-card__code">Артикул: 142 121</div>
+                <div class="product-card__company"> <img src="images/partners/necta.png"></div>
+              </div>
+              <div class="product-card__description" id="product-card__description"> 
+                <p>Вендинговый автомат OPERA популярный кофейный аппарат от компании Evoca (Necta), который применяется для приготовления 18 разных видов напитков. Для их приготовления применяются растворимые компоненты и натуральный зерновой кофе, что делает его универсальным решением для установки в торговых центрах и офисах... 
+                  <button class="product-card__description-btn js-show-hide" data-target="product-card-hidden-description">Показать еще</button>
+                </p>
+                <div class="is-hidden" id="product-card-hidden-description">
+                  <p>Вендинговый автомат OPERA популярный кофейный аппарат от компании Evoca (Necta), который применяется для приготовления 18 разных видов напитков. Для их приготовления применяются растворимые компоненты и натуральный зерновой кофе, что делает его универсальным решением для установки в торговых центрах и офисах</p>
+                  <p>Вендинговый автомат OPERA популярный кофейный аппарат от компании Evoca (Necta), который применяется для приготовления 18 разных видов напитков. Для их приготовления применяются растворимые компоненты и натуральный зерновой кофе, что делает его универсальным решением для установки в торговых центрах и офисах</p>
+                </div>
+              </div>
+              <div class="product-card__qualities">
+                <div class="product-card__qualities-title">Особенности</div>
+                <div class="product-card__qualities-list">
+                                <div class="product-card__qualities-item"> <span class="product-card__qualities-item--grey">Кофемолка: </span><span>регулируемая (от 7 до 15 г)</span></div>
+                                <div class="product-card__qualities-item"> <span class="product-card__qualities-item--grey">Капучинатор: </span><span>автоматический</span></div>
+                                <div class="product-card__qualities-item"> <span class="product-card__qualities-item--grey">Количество напитков: </span><span>до 32 напитков</span></div>
+                                <div class="product-card__qualities-item"> <span class="product-card__qualities-item--grey">Количество видов кофе: </span><span>можно использовать 2 вида кофе</span></div>
+                                <div class="product-card__qualities-item"> <span class="product-card__qualities-item--grey">Экран: </span><span>touch</span></div>
+                </div>
+              </div>
+              <div class="product-card__controls"> 
+                <div class="product-card__prices">
+                  <div class="product-card__price">521 897,71 ₽</div>
+                  <div class="product-card__price-foreign">6 030.00 €</div>
+                </div>
+                <div class="product-card__buy-quantity"> 
+                  <div class="counter js-counter">
+                    <div class="counter__item js-counter__minus"></div>
+                    <div class="counter__item">
+                      <input class="counter__input js-counter__input" title="number" value="1"/>
                     </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
-                          </div>
-                          <div class="counter__item js-counter__plus"></div>
-                        </div>
-                      </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="repair-item__sale">
-                    <div class="repair-item__sale-btn js-popup-link" data-link="popup-goods"> <span>есть дешевле</span></div>
+                    <div class="counter__item js-counter__plus"></div>
                   </div>
                 </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
-                    </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
-                          </div>
-                          <div class="counter__item js-counter__plus"></div>
-                        </div>
-                      </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
+                <button class="product-card__buy-btn btn btn--arrow btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>В корзину</span>
+                </button>
+              </div>
+              <div class="product-card__partner-stores"><a class="product-card__partner-stores-btn product-card__partner-stores-btn--ozon" href="#">Купить на<img class="icon" src="images/ozon.svg"></a><a class="product-card__partner-stores-btn product-card__partner-stores-btn--wildberries" href="#">Купить на<img class="icon" src="images/wildberries.svg"></a></div>
+              <div class="js-tab">
+                <div class="product-card__tabs js-tab__list">
+                  <button class="product-card__tabs-item js-tab__item is-active" data-id="tab-details-1">Характеристики</button>
+                  <button class="product-card__tabs-item js-tab__item" data-id="tab-details-2">Меню и настройки</button>
+                  <button class="product-card__tabs-item js-tab__item" data-id="tab-details-3">Доставка</button>
                 </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
+                <div class="js-tab__content">
+                  <div class="product-card__tabs-container js-tab__block is-active" id="tab-details-1">
+                    <div class="product-card__tab-details">
+                      <div class="product-card__tab-details-title">Параметры:</div>
+                      <table class="product-card__details-table"> 
+                        <tr>
+                          <td>Габариты ВхШхГ 
+                            <td>1830х717х874 мм</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Вес
+                            <td>225 кг</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Энергопотребление в режиме ожидания
+                            <td>76.5 Вт/ч</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Пиковая мощность
+                            <td>2500 Вт</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Тип оборудования
+                            <td>Автоматическая</td>
+                          </td>
+                        </tr>
+                      </table>
                     </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
-                          </div>
-                          <div class="counter__item js-counter__plus"></div>
-                        </div>
-                      </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
+                    <div class="product-card__tab-details">
+                      <div class="product-card__tab-details-title">Параметры:</div>
+                      <table class="product-card__details-table"> 
+                        <tr>
+                          <td>Габариты ВхШхГ 
+                            <td>1830х717х874 мм</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Вес
+                            <td>225 кг</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Энергопотребление в режиме ожидания
+                            <td>76.5 Вт/ч</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Пиковая мощность
+                            <td>2500 Вт</td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Тип оборудования
+                            <td>Автоматическая</td>
+                          </td>
+                        </tr>
+                      </table>
                     </div>
                   </div>
-                </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
-                    </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
-                          </div>
-                          <div class="counter__item js-counter__plus"></div>
-                        </div>
-                      </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
+                  <div class="product-card__tabs-container js-tab__block" id="tab-details-2"> 
+                    <div class="product-card__tab-details">
+                      <div class="product-card__tab-details-title">Меню и настройки:</div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                   </div>
-                </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
-                    </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
-                          </div>
-                          <div class="counter__item js-counter__plus"></div>
-                        </div>
-                      </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
+                  <div class="product-card__tabs-container js-tab__block" id="tab-details-3"> 
+                    <div class="product-card__tab-details">
+                      <div class="product-card__tab-details-title">Доставка:</div>
+                      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                     </div>
                   </div>
                 </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
+              </div>
+              <h4 class="product-card__videos-h4">Полезная информация</h4>
+              <div class="product-card__videos"> <a class="b-video js-popup-link" href="#" data-link="video" data-src="https://www.youtube.com/embed/hFj5L6sbX-o">
+                  <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-1.jpg" alt=""/>
+                    <div class="b-video__icon btn-play">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#play"></use>
+                      </svg>
+                      <svg class="btn-play__hov">
+                        <use xlink:href="images/sprites.svg#play-hov"></use>
+                      </svg>
                     </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
+                  </div>
+                  <div class="b-video__desc"> 
+                    <h6 class="h6-title">Новинка в ассортименте: Капсулы EP Aroma Club</h6><small class="small-title">26 июня 2023</small>
+                  </div></a><a class="b-video b-video--news" href="#">
+                  <div class="b-video__block-image"><img class="b-video__image" src="./images/news/news-1.jpg" alt=""/>
+                  </div>
+                  <div class="b-video__desc"> 
+                    <h6 class="h6-title">Итоги выставки Versus 2023</h6><small class="small-title">26 июня 2023</small>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="products-horizontal sec sec--small">
+          <div class="wrapper">
+            <h4 class="products-horizontal__title">Дополнительно требуется
+              <div class="slider-arrow products-horizontal__slider-navigation is-active" id="slider-nav-buy-also-0">
+                <div class="slider-arrow__item slider-arrow__item--prev js-slider__prev">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#prev"></use>
+                  </svg>
+                </div>
+                <div class="slider-arrow__item slider-arrow__item--next js-slider__next">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#next"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="slider-arrow products-horizontal__slider-navigation" id="slider-nav-buy-also-1">
+                <div class="slider-arrow__item slider-arrow__item--prev js-slider__prev">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#prev"></use>
+                  </svg>
+                </div>
+                <div class="slider-arrow__item slider-arrow__item--next js-slider__next">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#next"></use>
+                  </svg>
+                </div>
+              </div>
+            </h4>
+            <div class="products-horizontal__container js-tab">
+              <div class="products-horizontal__tabs js-tab__list">
+                <button class="products-horizontal__tabs-item js-tab__item is-active" data-id="buy-also-0">Все</button>
+                <button class="products-horizontal__tabs-item js-tab__item" data-id="buy-also-1">Оборудование</button>
+                <button class="products-horizontal__tabs-item js-tab__item" data-id="buy-also-2">Купюроприемники</button>
+                <button class="products-horizontal__tabs-item js-tab__item" data-id="buy-also-3">Монетоприемники</button>
+              </div>
+              <div class="tabs-container js-tab__content">
+                <div class="js-tab__block is-active" id="buy-also-0">
+                  <div class="swiper js-slider-horizontal" data-navigation="slider-nav-buy-also-0">
+                    <div class="products-horizontal__products swiper-wrapper">
+                      <div class="product-horizontal swiper-slide">
+                        <div class="product-horizontal-icon">Хит</div>
+                        <div class="product-horizontal__image"><img src="./images/products/product-4.png" alt=""/>
+                        </div>
+                        <div class="product-horizontal__desc">
+                          <div class="product-horizontal__desc-wrap">
+                            <div class="product-horizontal__about">
+                              <h6 class="product-horizontal__name">Снековый автомат</h6><small class="product-horizontal__text">Артикул 142 364</small>
+                            </div>
+                            <div class="product-horizontal__prices">
+                              <div class="product-horizontal__price"><span>100 000</span><span>&#8381;</span></div>
+                            </div>
                           </div>
-                          <div class="counter__item js-counter__plus"></div>
+                          <div class="product-horizontal__data">
+                            <div class="counter js-counter">
+                              <div class="counter__item js-counter__minus"></div>
+                              <div class="counter__item">
+                                <input class="counter__input js-counter__input" title="number" value="1"/>
+                              </div>
+                              <div class="counter__item js-counter__plus"></div>
+                            </div>
+                            <div class="btn btn--blue btn--small btn--arrow product-horizontal__btn">
+                              <svg>
+                                <use xlink:href="images/sprites.svg#basket"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
+                      <div class="product-horizontal swiper-slide">
+                        <div class="product-horizontal__image"><img src="./images/products/product-4.png" alt=""/>
+                        </div>
+                        <div class="product-horizontal__desc">
+                          <div class="product-horizontal__desc-wrap">
+                            <div class="product-horizontal__about">
+                              <h6 class="product-horizontal__name">Кофе в зернах BOASI «Gran Crema»</h6><small class="product-horizontal__text">Артикул 142 364</small>
+                            </div>
+                            <div class="product-horizontal__prices">
+                              <div class="product-horizontal__price"><span>785</span><span>&#8381;</span></div>
+                            </div>
+                          </div>
+                          <div class="product-horizontal__data">
+                            <div class="counter js-counter">
+                              <div class="counter__item js-counter__minus"></div>
+                              <div class="counter__item">
+                                <input class="counter__input js-counter__input" title="number" value="1"/>
+                              </div>
+                              <div class="counter__item js-counter__plus"></div>
+                            </div>
+                            <div class="btn btn--blue btn--small btn--arrow product-horizontal__btn">
+                              <svg>
+                                <use xlink:href="images/sprites.svg#basket"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-horizontal swiper-slide">
+                        <div class="product-horizontal__image"><img src="./images/products/product-4.png" alt=""/>
+                        </div>
+                        <div class="product-horizontal__desc">
+                          <div class="product-horizontal__desc-wrap">
+                            <div class="product-horizontal__about">
+                              <h6 class="product-horizontal__name">Зерновая кофемашина Necta Koro Prime ES3</h6><small class="product-horizontal__text">Артикул 142 364</small>
+                            </div>
+                            <div class="product-horizontal__prices">
+                              <div class="product-horizontal__price"><span>215 000</span><span>&#8381;</span></div>
+                            </div>
+                          </div>
+                          <div class="product-horizontal__data">
+                            <div class="counter js-counter">
+                              <div class="counter__item js-counter__minus"></div>
+                              <div class="counter__item">
+                                <input class="counter__input js-counter__input" title="number" value="1"/>
+                              </div>
+                              <div class="counter__item js-counter__plus"></div>
+                            </div>
+                            <div class="btn btn--blue btn--small btn--arrow product-horizontal__btn">
+                              <svg>
+                                <use xlink:href="images/sprites.svg#basket"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-horizontal swiper-slide">
+                        <div class="product-horizontal__image"><img src="./images/products/product-4.png" alt=""/>
+                        </div>
+                        <div class="product-horizontal__desc">
+                          <div class="product-horizontal__desc-wrap">
+                            <div class="product-horizontal__about">
+                              <h6 class="product-horizontal__name">Kikko ES6</h6><small class="product-horizontal__text">Артикул 142 364</small>
+                            </div>
+                            <div class="product-horizontal__prices">
+                              <div class="product-horizontal__price"><span>100 000</span><span>&#8381;</span></div>
+                            </div>
+                          </div>
+                          <div class="product-horizontal__data">
+                            <div class="counter js-counter">
+                              <div class="counter__item js-counter__minus"></div>
+                              <div class="counter__item">
+                                <input class="counter__input js-counter__input" title="number" value="1"/>
+                              </div>
+                              <div class="counter__item js-counter__plus"></div>
+                            </div>
+                            <div class="btn btn--blue btn--small btn--arrow product-horizontal__btn">
+                              <svg>
+                                <use xlink:href="images/sprites.svg#basket"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
-                    </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
+                <div class="js-tab__block" id="buy-also-1">
+                  <div class="swiper js-slider-horizontal" data-navigation="slider-nav-buy-also-1">
+                    <div class="products-horizontal__products swiper-wrapper">
+                      <div class="product-horizontal swiper-slide">
+                        <div class="product-horizontal-icon product-horizontal-icon--sale">Sale</div>
+                        <div class="product-horizontal__image"><img src="./images/products/product-1.png" alt=""/>
+                        </div>
+                        <div class="product-horizontal__desc">
+                          <div class="product-horizontal__desc-wrap">
+                            <div class="product-horizontal__about">
+                              <h6 class="product-horizontal__name">Where does it come from?</h6><small class="product-horizontal__text">Артикул 142 364</small>
+                            </div>
+                            <div class="product-horizontal__prices">
+                              <div class="product-horizontal__price"><span>100 000</span><span>&#8381;</span></div>
+                            </div>
                           </div>
-                          <div class="counter__item js-counter__plus"></div>
+                          <div class="product-horizontal__data">
+                            <div class="counter js-counter">
+                              <div class="counter__item js-counter__minus"></div>
+                              <div class="counter__item">
+                                <input class="counter__input js-counter__input" title="number" value="1"/>
+                              </div>
+                              <div class="counter__item js-counter__plus"></div>
+                            </div>
+                            <div class="btn btn--blue btn--small btn--arrow product-horizontal__btn">
+                              <svg>
+                                <use xlink:href="images/sprites.svg#basket"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
+                      <div class="product-horizontal swiper-slide">
+                        <div class="product-horizontal__image"><img src="./images/products/product-2.png" alt=""/>
+                        </div>
+                        <div class="product-horizontal__desc">
+                          <div class="product-horizontal__desc-wrap">
+                            <div class="product-horizontal__about">
+                              <h6 class="product-horizontal__name">Why do we use it?</h6><small class="product-horizontal__text">Артикул 142 364</small>
+                            </div>
+                            <div class="product-horizontal__prices">
+                              <div class="product-horizontal__price"><span>785</span><span>&#8381;</span></div>
+                            </div>
+                          </div>
+                          <div class="product-horizontal__data">
+                            <div class="counter js-counter">
+                              <div class="counter__item js-counter__minus"></div>
+                              <div class="counter__item">
+                                <input class="counter__input js-counter__input" title="number" value="1"/>
+                              </div>
+                              <div class="counter__item js-counter__plus"></div>
+                            </div>
+                            <div class="btn btn--blue btn--small btn--arrow product-horizontal__btn">
+                              <svg>
+                                <use xlink:href="images/sprites.svg#basket"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-horizontal swiper-slide">
+                        <div class="product-horizontal__image"><img src="./images/products/product-3.png" alt=""/>
+                        </div>
+                        <div class="product-horizontal__desc">
+                          <div class="product-horizontal__desc-wrap">
+                            <div class="product-horizontal__about">
+                              <h6 class="product-horizontal__name">Where can I get some?</h6><small class="product-horizontal__text">Артикул 142 364</small>
+                            </div>
+                            <div class="product-horizontal__prices">
+                              <div class="product-horizontal__price"><span>215 000</span><span>&#8381;</span></div>
+                            </div>
+                          </div>
+                          <div class="product-horizontal__data">
+                            <div class="counter js-counter">
+                              <div class="counter__item js-counter__minus"></div>
+                              <div class="counter__item">
+                                <input class="counter__input js-counter__input" title="number" value="1"/>
+                              </div>
+                              <div class="counter__item js-counter__plus"></div>
+                            </div>
+                            <div class="btn btn--blue btn--small btn--arrow product-horizontal__btn">
+                              <svg>
+                                <use xlink:href="images/sprites.svg#basket"></use>
+                              </svg><span>В корзину</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="repair-item">
-                  <div class="repair-item__wrapper">
-                    <div class="repair-item__number">№ 1</div>
-                    <div class="repair-item__code">Артикул 142 364</div>
-                  </div>
-                  <div class="repair-item__title">Диспенсер стаканов в сборе CANTO (Диспенсер стаканов)</div>
-                  <div class="repair-item__bottom">
-                    <div class="repair-item__price">
-                      <div class="repair-item__price-current">23 932 ₽</div>
-                      <div class="repair-item__price-old">277 €</div>
-                    </div>
-                    <div class="repair-item__action">
-                      <div class="repair-item__counter">
-                        <div class="counter js-counter">
-                          <div class="counter__item js-counter__minus"></div>
-                          <div class="counter__item">
-                            <input class="counter__input js-counter__input" title="number" value="1"/>
+                <div class="js-tab__block" id="buy-also-2"></div>
+                <div class="js-tab__block" id="buy-also-3"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="products sec sec--line">
+          <div class="wrapper">
+            <div class="products__container">
+              <div class="products__tab js-tab__list">
+                <h4 class="title products__title">С этим товаром приобретают</h4>
+              </div>
+              <div class="products__slider swiper-container js-slider"> 
+                <div class="swiper-wrapper products__swiper-wrapper"> 
+                  <div class="swiper-slide products__item"> 
+                    <div class="product js-product"><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-6.png" alt=""/>
+                        </div></a>
+                      <div class="product__desc"><a class="product__desc-wrap" href="#">
+                          <div class="product__about">
+                            <h6 class="product__name">Капсульная кофемашина CLASSY&amp;MILK</h6><small class="product__text">Артикул 142 364</small>
                           </div>
-                          <div class="counter__item js-counter__plus"></div>
+                          <div class="product__prices">
+                            <div class="product__price"><span>51 625</span><span>&#8381;</span>
+                            </div>
+                            <div class="product__price product__price--old"><span>57 625</span><span>&#8381;</span></div>
+                          </div></a>
+                        <div class="product__data">
+                          <div class="counter js-counter">
+                            <div class="counter__item js-counter__minus"></div>
+                            <div class="counter__item">
+                              <input class="counter__input js-counter__input" title="number" value="1"/>
+                            </div>
+                            <div class="counter__item js-counter__plus"></div>
+                          </div>
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#basket"></use>
+                            </svg><span>в корзину</span>
+                          </div>
                         </div>
                       </div>
-                      <button class="repair-item__add js-add-basket">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                          <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
-                          <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
-                        </svg>
-                      </button>
                     </div>
+                  </div>
+                  <div class="swiper-slide products__item"> 
+                    <div class="product js-product"><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-7.png" alt=""/>
+                        </div></a>
+                      <div class="product__desc"><a class="product__desc-wrap" href="#">
+                          <div class="product__about">
+                            <h6 class="product__name">Кофе в зернах LAVAZZA Espresso «Crema e Aroma»</h6><small class="product__text">Артикул 142 364</small>
+                          </div>
+                          <div class="product__prices">
+                            <div class="product__price"><span>2 100</span><span>&#8381;</span>
+                            </div>
+                            <div class="product__price product__price--old"><span>3 100</span><span>&#8381;</span></div>
+                          </div></a>
+                        <div class="product__data">
+                          <div class="counter js-counter">
+                            <div class="counter__item js-counter__minus"></div>
+                            <div class="counter__item">
+                              <input class="counter__input js-counter__input" title="number" value="1"/>
+                            </div>
+                            <div class="counter__item js-counter__plus"></div>
+                          </div>
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#basket"></use>
+                            </svg><span>в корзину</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide products__item"> 
+                    <div class="product js-product"><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-8.png" alt=""/><img src="./images/products/product-2.png" alt=""/>
+                        </div></a>
+                      <div class="product__desc"><a class="product__desc-wrap" href="#">
+                          <div class="product__about">
+                            <h6 class="product__name">Kikko ES6</h6><small class="product__text">Артикул 142 364</small>
+                          </div>
+                          <div class="product__prices">
+                            <div class="product__price"><span>100 000</span><span>&#8381;</span>
+                            </div>
+                            <div class="product__price product__price--old"><span>130 000</span><span>&#8381;</span></div>
+                          </div></a>
+                        <div class="product__data">
+                          <div class="counter js-counter">
+                            <div class="counter__item js-counter__minus"></div>
+                            <div class="counter__item">
+                              <input class="counter__input js-counter__input" title="number" value="1"/>
+                            </div>
+                            <div class="counter__item js-counter__plus"></div>
+                          </div>
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#basket"></use>
+                            </svg><span>в корзину</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide products__item"> 
+                    <div class="product js-product"><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-9.png" alt=""/>
+                        </div></a>
+                      <div class="product__desc"><a class="product__desc-wrap" href="#">
+                          <div class="product__about">
+                            <h6 class="product__name">Капсулы EP Aroma Club (коробка)</h6><small class="product__text">Артикул 142 364</small>
+                          </div>
+                          <div class="product__prices">
+                            <div class="product__price"><span>4 500</span><span>&#8381;</span>
+                            </div>
+                            <div class="product__price product__price--old"><span>5 500</span><span>&#8381;</span></div>
+                          </div></a>
+                        <div class="product__data">
+                          <div class="counter js-counter">
+                            <div class="counter__item js-counter__minus"></div>
+                            <div class="counter__item">
+                              <input class="counter__input js-counter__input" title="number" value="1"/>
+                            </div>
+                            <div class="counter__item js-counter__plus"></div>
+                          </div>
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#basket"></use>
+                            </svg><span>в корзину</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide products__item">
+                    <div class="product js-product"><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-7.png" alt=""/>
+                        </div></a>
+                      <div class="product__desc"><a class="product__desc-wrap" href="#">
+                          <div class="product__about">
+                            <h6 class="product__name">Кофе в зернах LAVAZZA Espresso «Crema e Aroma»</h6><small class="product__text">Артикул 142 364</small>
+                          </div>
+                          <div class="product__prices">
+                            <div class="product__price"><span>2 100</span><span>&#8381;</span>
+                            </div>
+                            <div class="product__price product__price--old"><span>3 100</span><span>&#8381;</span></div>
+                          </div></a>
+                        <div class="product__data">
+                          <div class="counter js-counter">
+                            <div class="counter__item js-counter__minus"></div>
+                            <div class="counter__item">
+                              <input class="counter__input js-counter__input" title="number" value="1"/>
+                            </div>
+                            <div class="counter__item js-counter__plus"></div>
+                          </div>
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#basket"></use>
+                            </svg><span>в корзину</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide products__item">
+                    <div class="product js-product"><a class="product__image" href="#">
+                        <div class="product__image-block"><img class="js-product__img" src="./images/products/product-7.png" alt=""/>
+                        </div></a>
+                      <div class="product__desc"><a class="product__desc-wrap" href="#">
+                          <div class="product__about">
+                            <h6 class="product__name">Кофе в зернах LAVAZZA Espresso «Crema e Aroma»</h6><small class="product__text">Артикул 142 364</small>
+                          </div>
+                          <div class="product__prices">
+                            <div class="product__price"><span>2 100</span><span>&#8381;</span>
+                            </div>
+                            <div class="product__price product__price--old"><span>3 100</span><span>&#8381;</span></div>
+                          </div></a>
+                        <div class="product__data">
+                          <div class="counter js-counter">
+                            <div class="counter__item js-counter__minus"></div>
+                            <div class="counter__item">
+                              <input class="counter__input js-counter__input" title="number" value="1"/>
+                            </div>
+                            <div class="counter__item js-counter__plus"></div>
+                          </div>
+                          <div class="btn btn--blue btn--small btn--arrow product__btn js-add-basket">
+                            <svg>
+                              <use xlink:href="images/sprites.svg#basket"></use>
+                            </svg><span>в корзину</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-arrow slider-arrow--top-right">
+                  <div class="slider-arrow__item slider-arrow__item--prev js-slider__prev">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#prev"></use>
+                    </svg>
+                  </div>
+                  <div class="slider-arrow__item slider-arrow__item--next js-slider__next">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#next"></use>
+                    </svg>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="wrapper footer__wrapper">
@@ -1218,7 +1573,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"> </script>
-    <script src="js/vendor.js?v=1692788890971"></script>
-    <script src="js/main.js?v=1692788890971"></script>
+    <script src="js/vendor.js?v=1692788890802"></script>
+    <script src="js/main.js?v=1692788890802"></script>
   </body>
 </html>

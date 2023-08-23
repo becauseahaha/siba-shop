@@ -234,12 +234,12 @@ D.addEventListener("DOMContentLoaded", function() {
 
 })
 
-let repairItems = document.querySelectorAll('.repair-item')
-repairItems.forEach(function (item) {
-  item.querySelector(".repair-item__add").onclick = function () {
-    item
-      .querySelector(".repair-item__counter")
-      .classList.toggle("is-show");
-		this.classList.add('is-hidden')
-  };
-});
+// let repairItems = document.querySelectorAll('.repair-item')
+// repairItems.forEach(function (item) {
+//   item.querySelector(".repair-item__add").onclick = function () {
+//     item
+//       .querySelector(".repair-item__counter")
+//       .classList.toggle("is-show");
+// 		this.classList.add('is-hidden')
+//   };
+// });
