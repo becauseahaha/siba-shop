@@ -1,0 +1,47 @@
+extends pug/base
+include components/repair-item/repair-item
+include components/counter/counter
+
+
+append vars
+	- title = 'Карточка товара'
+
+block content
+	.basket
+		.wrapper
+			.basket__title
+				.basket-list
+					.basket-item 
+						.basket-item__img 
+							img(src="images/products/eq-1.png", alt="")
+						.basket-item__info 
+							.basket-item__name Кофейный автомат OPERA
+							.basket-item__articul Артикул 142 364
+						.basket-item__price 521 897,71 ₽
+							span 6 030.00 €
+						.basket-item__counter 
+							+counter({val: 1})
+						.basket-item__price-total 1 042 897,71 ₽
+							span 12 060.00 €
+						.basket-item__remove Удалить
+					.basket-item 
+						.basket-item__img 
+							img(src="images/products/eq-1.png", alt="")
+						.basket-item__info 
+							.basket-item__name Кофейный автомат OPERA
+							.basket-item__articul Артикул 142 364
+						.basket-item__price 521 897,71 ₽
+							span 6 030.00 €
+						.basket-item__counter 
+							+counter({val: 1})
+						.basket-item__price-total 1 042 897,71 ₽
+							span 12 060.00 €
+						.basket-item__remove Удалить
+				.basket-total 
+					.basket-total__title В итоге
+					.basket-total__price 1 042 897,71 ₽
+						span 12 060.00 €
+					.basket-total__btn.btn
+						span Оформить заказ
+
+
