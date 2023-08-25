@@ -8,7 +8,7 @@
     </title>
     <link rel="icon" href="">
     <link rel="icon" href="" sizes="16x16">
-    <link rel="stylesheet" href="css/main.css?v=1692915608804">
+    <link rel="stylesheet" href="css/main.css?v=1692962185888">
   </head>
   <body>
     <div class="page js-page">
@@ -500,7 +500,8 @@
       <main class="main" id="main">
         <div class="basket">
           <div class="wrapper">
-            <div class="basket__title">
+            <div class="basket__title">Корзина</div>
+            <div class="basket-section">
               <div class="basket-list">
                 <div class="basket-item"> 
                   <div class="basket-item__img"> <img src="images/products/eq-1.png" alt=""></div>
@@ -519,7 +520,7 @@
                     </div>
                   </div>
                   <div class="basket-item__price-total">1 042 897,71 ₽<span>12 060.00 €</span></div>
-                  <div class="basket-item__remove">Удалить</div>
+                  <div class="basket-item__remove js-basket-remove">Удалить</div>
                 </div>
                 <div class="basket-item"> 
                   <div class="basket-item__img"> <img src="images/products/eq-1.png" alt=""></div>
@@ -538,14 +539,38 @@
                     </div>
                   </div>
                   <div class="basket-item__price-total">1 042 897,71 ₽<span>12 060.00 €</span></div>
-                  <div class="basket-item__remove">Удалить</div>
+                  <div class="basket-item__remove js-basket-remove">Удалить</div>
                 </div>
               </div>
-              <div class="basket-total"> 
-                <div class="basket-total__title">В итоге</div>
-                <div class="basket-total__price">1 042 897,71 ₽<span>12 060.00 €</span></div>
-                <div class="basket-total__btn btn"><span>Оформить заказ</span></div>
+            </div>
+            <div class="basket-section basket-section--unavailable">
+              <div class="basket-section__title">Недоступные для покупки</div>
+              <div class="basket-list">
+                <div class="basket-item"> 
+                  <div class="basket-item__img"> <img src="images/products/eq-1.png" alt=""></div>
+                  <div class="basket-item__info"> 
+                    <div class="basket-item__name">Кофейный автомат OPERA</div>
+                    <div class="basket-item__articul">Артикул 142 364</div>
+                  </div>
+                  <div class="basket-item__price">521 897,71 ₽<span>6 030.00 €</span></div>
+                  <div class="basket-item__counter"> 
+                    <div class="counter js-counter">
+                      <div class="counter__item js-counter__minus"></div>
+                      <div class="counter__item">
+                        <input class="counter__input js-counter__input" title="number" value="1"/>
+                      </div>
+                      <div class="counter__item js-counter__plus"></div>
+                    </div>
+                  </div>
+                  <div class="basket-item__price-total">1 042 897,71 ₽<span>12 060.00 €</span></div>
+                  <div class="basket-item__remove js-basket-remove">Удалить</div>
+                </div>
               </div>
+            </div>
+            <div class="basket-total"> 
+              <div class="basket-total__title">В итоге</div>
+              <div class="basket-total__price">1 042 897,71 ₽<span>12 060.00 €</span></div>
+              <div class="basket-total__btn btn btn--large btn--blue"><span>Оформить заказ</span></div>
             </div>
           </div>
         </div>
@@ -976,7 +1001,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"> </script>
-    <script src="js/vendor.js?v=1692915608809"></script>
-    <script src="js/main.js?v=1692915608809"></script>
+    <script src="js/vendor.js?v=1692962185901"></script>
+    <script src="js/main.js?v=1692962185901"></script>
   </body>
 </html>

@@ -243,3 +243,16 @@ D.addEventListener("DOMContentLoaded", function() {
 // 		this.classList.add('is-hidden')
 //   };
 // });
+
+
+let basketItems = document.querySelectorAll('.basket-item');
+
+if(basketItems) {
+	basketItems.forEach(function(item){
+		let removeBtn = item.querySelector('.js-basket-remove');
+		removeBtn.addEventListener('click', function(){
+			item.remove();
+		})
+	})
+}
+
