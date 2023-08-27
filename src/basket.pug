@@ -12,7 +12,7 @@ block content
 				.basket__title Корзина
 				.basket-section
 					.basket-list
-						.basket-item 
+						.basket-item.js-basket-item
 							.basket-item__img 
 								img(src="images/products/eq-1.png", alt="")
 							.basket-item__info 
@@ -25,7 +25,7 @@ block content
 							.basket-item__price-total 1 042 897,71 ₽
 								span 12 060.00 €
 							.basket-item__remove.js-basket-remove Удалить
-						.basket-item 
+						.basket-item.js-basket-item 
 							.basket-item__img 
 								img(src="images/products/eq-1.png", alt="")
 							.basket-item__info 
@@ -60,5 +60,5 @@ block content
 						span 12 060.00 €
 					.basket-total__btn.btn.btn--large.btn--blue
 						span Оформить заказ
-
+	include components/basket-popup/basket-popup
 
