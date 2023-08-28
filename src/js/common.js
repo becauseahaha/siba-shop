@@ -256,7 +256,7 @@ if(basketItems) {
 	})
 }
 
-let basketPopupBtn = document.querySelector('.js-basket-total');
+let basketPopupBtn = document.querySelectorAll('.js-basket-total');
 let basketPopup = document.querySelector('.basket-popup');
 let basketPopupClose = document.querySelector('.basket-popup__close');
 let basketPopupOverlay = document.querySelector('.basket-popup__overlay');
@@ -264,8 +264,10 @@ let basketPopupOverlay = document.querySelector('.basket-popup__overlay');
 
 
 if(basketPopup) {
-	basketPopupBtn.addEventListener('click', function(){
-		basketPopup.classList.add('is-open')
+	basketPopupBtn.forEach((item) => {
+		item.addEventListener('click', function(){
+			basketPopup.classList.add('is-open')
+		})
 	})
 
 	basketPopupClose.addEventListener('click', function(){
