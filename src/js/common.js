@@ -263,7 +263,7 @@ let basketPopupOverlay = document.querySelector('.basket-popup__overlay');
 
 
 
-if(basketPopupBtn) {
+if(basketPopup) {
 	basketPopupBtn.addEventListener('click', function(){
 		basketPopup.classList.add('is-open')
 	})
