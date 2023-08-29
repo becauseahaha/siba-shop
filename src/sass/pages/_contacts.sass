@@ -1,0 +1,63 @@
+.contacts-page
+    padding-top: 55px
+
+.contacts-container
+    display: flex
+    gap: 100px
+
+.contacts
+
+    flex: 0 0 auto
+
+    &-title
+        margin-bottom: 75px
+        text-transform: capitalize
+    &-address
+        font-size: 18px
+        line-height: 150%
+        margin-bottom: 36px
+        small
+            display: block
+            font-size: 13px
+            font-weight: 400
+            line-height: 120%
+            color: $gray
+            letter-spacing: normal
+
+.contacts-map
+    flex: 1 1 800px
+    min-height: 500px
+
++bp($bp-tablet)
+    .contacts-page
+        padding-top: 50px
+        padding-bottom: 0
+        .wrapper
+            padding: 0
+    .contacts
+        padding-left: 25px
+        padding-right: 25px
+        margin-bottom: 30px
+    .contacts-container
+        flex-direction: column
+        align-items: flex-start
+        gap: 0
+    .contacts-map
+        flex-basis: 100%
+        min-width: 100%
+
++bp($bp-extra-small)
+    .contacts-page
+        padding-top: 40px
+    .contacts
+        padding-left: 10px
+        padding-right: 10px
+        margin-bottom: 0
+        &-title
+            font-size: 30px
+            margin-bottom: 50px
+        &-address
+            font-size: 15px
+            margin-bottom: 30px
+    .contacts-map
+        min-height: 340px

@@ -1,0 +1,89 @@
+.notfound-wrapper
+    position: relative
+.notfound-figure-1,
+.notfound-figure-2,
+.notfound-figure-3,
+.notfound-figure-4
+    position: absolute
+    background-repeat: no-repeat
+    background-size: contain
+    z-index: -1
+    +bp(1024px)
+        display: none
+.notfound-figure-1
+    top: -20px
+    left: -20px
+    width: 632px
+    height: 427px
+    background-image: url(/images/404/figure-top-left.png)
+.notfound-figure-2
+    top: -20px
+    right: -20px
+    background-image: url(/images/404/figure-top-right.png)
+    width: 337px
+    height: 355px
+.notfound-figure-3
+    bottom: -20px
+    left: -20px
+    background-image: url(/images/404/figure-bottom-left.png)
+    width: 393px
+    height: 248px
+.notfound-figure-4
+    bottom: -20px
+    right: -20px
+    background-image: url(/images/404/figure-bottom-right.png)
+    width: 639px
+    height: 329px
+
+.notfound-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 150px 0
+.notfound-figure
+    display: flex
+    align-items: center
+    &__four
+        width: 126px
+        height: auto
+        z-index: 1
+        position: relative
+        &:first-child 
+            margin-right: -35px
+        &:last-child
+            margin-left: -35px
+    &__zero
+        width: 200px
+        height: 200px
+        border-radius: 100%;
+        background-color: $orange
+
+.notfound-title
+    text-transform: uppercase
+    margin: 68px 0 17px
+.notfound-text
+    text-align: center
+    p
+        margin: 0
+.notfound-btn
+    margin-top: 30px
+    height: 60px
+    padding-left: 35px
+    padding-right: 35px
+
++bp($bp-tablet)
+    .notfound-container
+        padding: 100px 0
++bp($bp-small)
+    .notfound-container
+        padding: 50px 0
+    .notfound-figure
+        &__zero
+            width: 130px
+            height: 130px
+        &__four
+            width: 90px
+            &:first-child 
+                margin-right: -25px
+            &:last-child
+                margin-left: -25px

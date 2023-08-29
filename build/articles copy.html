@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Видео
+    </title>
+    <link rel="icon" href="">
+    <link rel="icon" href="" sizes="16x16">
+    <link rel="stylesheet" href="css/main.css?v=1693308572901">
+  </head>
+  <body>
+    <div class="page js-page">
+      <header class="header js-header">
+        <div class="header__top"> 
+          <div class="wrapper">
+            <div class="header__menu js-mobile-menu">
+              <h2 class="header__mobile-title">Меню </h2>
+              <div class="header__menu-close js-close-mobile-menu">
+                <svg>
+                  <use xlink:href="images/sprites.svg#close"></use>
+                </svg>
+              </div>
+              <nav class="header__nav"> 
+                <ul class="header__list">
+                  <li class="header__item"><a class="link link--default is-active" href="#">О компании</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Оплата и доставка</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Гарантия и сопровождение</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Обзоры</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Статьи</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Новости</a></li>
+                  <li class="header__item"><a class="link link--default" href="#">Контакты</a></li>
+                </ul>
+              </nav><a class="header__lk link link--default link--arrow js-popup-link" href="#" data-link="enter">
+                <svg>
+                  <use xlink:href="images/sprites.svg#lk"></use>
+                </svg><span>Личный кабинет</span></a><a class="btn btn--middle header__mobile-btn" href="#"> <span>Задать вопрос</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="header__about">
+          <div class="wrapper">
+            <div class="header__line"><a class="header__mobile-icon js-city" href="#">
+                <svg class="header__mobile-icon-place">
+                  <use xlink:href="images/sprites.svg#place"></use>
+                </svg>
+                <svg class="header__mobile-icon-close">
+                  <use xlink:href="images/sprites.svg#close"></use>
+                </svg></a><a class="header__logo" href="main.html"><img src="./images/logo.svg" alt=""/></a><a class="header__mobile-icon" href="tel:+74951208137">
+                <svg>
+                  <use xlink:href="images/sprites.svg#phone"></use>
+                </svg></a>
+              <div class="header__city js-city"><span class="header__city-value js-city__value">Москва </span>
+                <svg>
+                  <use xlink:href="images/sprites.svg#arrow-bottom"></use>
+                </svg>
+              </div>
+              <div class="header__part">
+                <address class="header__address">г. Москва, 4-й Лихачёвский переулок, 4с2</address><a class="header__phone link link--bor link--bor-white link--white" href="tel:+74951208137">+7 (495) 120-81-37</a><span class="header__inform">Офис: 08:00-18:00, касса 08:00-17:00 </span>
+              </div><a class="btn btn--middle btn--mobile header__btn" href="#"> <span>Задать вопрос</span></a>
+            </div>
+            <div class="header-city js-city-block">
+              <div class="header-city-block is-active js-city-item">
+                <div class="header-city-block__icon"> 
+                  <svg>
+                    <use xlink:href="images/sprites.svg#moskow"></use>
+                  </svg>
+                </div>
+                <div class="header-city-block__name js-city-item__value">Москва</div>
+                <div class="header-city-block__unit">
+                  <div class="header-city-block__unit-name">г. Москва, 4-й Лихачёвский переулок, 4с2</div>
+                  <div class="header-city-block__unit-span">Офис: 08:00-18:00, касса 08:00-17:00</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__unit-name" href="tel:+74951208137">+7 (495) 120-81-37</a>
+                  <div class="header-city-block__unit-span">Бесплатно, с 08:00 до 18:00</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__unit-name" hrfe="mailto:b2b@siba-vending.ru">b2b@siba-vending.ru</a>
+                  <div class="header-city-block__unit-span">Есть вопросы? Напишите нам</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__data link link--bor link--upper js-city-item__link" href="#"> <span class="header-city-block__no">Выбрать</span><span class="header-city-block__yes">Выбрано</span></a></div>
+              </div>
+              <div class="header-city-block js-city-item">
+                <div class="header-city-block__icon"> 
+                  <svg>
+                    <use xlink:href="images/sprites.svg#sankt"></use>
+                  </svg>
+                </div>
+                <div class="header-city-block__name js-city-item__value">Санкт-Петербург</div>
+                <div class="header-city-block__unit">
+                  <div class="header-city-block__unit-name">г. Санкт-Петербург, пр-т 9 Января, д. 9, корп. 1</div>
+                  <div class="header-city-block__unit-span">Офис: 08:00-18:00, касса 08:00-17:00</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__unit-name" href="tel:+78126034993">+7 (812) 603-49-93</a>
+                  <div class="header-city-block__unit-span">Бесплатно, с 08:00 до 18:00</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__unit-name" hrfe="mailto:b2b@spb.siba-vending.ru">b2b@spb.siba-vending.ru</a>
+                  <div class="header-city-block__unit-span">Есть вопросы? Напишите нам</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__data link link--bor link--upper js-city-item__link" href="#"> <span class="header-city-block__no">Выбрать</span><span class="header-city-block__yes">Выбрано</span></a></div>
+              </div>
+              <div class="header-city-block js-city-item">
+                <div class="header-city-block__icon"> 
+                  <svg>
+                    <use xlink:href="images/sprites.svg#ek"></use>
+                  </svg>
+                </div>
+                <div class="header-city-block__name js-city-item__value">Екатеринбург</div>
+                <div class="header-city-block__unit">
+                  <div class="header-city-block__unit-name">г. Екатеринбург, ул. Норильская, дом 75</div>
+                  <div class="header-city-block__unit-span">Офис: 08:00-18:00, касса 08:00-17:00</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__unit-name" href="tel:+73432435389">+7 (343) 243-53-89</a>
+                  <div class="header-city-block__unit-span">Бесплатно, с 08:00 до 18:00</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__unit-name" hrfe="mailto:office.ural@siba-vending.ru">office.ural@siba-vending.ru</a>
+                  <div class="header-city-block__unit-span">Есть вопросы? Напишите нам</div>
+                </div>
+                <div class="header-city-block__unit"><a class="header-city-block__data link link--bor link--upper js-city-item__link" href="#"> <span class="header-city-block__no">Выбрать</span><span class="header-city-block__yes">Выбрано</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__data">
+          <div class="wrapper">
+            <div class="header__line header__line--large"><a class="btn header__btn-catalog js-open-catalog" href="#"> <span>Каталог </span>
+                <svg class="header__icon-catalog" width="36" height="36">
+                  <use xlink:href="images/sprites.svg#catalog"></use>
+                </svg>
+                <svg class="header__btn-close">
+                  <use xlink:href="images/sprites.svg#close"></use>
+                </svg></a><a class="btn btn--blue header__btn-action" hrfe="#"> <span>акции</span></a>
+              <form class="header__search js-search-unit" action="#" name="form-search">
+                <div class="form-field form-group form-field--search">
+                  <div class="form-field__label">Я ИЩУ...</div>
+                  <input class="form-field__input js-input js-open-search js-open-search" type="search" name="search" data-pristine-required-message="" required="required"/>
+                  <div class="form-field__mask"></div>
+                </div>
+                <div class="header__search-buttons">
+                  <button class="btn btn--blue btn--icon header__search-btn" type="submit">
+                    <svg width="24" height="24">
+                      <use xlink:href="images/sprites.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--icon header__search-btn header__search-btn-hide js-close-search" type="submit">
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprites.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+              <div class="header__hide-block"> <a class="header__phone" href="tel:+74951208137">+7 (495) 120-81-37</a><span class="header__inform">Офис: 08:00-18:00, касса 08:00-17:00 </span></div>
+              <div class="header__basket js-basket-total"> 
+                <svg class="header__basket-icon">
+                  <use xlink:href="images/sprites.svg#basket"></use>
+                </svg>
+                <div class="header__basket-name">Корзина </div>
+                <div class="header__price"> <span>231 243</span><span>&#8381; </span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-catalog modal js-menu-catalog">
+          <div class="wrapper">
+            <div class="menu-catalog__part js-catalog-menu">
+              <div class="menu-catalog__desctop">
+                <div class="menu-catalog-item js-catalog-menu__item is-active" data-id="cofee">
+                  <div class="menu-catalog-item__link">
+                    <svg width="25" height="25">
+                      <use xlink:href="images/sprites.svg#cofee"></use>
+                    </svg><span>Кофе, ингредиенты, продукты</span>
+                  </div>
+                </div>
+                <div class="menu-catalog-item js-catalog-menu__item" data-id="equipment">
+                  <div class="menu-catalog-item__link">
+                    <svg width="22" height="30">
+                      <use xlink:href="images/sprites.svg#eq"></use>
+                    </svg><span>Оборудование</span>
+                  </div>
+                </div>
+                <div class="menu-catalog-item js-catalog-menu__item" data-id="spare-parts">
+                  <div class="menu-catalog-item__link">
+                    <svg width="30" height="30">
+                      <use xlink:href="images/sprites.svg#z"></use>
+                    </svg><span>Запчасти</span>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-catalog-list">
+                <div class="menu-catalog-list__block is-active js-catalog-menu__block" id="cofee">
+                  <div class="menu-catalog-list__title js-catalog-menu__mobile">
+                    <div class="menu-catalog-item">
+                      <div class="menu-catalog-item__link">
+                        <svg width="25" height="25">
+                          <use xlink:href="images/sprites.svg#cofee"></use>
+                        </svg><span>Кофе, ингредиенты, продукты</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="menu-catalog-list__content js-catalog-menu__mobile-content">
+                    <div class="menu-catalog-list__grid"> 
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофе</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Растворимые ингредиенты</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молоко</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Горячий шоколад</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">КапучиноЧай и Кисель</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Сахар и Сироп</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Сливки</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Выпечка</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Печенье, пряники и вафли</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Шоколодные батончики</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Орехи, снеки и чипсы</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Фруктово злаковые батончики</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Сливки</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Стаканы пластиковые</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Печенье, пряники и вафли</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Стаканы бумажные</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Размешиватели</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Крышки</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Напитки</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Вода</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Соки</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Безалкогольные напитки</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Квас, Морс</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Энергетики</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Кисломолочные</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Еда</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Лапша, пюре, каша б/п</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Сендвичи и роллы</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Готовые блюда</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="menu-catalog-list__logos"><a class="menu-catalog-list__logo" href="#"><img src="./images/lavazza.png" alt=""/></a><a class="menu-catalog-list__logo" href="#"><img src="./images/covim.png" alt=""/></a><a class="menu-catalog-list__logo" href="#"><img src="./images/cafee.png" alt=""/></a><a class="menu-catalog-list__logo" href="#"><img src="./images/ristora.png" alt=""/></a><a class="menu-catalog-list__logo" href="#"><img src="./images/tazamia.png" alt=""/></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-catalog-list__block js-catalog-menu__block" id="equipment">
+                  <div class="menu-catalog-list__title js-catalog-menu__mobile">
+                    <div class="menu-catalog-item">
+                      <div class="menu-catalog-item__link">
+                        <svg width="22" height="30">
+                          <use xlink:href="images/sprites.svg#eq"></use>
+                        </svg><span>Оборудование</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="menu-catalog-list__content js-catalog-menu__mobile-content">
+                    <div class="menu-catalog-list__grid"> 
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофе</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Кофейные автоматы</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Торговые автоматы</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофемашины</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Доп. Оборудование</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="menu-catalog-list__logos"><a class="menu-catalog-list__logo" href="#"><img src="./images/lavazza.png" alt=""/></a><a class="menu-catalog-list__logo" href="#"><img src="./images/nesta.png" alt=""/></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-catalog-list__block js-catalog-menu__block" id="spare-parts">
+                  <div class="menu-catalog-list__title js-catalog-menu__mobile">
+                    <div class="menu-catalog-item">
+                      <div class="menu-catalog-item__link">
+                        <svg width="30" height="30">
+                          <use xlink:href="images/sprites.svg#z"></use>
+                        </svg><span>Запчасти</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="menu-catalog-list__content js-catalog-menu__mobile-content">
+                    <div class="menu-catalog-list__grid">
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофемашины</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Доп. Оборудование</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                      <div class="menu-catalog-list__unit"><a class="menu-catalog-list__name" href="#">Кофе</a>
+                        <div class="menu-catalog-list__list">
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В зернах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">В капсулах</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Молотый</a></div>
+                          <div class="menu-catalog-list__item"> <a class="link link--gray" href="#">Растворимый</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="menu-catalog-list__logos"><a class="menu-catalog-list__logo" href="#"><img src="./images/lavazza.png" alt=""/></a><a class="menu-catalog-list__logo" href="#"><img src="./images/covim.png" alt=""/></a><a class="menu-catalog-list__logo" href="#"><img src="./images/covim.png" alt=""/></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-search modal js-list-search"> 
+          <div class="wrapper">
+            <div class="header-search__mobile">
+              <form class="header__search js-search-unit" action="#" name="form-search">
+                <div class="form-field form-group form-field--search">
+                  <div class="form-field__label">Я ИЩУ...</div>
+                  <input class="form-field__input js-input js-open-search js-open-search" type="search" name="search" data-pristine-required-message="" required="required"/>
+                  <div class="form-field__mask"></div>
+                </div>
+                <div class="header__search-buttons">
+                  <button class="btn btn--blue btn--icon header__search-btn" type="submit">
+                    <svg width="24" height="24">
+                      <use xlink:href="images/sprites.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--blue btn--icon header__search-btn header__search-btn-hide js-close-search" type="submit">
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprites.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="header-search__list"> 
+              <div class="b-search"><a class="b-search__image" href="#"><img src="images/products/s-1.png"/></a><a class="b-search__desc" href="#">
+                  <h6 class="h6-title">Кофейный автомат CONCERTO</h6><small class="small-title">Артикул 142 364</small></a>
+                <div class="b-search__price">
+                  <div class="b-search__price__ru"><span>521 573,29</span><span>&#8381;</span></div>
+                  <div class="b-search__price-e"><span>6 030.00 </span><span>€</span></div>
+                </div>
+                <div class="counter js-counter counter--large counter--blue b-search__counter">
+                  <div class="counter__item js-counter__minus"></div>
+                  <div class="counter__item">
+                    <input class="counter__input js-counter__input" title="number" value="2"/>
+                  </div>
+                  <div class="counter__item js-counter__plus"></div>
+                </div><a class="btn btn--arrow btn--middle btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>Корзина</span></a>
+              </div>
+              <div class="b-search"><a class="b-search__image" href="#"><img src="images/products/s-2.png"/></a><a class="b-search__desc" href="#">
+                  <h6 class="h6-title">Кофейный автомат CONCERTO TOUCH LB</h6><small class="small-title">Артикул 142 364</small></a>
+                <div class="b-search__price">
+                  <div class="b-search__price__ru"><span>532 904,32</span><span>&#8381;</span></div>
+                  <div class="b-search__price-e"><span>6 030.00 </span><span>€</span></div>
+                </div>
+                <div class="counter js-counter counter--large counter--blue b-search__counter">
+                  <div class="counter__item js-counter__minus"></div>
+                  <div class="counter__item">
+                    <input class="counter__input js-counter__input" title="number" value="2"/>
+                  </div>
+                  <div class="counter__item js-counter__plus"></div>
+                </div><a class="btn btn--arrow btn--middle btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>Корзина</span></a>
+              </div>
+              <div class="b-search"><a class="b-search__image" href="#"><img src="images/products/s-3.png"/></a><a class="b-search__desc" href="#">
+                  <h6 class="h6-title">Кофейный автомат OPERA</h6><small class="small-title">Артикул 142 364</small></a>
+                <div class="b-search__price"><span class="b-search__del">Под заказ</span>
+                </div>
+                <div class="counter js-counter counter--large counter--blue b-search__counter">
+                  <div class="counter__item js-counter__minus"></div>
+                  <div class="counter__item">
+                    <input class="counter__input js-counter__input" title="number" value="2"/>
+                  </div>
+                  <div class="counter__item js-counter__plus"></div>
+                </div><a class="btn btn--arrow btn--middle btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>Корзина</span></a>
+              </div>
+              <div class="b-search"><a class="b-search__image" href="#"><img src="images/products/s-4.png"/></a><a class="b-search__desc" href="#">
+                  <h6 class="h6-title">SNAKKY LX 6-30 Б/У</h6><small class="small-title">Артикул 142 364</small></a>
+                <div class="b-search__price">
+                  <div class="b-search__price__ru"><span>532 904,32</span><span>&#8381;</span></div>
+                  <div class="b-search__price-e"><span>6 030.00 </span><span>€</span></div>
+                </div>
+                <div class="counter js-counter counter--large counter--blue b-search__counter">
+                  <div class="counter__item js-counter__minus"></div>
+                  <div class="counter__item">
+                    <input class="counter__input js-counter__input" title="number" value="2"/>
+                  </div>
+                  <div class="counter__item js-counter__plus"></div>
+                </div><a class="btn btn--arrow btn--middle btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>Корзина</span></a>
+              </div>
+              <div class="b-search"><a class="b-search__image" href="#"><img src="images/products/s-5.png"/></a><a class="b-search__desc" href="#">
+                  <h6 class="h6-title">Кофейный автомат OPERA</h6><small class="small-title">Артикул 142 364</small></a>
+                <div class="b-search__price">
+                  <div class="b-search__price__ru"><span>532 904,32</span><span>&#8381;</span></div>
+                  <div class="b-search__price-e"><span>6 030.00 </span><span>€</span></div>
+                </div>
+                <div class="counter js-counter counter--large counter--blue b-search__counter">
+                  <div class="counter__item js-counter__minus"></div>
+                  <div class="counter__item">
+                    <input class="counter__input js-counter__input" title="number" value="2"/>
+                  </div>
+                  <div class="counter__item js-counter__plus"></div>
+                </div><a class="btn btn--arrow btn--middle btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>Корзина</span></a>
+              </div>
+              <div class="b-search"><a class="b-search__image" href="#"><img src="images/products/s-6.png"/></a><a class="b-search__desc" href="#">
+                  <h6 class="h6-title">SNAKKY LX 6-30 Б/У</h6><small class="small-title">Артикул 142 364</small></a>
+                <div class="b-search__price"><span class="b-search__del">Под заказ</span>
+                </div>
+                <div class="counter js-counter counter--large counter--blue b-search__counter">
+                  <div class="counter__item js-counter__minus"></div>
+                  <div class="counter__item">
+                    <input class="counter__input js-counter__input" title="number" value="2"/>
+                  </div>
+                  <div class="counter__item js-counter__plus"></div>
+                </div><a class="btn btn--arrow btn--middle btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>Корзина</span></a>
+              </div>
+              <div class="b-search"><a class="b-search__image" href="#"><img src="images/products/s-7.png"/></a><a class="b-search__desc" href="#">
+                  <h6 class="h6-title">Кофейный автомат CONCERTO TOUCH LB</h6><small class="small-title">Артикул 142 364</small></a>
+                <div class="b-search__price">
+                  <div class="b-search__price__ru"><span>553 144,48</span><span>&#8381;</span></div>
+                  <div class="b-search__price-e"><span>6 030.00 </span><span>€</span></div>
+                </div>
+                <div class="counter js-counter counter--large counter--blue b-search__counter">
+                  <div class="counter__item js-counter__minus"></div>
+                  <div class="counter__item">
+                    <input class="counter__input js-counter__input" title="number" value="2"/>
+                  </div>
+                  <div class="counter__item js-counter__plus"></div>
+                </div><a class="btn btn--arrow btn--middle btn--blue" href="#">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#basket"></use>
+                  </svg><span>Корзина</span></a>
+              </div>
+            </div>
+            <div class="pagination">
+              <div class="pagination__row">
+                <div class="pagination__pages"><a class="pagination__page pagination__btn pagination__page--active" href="#!">1</a><a class="pagination__page pagination__btn" href="#!">2</a><a class="pagination__page pagination__btn" href="#!">3</a><a class="pagination__page pagination__btn" href="#!">4</a><a class="pagination__page pagination__btn" href="#!">5</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main" id="main">
+        <div class="wrapper"> 
+          <section class="articles-page"><a class="b-video b-video--news b-video--inner" href="#">
+              <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-1.jpg" alt=""/>
+              </div>
+              <div class="b-video__desc"> 
+                <h6 class="h6-title">Новинка в ассортименте: Капсулы EP Aroma Club</h6><small class="small-title">26 июня 2023</small>
+              </div></a><a class="b-video b-video--news" href="#">
+              <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-2.jpg" alt=""/>
+              </div>
+              <div class="b-video__desc"> 
+                <h6 class="h6-title">N&amp;W Global Vending на VENDEXPO 2023</h6><small class="small-title">26 июня 2023</small>
+              </div></a><a class="b-video b-video--news" href="#">
+              <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-3.jpg" alt=""/>
+              </div>
+              <div class="b-video__desc"> 
+                <h6 class="h6-title">Новинка в ассортименте: Капсулы EP Aroma Club</h6><small class="small-title">26 июня 2023</small>
+              </div></a><a class="b-video b-video--news" href="#">
+              <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-4.jpg" alt=""/>
+              </div>
+              <div class="b-video__desc"> 
+                <h6 class="h6-title">Обзор Кофе в зернах MARZOTTO «Intenso»</h6><small class="small-title">26 июня 2023</small>
+              </div></a><a class="b-video b-video--news" href="#">
+              <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-5.jpg" alt=""/>
+              </div>
+              <div class="b-video__desc"> 
+                <h6 class="h6-title">Новинка в ассортименте: Капсулы EP Aroma Club</h6><small class="small-title">26 июня 2023</small>
+              </div></a><a class="b-video b-video--news" href="#">
+              <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-5.jpg" alt=""/>
+              </div>
+              <div class="b-video__desc"> 
+                <h6 class="h6-title">Новинка в ассортименте: Капсулы EP Aroma Club</h6><small class="small-title">26 июня 2023</small>
+              </div></a><a class="b-video b-video--news" href="#">
+              <div class="b-video__block-image"><img class="b-video__image" src="./images/products/v-5.jpg" alt=""/>
+              </div>
+              <div class="b-video__desc"> 
+                <h6 class="h6-title">Новинка в ассортименте: Капсулы EP Aroma Club</h6><small class="small-title">26 июня 2023</small>
+              </div></a>
+          </section>
+        </div>
+        <div class="pagination">
+          <div class="pagination__row">
+            <div class="pagination__pages"><a class="pagination__page pagination__btn pagination__page--active" href="#!">1</a><a class="pagination__page pagination__btn" href="#!">2</a><a class="pagination__page pagination__btn" href="#!">3</a><a class="pagination__page pagination__btn" href="#!">4</a><a class="pagination__page pagination__btn" href="#!">5</a></div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="wrapper footer__wrapper">
+          <div class="footer__top"> 
+            <div class="footer__unit"> 
+              <svg>
+                <use xlink:href="images/sprites.svg#footer-sale"></use>
+              </svg><small class="footer__unit-text">Выгодная система скидок</small>
+            </div>
+            <div class="footer__unit"> 
+              <svg>
+                <use xlink:href="images/sprites.svg#footer-support"></use>
+              </svg><small class="footer__unit-text">Сервисная поддержка</small>
+            </div>
+            <div class="footer__unit"> 
+              <svg>
+                <use xlink:href="images/sprites.svg#footer-delivery"></use>
+              </svg><small class="footer__unit-text">Бесплатная доставка</small>
+            </div>
+            <div class="footer__unit"> 
+              <svg>
+                <use xlink:href="images/sprites.svg#footer-learn"></use>
+              </svg><small class="footer__unit-text">Бесплатное обучение</small>
+            </div>
+          </div>
+          <div class="footer__part"> 
+            <div class="footer__column footer__column--left"><a class="footer__unit-top" href="main.html"><img src="./images/logo.svg" alt=""/></a>
+              <div class="footer__city js-city"> <span class="footer__city-value js-city__value">Москва</span>
+                <svg width="14" height="7">
+                  <use xlink:href="images/sprites.svg#arrow-bottom"></use>
+                </svg>
+              </div>
+              <div class="footer__item"> 
+                <address class="footer__data-name">125438, г. Москва, 4-й Лихачёвский переулок, 4с2</address><span>Офис: 08:00-18:00, касса 08:00-17:00</span>
+              </div>
+              <div class="footer__item"> <a class="footer__data-name link link--bor link--bor-white link--white" href="tel:+74951208137">+7 (495) 120-81-37</a><span>Бесплатно, с 08:00 до 18:00</span></div>
+              <div class="footer__item"> <a class="footer__data-name link link--bor link--bor-white link--white" href="mailto:b2b@siba-vending.ru">b2b@siba-vending.ru</a><span>Остались вопросы? Напишите нам</span></div>
+              <div class="footer__tablet"> 
+                <div class="footer__unit-top footer__unit-top--small">
+                  <h6 class="h6-title">Рассылка всего самого вкусного из новинок и акций продукции</h6>
+                  <form class="footer__form js-form" action="#" name="form-search" data-thank="#popup-thank">
+                    <div class="form-field form-group">
+                      <div class="form-field__label">Email</div>
+                      <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required="required"/>
+                      <div class="form-field__mask"></div>
+                    </div>
+                    <button class="btn btn--middle footer__btn" type="submit"><span>Подписаться</span>
+                      <svg class="footer__btn-icon">
+                        <use xlink:href="images/sprites.svg#send"></use>
+                      </svg>
+                    </button>
+                  </form>
+                  <div class="soc"> <a class="soc__link" href="#" target="_blank">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#facebook"></use>
+                      </svg></a><a class="soc__link" href="#" target="_blank">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#instagram"></use>
+                      </svg></a><a class="soc__link" href="#" target="_blank">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#youtube"></use>
+                      </svg></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column footer__column--flex footer__column--menu">
+              <div class="footer__column-unit">
+                <div class="footer__unit-top"> 
+                  <h6 class="h6-title">Сиба-вендинг</h6>
+                </div>
+                <ul class="footer__list"> 
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">О компании</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Оплата и доставка</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Гарантия и сопровождение</a></li>
+                </ul>
+              </div>
+              <div class="footer__column-unit"> 
+                <div class="footer__unit-top footer__unit-top--top">
+                  <h6 class="h6-title">Каталог</h6>
+                </div>
+                <ul class="footer__list"> 
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Вендинговые автоматы</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Ингредиенты для вендинговых автоматов</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Кофемашины для бизнеса</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Доп. оборудование для вендинга</a></li>
+                  <li class="footer__list-item"><a class="footer__link link link--bor link--bor-white link--white" href="#">Запчасти и ремонт</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column footer__column--right footer__desctop">
+              <div class="footer__unit-top footer__unit-top--small">
+                <h6 class="h6-title">Рассылка всего самого вкусного из новинок и акций продукции</h6>
+                <form class="footer__form js-form" action="#" name="form-search" data-thank="#popup-thank">
+                  <div class="form-field form-group">
+                    <div class="form-field__label">Email</div>
+                    <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required="required"/>
+                    <div class="form-field__mask"></div>
+                  </div>
+                  <button class="btn btn--middle footer__btn" type="submit"><span>Подписаться</span>
+                    <svg class="footer__btn-icon">
+                      <use xlink:href="images/sprites.svg#send"></use>
+                    </svg>
+                  </button>
+                </form>
+                <div class="soc"> <a class="soc__link" href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#facebook"></use>
+                    </svg></a><a class="soc__link" href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#instagram"></use>
+                    </svg></a><a class="soc__link" href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#youtube"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__part footer__part--bottom"> 
+            <div class="footer__column footer__column--left"><span>2023 © СИБА-Вендинг. Все права защищены</span></div>
+            <div class="footer__column footer__column--flex">
+              <div class="footer__column-unit"> <a class="link link--bor link--bor-white link--white" href="#" target="_blank">Пользовательское соглашение</a></div>
+              <div class="footer__column-unit footer__column-unit--rules"><a class="link link--bor link--bor-white link--white" href="#" target="_blank">Политика конфиденциальности</a></div>
+            </div>
+            <div class="footer__column footer__column--right footer__web-unit"><span class="footer__web">Разработка сайта — <a href="https://nikoland.ru/" target="_blank" class="link link--bor link--bor-white link--white footer__web-link">Nikoland</a></span></div>
+          </div>
+        </div>
+      </footer>
+      <div class="mobile-navbar js-mobile-navbar">
+        <div class="mobile-navbar__main"><a class="mobile-navbar__item is-active" href="main.html">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#main"></use>
+            </svg>
+            <div class="mobile-navbar__text">Главная</div></a><a class="mobile-navbar__item js-open-catalog" href="#">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#catalog2"></use>
+            </svg>
+            <div class="mobile-navbar__text">Каталог</div></a><a class="mobile-navbar__item" href="basket.html">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#basket2"></use>
+            </svg>
+            <div class="mobile-navbar__text">Корзина</div></a><a class="mobile-navbar__item" href="lk.html">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#lk2"></use>
+            </svg>
+            <div class="mobile-navbar__text">Кабинет</div></a><a class="mobile-navbar__item js-open-mobile-menu">
+            <svg class="mobile-navbar__icon">
+              <use xlink:href="images/sprites.svg#menu"></use>
+            </svg>
+            <div class="mobile-navbar__text">Mеню</div></a></div>
+      </div>
+    </div>
+    <div class="popups-wrapper js-popups-wrapper">
+      <div class="popups-wrapper__layout">
+        <div class="popups-wrapper__overlay js-popup-close"></div>
+        <div class="popups-wrapper__close js-popup-close">
+              <svg>
+                <use xlink:href="images/sprites.svg#close"></use>
+              </svg>
+        </div>
+        <div class="popups-wrapper__inner">
+              <div class="popup js-popup" data-block="fetch-content">
+                <div class="js-fetch-wrapper"></div>
+              </div>
+              <div class="popup js-popup" data-block="enter">
+                <div class="enter__top"> 
+                  <h3 class="enter__title">Вход </h3>
+                  <h3 class="enter__title enter__title--link js-popup-link" data-link="registration">Регистрация</h3>
+                </div>
+                <form class="form js-form" action="#" method="GET">
+                  <div class="form__block">
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Email</div>
+                            <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Пароль</div>
+                            <input class="form-field__input js-input" type="password" name="password" data-pristine-required-message="" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line form__line--check">
+                          <label class="form-checkbox form-group">
+                            <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"><span class="form-checkbox__text">Соглашаюсь с <a href="#" target="_blank" class="link link--blue-bor">условиями</a> обработки данных</span></span>
+                          </label>
+                    </div>
+                    <div class="form__line">
+                      <button class="btn btn--large btn--blue js-form-submit" type="submit"> <span>Войти</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="popup js-popup" data-block="registration">
+                <div class="enter__top"> 
+                  <h3 class="enter__title">Регистрация</h3>
+                  <h3 class="enter__title enter__title--link js-popup-link" data-link="enter">Вход</h3>
+                </div>
+                <form class="form js-form" action="#" method="GET">
+                  <div class="form__block">
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Ваше имя</div>
+                            <input class="form-field__input js-input" type="text" name="name" data-pristine-required-message="Обязательное поле" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Email</div>
+                            <input class="form-field__input js-input" type="email" name="email" data-pristine-required-message="" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Придумайте Пароль</div>
+                            <input class="form-field__input js-input" type="password" name="password" data-pristine-required-message="" required id="pwd">
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Пароль еще раз</div>
+                            <input class="form-field__input js-input" type="password" name="password" data-pristine-required-message="" required data-pristine-equals="#pwd" data-pristine-equals-message="Пароли не совпадают!">
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line form__line--check">
+                          <label class="form-checkbox form-group">
+                            <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"><span class="form-checkbox__text">Соглашаюсь с <a href="#" target="_blank" class="link link--blue-bor">условиями</a> обработки данных</span></span>
+                          </label>
+                    </div>
+                    <div class="form__line">
+                      <button class="btn btn--large btn--blue js-form-submit" type="submit"> <span>зарегистрироваться</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="popup js-popup" data-block="feedback">
+                <h2 class="popup__name">Написать нам </h2>
+                <form class="form js-form" action="#" method="GET" data-thank="#popup-thank" style="max-width: 500px">
+                  <div class="form__grid">
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Ваше имя</div>
+                            <input class="form-field__input js-input" type="text" name="name" data-pristine-required-message="Обязательное поле" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                    <div class="form__line">
+                          <div class="form-field form-group">
+                            <div class="form-field__label">Ваш телефон</div>
+                            <input class="form-field__input js-input js-phone js-phone" type="tel" name="phone" data-pristine-required-message="" data-mask="+7-(___)-___-____" data-slots="_" minlength="11" required>
+                            <div class="form-field__mask"></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="form__line">
+                        <div class="form-field form-group">
+                          <label class="form-field__label-select">Ваш возраст</label>
+                          <select class="js-select" name="old" required>
+                            <option data-display="Select"></option>
+                            <option value="0">20-30</option>
+                            <option value="1">30-40</option>
+                            <option value="2">40-50</option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="form__line">
+                        <label class="form-checkbox form-group">
+                          <input class="form-checkbox__input js-checkbox-rules" type="checkbox" checked><span class="form-checkbox__checkmark"><span class="form-checkbox__text">Принимаю условия <a href="#" target="_blank" class="link link--blue">использования информации</a></span></span>
+                        </label>
+                  </div>
+                  <div class="form__line">
+                    <button class="btn btn--middle js-form-submit" type="submit"> <span>Оформить</span>
+                      <div class="btn__shadow"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="popup js-popup" data-block="thank" id="popup-thank">
+                <div class="popup__thank-block"> 
+                  <h2 class="popup__name">Спасибо!</h2>
+                  <p>Наш менеджер с Вами свяжется в ближайшее время!</p>
+                </div>
+              </div>
+                    <div class="popup js-popup" data-block="popup-goods" id="popup-goods">
+                      <div class="popup-goods__content">
+                        <h2 class="popup-goods__title">Диспенсер стаканов для CANTO</h2>
+                        <div class="popup-goods__list">
+                          <div class="popup-goods__item">
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-name">Выключатель выброса стакана CANTO</div>
+                              <div class="popup-goods__item-articul">Артикул 142 364</div>
+                            </div>
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-price">23 932 ₽</div>
+                              <div class="popup-goods__item-price-old">277 €</div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__item-country">Корея</div>
+                              <div class="popup-goods__item-production popup-goods__item-production--original">
+                                Оригинал </div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__counter">
+                                          <div class="counter js-counter">
+                                            <div class="counter__item js-counter__minus"></div>
+                                            <div class="counter__item">
+                                              <input class="counter__input js-counter__input" title="number" value="1">
+                                            </div>
+                                            <div class="counter__item js-counter__plus"></div>
+                                          </div>
+                              </div>
+                              <button class="popup-goods__btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                  <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
+                                  <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                                </svg><span>в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="popup-goods__item">
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-name">Выключатель выброса стакана CANTO</div>
+                              <div class="popup-goods__item-articul">Артикул 142 364</div>
+                            </div>
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-price">23 932 ₽</div>
+                              <div class="popup-goods__item-price-old">277 €</div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__item-country">Корея</div>
+                              <div class="popup-goods__item-production">Реплика</div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__counter">
+                                          <div class="counter js-counter">
+                                            <div class="counter__item js-counter__minus"></div>
+                                            <div class="counter__item">
+                                              <input class="counter__input js-counter__input" title="number" value="1">
+                                            </div>
+                                            <div class="counter__item js-counter__plus"></div>
+                                          </div>
+                              </div>
+                              <button class="popup-goods__btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                  <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
+                                  <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                                </svg><span>в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="popup-goods__item">
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-name">Выключатель выброса стакана CANTO</div>
+                              <div class="popup-goods__item-articul">Артикул 142 364</div>
+                            </div>
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-price">23 932 ₽</div>
+                              <div class="popup-goods__item-price-old">277 €</div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__item-country">Индонезия</div>
+                              <div class="popup-goods__item-production">Реплика</div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__counter">
+                                          <div class="counter js-counter">
+                                            <div class="counter__item js-counter__minus"></div>
+                                            <div class="counter__item">
+                                              <input class="counter__input js-counter__input" title="number" value="1">
+                                            </div>
+                                            <div class="counter__item js-counter__plus"></div>
+                                          </div>
+                              </div>
+                              <button class="popup-goods__btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                  <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
+                                  <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                                </svg><span>в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="popup-goods__item">
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-name">Выключатель выброса стакана CANTO</div>
+                              <div class="popup-goods__item-articul">Артикул 142 364</div>
+                            </div>
+                            <div class="popup-goods__item-wrapper">
+                              <div class="popup-goods__item-price">23 932 ₽</div>
+                              <div class="popup-goods__item-price-old">277 €</div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__item-country">Китай</div>
+                              <div class="popup-goods__item-production">Реплика</div>
+                            </div>
+                            <div class="popup-goods__wrapper">
+                              <div class="popup-goods__counter">
+                                          <div class="counter js-counter">
+                                            <div class="counter__item js-counter__minus"></div>
+                                            <div class="counter__item">
+                                              <input class="counter__input js-counter__input" title="number" value="1">
+                                            </div>
+                                            <div class="counter__item js-counter__plus"></div>
+                                          </div>
+                              </div>
+                              <button class="popup-goods__btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                  <rect x="4" y="7" width="16" height="13" rx="4" stroke="white" stroke-width="1.5"></rect>
+                                  <path d="M16 10V6C16 3.79086 14.2091 2 12 2V2C9.79086 2 8 3.79086 8 6L8 10" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                                </svg><span>в корзину</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"> </script>
+    <script src="js/vendor.js?v=1693308572904"></script>
+    <script src="js/main.js?v=1693308572904"></script>
+  </body>
+</html>

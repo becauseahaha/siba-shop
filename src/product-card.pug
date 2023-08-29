@@ -88,14 +88,14 @@ block content
 					a(href="#").product-card__partner-stores-btn.product-card__partner-stores-btn--wildberries Купить на
 						img.icon(src="images/wildberries.svg")
 				
-				.js-tab
-					.product-card__tabs.js-tab__list
-						button.product-card__tabs-item.js-tab__item.is-active(data-id="tab-details-1") Характеристики
-						button.product-card__tabs-item.js-tab__item(data-id="tab-details-2") Меню и настройки
-						button.product-card__tabs-item.js-tab__item(data-id="tab-details-3") Доставка
+				.js-tabs
+					.tabs__list.product-card__tabs
+						button.tabs__btn.product-card__tabs-item.is-active(data-id="tab-details-1") Характеристики
+						button.tabs__btn.product-card__tabs-item(data-id="tab-details-2") Меню и настройки
+						button.tabs__btn.product-card__tabs-item(data-id="tab-details-3") Доставка
 
-					.js-tab__content
-						.product-card__tabs-container.js-tab__block#tab-details-1.is-active
+					.tabs__content-wrapper
+						.tabs__content-tab.product-card__tabs-container#tab-details-1.is-active
 							.product-card__tab-details
 								.product-card__tab-details-title Параметры:
 								table.product-card__details-table 
@@ -123,12 +123,12 @@ block content
 									tr: td Тип оборудования
 										td Автоматическая
 
-						.product-card__tabs-container.js-tab__block#tab-details-2 
+						.tabs__content-tab.product-card__tabs-container#tab-details-2 
 							.product-card__tab-details
 								.product-card__tab-details-title Меню и настройки:
 								p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-						.product-card__tabs-container.js-tab__block#tab-details-3 
+						.tabs__content-tab#tab-details-3 
 							.product-card__tab-details
 								.product-card__tab-details-title Доставка:
 								p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
@@ -158,16 +158,16 @@ block content
 				+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).products-horizontal__slider-navigation.is-active(id="slider-nav-buy-also-0")
 				+slider-arrow({prev: 'js-slider__prev', next: 'js-slider__next'}).products-horizontal__slider-navigation(id="slider-nav-buy-also-1")
 
-			.products-horizontal__container.js-tab
+			.tabs.products-horizontal__container.js-tabs
 
-				.products-horizontal__tabs.js-tab__list
-					button.products-horizontal__tabs-item.js-tab__item.is-active(data-id="buy-also-0") Все
-					button.products-horizontal__tabs-item.js-tab__item(data-id="buy-also-1") Оборудование
-					button.products-horizontal__tabs-item.js-tab__item(data-id="buy-also-2") Купюроприемники
-					button.products-horizontal__tabs-item.js-tab__item(data-id="buy-also-3") Монетоприемники
+				.tabs__list.products-horizontal__tabs
+					button.tabs__btn.products-horizontal__tabs-item.is-active(data-id="buy-also-0") Все
+					button.tabs__btn.products-horizontal__tabs-item(data-id="buy-also-1") Оборудование
+					button.tabs__btn.products-horizontal__tabs-item(data-id="buy-also-2") Купюроприемники
+					button.tabs__btn.products-horizontal__tabs-item(data-id="buy-also-3") Монетоприемники
 
-				.tabs-container.js-tab__content
-					.js-tab__block.is-active#buy-also-0
+				.tabs__content-wrapper
+					.tabs__content-tab.is-active#buy-also-0
 						.swiper.js-slider-horizontal(data-navigation="slider-nav-buy-also-0")
 							.products-horizontal__products.swiper-wrapper
 								+product_horizontal({
@@ -196,7 +196,7 @@ block content
 									price: '100 000'
 								})
 
-					.js-tab__block#buy-also-1
+					.tabs__content-tab#buy-also-1
 						.swiper.js-slider-horizontal(data-navigation="slider-nav-buy-also-1")
 							.products-horizontal__products.swiper-wrapper
 								+product_horizontal({
@@ -219,8 +219,8 @@ block content
 									price: '215 000'
 								})
 
-					.js-tab__block#buy-also-2
-					.js-tab__block#buy-also-3
+					.tabs__content-tab#buy-also-2
+					.tabs__content-tab#buy-also-3
 
 	section.products.sec.sec--line
 		.wrapper

@@ -1,0 +1,56 @@
+extends pug/base
+include components/b-video/b-video
+include components/pagination/pagination
+
+append vars
+	- title = 'Видео'
+
+block content
+
+
+	.wrapper 
+		section.articles-page
+			+b-video({
+				cl: 'b-video--news b-video--inner',
+				img: 'products/v-1.jpg', 
+				title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+				date: '26 июня 2023'
+			})
+			+b-video({
+				cl: 'b-video--news',
+				img: 'products/v-2.jpg', 
+				title: 'N&W Global Vending на VENDEXPO 2023', 
+				date: '26 июня 2023'
+			})
+			+b-video({
+				cl: 'b-video--news',
+				img: 'products/v-3.jpg', 
+				title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+				date: '26 июня 2023'
+			})
+			+b-video({
+				cl: 'b-video--news',
+				img: 'products/v-4.jpg', 
+				title: 'Обзор Кофе в зернах MARZOTTO «Intenso»', 
+				date: '26 июня 2023'
+			})
+			+b-video({
+				cl: 'b-video--news',
+				img: 'products/v-5.jpg', 
+				title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+				date: '26 июня 2023'
+			})
+			+b-video({
+				cl: 'b-video--news',
+				img: 'products/v-5.jpg', 
+				title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+				date: '26 июня 2023'
+			})
+			+b-video({
+				cl: 'b-video--news',
+				img: 'products/v-5.jpg', 
+				title: 'Новинка в ассортименте: Капсулы EP Aroma Club', 
+				date: '26 июня 2023'
+			})
+
+	+pagination()

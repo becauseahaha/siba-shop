@@ -12,4 +12,6 @@ import './basket'
 import './filter'
 import './animation'
 import './magnify'
+import './404'
+import './contacts'
 

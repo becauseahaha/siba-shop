@@ -34,14 +34,14 @@ const mobileMenu = () => {
 //tabs
 const tabsInit = () => {
 
-	const tabs = D.querySelectorAll(".js-tab");
+	const tabs = D.querySelectorAll(".js-tabs");
 
 	if (!tabs) return;
 
 	tabs.forEach((el) => {
 
-		const tabButtons = el.querySelectorAll(".js-tab__item"),
-			  contents   = el.querySelectorAll(".js-tab__block");
+		const tabButtons = el.querySelectorAll(".tabs__btn"),
+			  contents   = el.querySelectorAll(".tabs__content-tab");
 
 		if (!tabButtons) return;
 		if (!contents)   return;
@@ -60,6 +60,9 @@ const tabsInit = () => {
 					contents.forEach(content => {
 						content.classList.remove("is-active");
 					});
+
+					if (!D.getElementById(id)) return;
+
 					const element = D.getElementById(id);
 					element.classList.add("is-active");
 

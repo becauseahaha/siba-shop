@@ -1,0 +1,39 @@
+extends pug/base
+
+append vars
+	- title = 'Контакты'
+
+append scripts
+	script(src="https://api-maps.yandex.ru/2.1/?apikey=c74c036f-0577-4d7a-8c40-c1ca5e6195d1&lang=ru_RU")
+
+block content
+	.contacts-page.sec.sec--line: .wrapper 
+
+		.contacts-container
+
+
+			.contacts
+				h1.contacts-title Контакты
+			
+				.tabs.js-tabs#js-tabs-map
+					.tabs__list
+						button.tabs__btn.is-active(data-id="contacts-msk", data-geo-1="55.852142", data-geo-2="37.530463") Москва
+						button.tabs__btn(data-id="contacts-spb", data-geo-1="59.847037", data-geo-2="30.446627") Санкт-Петербург
+						button.tabs__btn(data-id="contacts-ekb", data-geo-1="56.908266", data-geo-2="60.619106") Екатеринбург
+					.tabs__content-wrapper
+						.tabs__content-tab.is-active#contacts-msk
+							address.contacts-address г. Москва, 4-й Лихачёвский переулок, 4с2
+								small Офис: 08:00-18:00, касса 08:00-17:00
+							address.contacts-address +7 (495) 120-81-37
+								small Бесплатно, с 08:00 до 18:00
+							address.contacts-address b2b@siba-vending.ru
+								small Есть вопросы? Напишите нам
+						.tabs__content-tab#contacts-spb
+							address.contacts-address г. СПб
+								small Офис: 08:00-18:00, касса 08:00-17:00
+							address.contacts-address +7 (495) 120-81-37
+								small Бесплатно, с 08:00 до 18:00
+							address.contacts-address b2b@siba-vending.ru
+								small Есть вопросы? Напишите нам
+
+			.contacts-map#map

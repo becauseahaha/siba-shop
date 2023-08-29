@@ -128,40 +128,11 @@
             margin-top: -3px
 
     &__tabs
-        display: flex
-        gap: 40px
-        // border-bottom: 1px solid $blue-light3
         margin-bottom: 30px
-        overflow: hidden
-        overflow-x: auto
-        white-space: nowrap
-        position: relative
-        &:after
-            position: absolute
-            content: ""
-            display: block
-            height: 1px
-            background-color: $blue-light3
-            left: 0
-            right: 0
-            bottom: 0
-            z-index: -1
     &__tabs-container
         margin-bottom: 90px
-        display: none
         p
             font-size: inherit
-        &.is-active
-            display: block
-    &__tabs-item
-        padding: 0 0 12px 0
-        text-transform: uppercase
-        letter-spacing: 1.5px
-        position: relative
-        border-bottom: 1px solid transparent
-    &__tabs-item.is-active
-        color: $blue
-        border-color: $blue
 
     &__tab-details-title
         font-weight: 500
@@ -269,23 +240,6 @@
         &__videos
             .b-video
                 margin-bottom: 24px
-        
-        &__tabs
-            gap: 24px
-
-
-
-
-// @mixin card-gallery-figure($w, $h, $image, $args...) 
-//     position: absolute
-//     width: $w
-//     height: $h
-//     @if variable-exists($image)
-//         background: url($image)
-//         background-repeat: no-repeat
-//         background-size: contain
-//     @each $prop, $val in $args
-//         $prop: $val
     
 
 .card-gallery

@@ -1,0 +1,21 @@
+extends pug/base
+
+append vars
+	- title = '404'
+
+block content
+	.notfound-wrapper
+		.notfound-figure-1.js-parallax(data-prlx="3")
+		.notfound-figure-2.js-parallax(data-prlx="-3")
+		.notfound-figure-3.js-parallax(data-prlx="-3")
+		.notfound-figure-4.js-parallax(data-prlx="3")
+		.wrapper: .notfound-container
+			.notfound-figure#notfound-figure 
+				img(src="images/404/4.png").notfound-figure__four
+				.notfound-figure__zero.js-parallax(data-prlx="1")
+				img(src="images/404/4.png").notfound-figure__four
+			h2.notfound-title Страница не найдена
+			.notfound-text
+				p Похоже запрашиваемой страницы не существует, или введен неправильный адрес.
+				p Перепроверьте запрос или вернитесь на предыдущую страницу.
+			a(href="#").btn.btn--blue.notfound-btn: span &larr; Назад

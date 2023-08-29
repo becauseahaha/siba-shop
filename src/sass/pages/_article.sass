@@ -1,0 +1,251 @@
+.article
+
+    font-size: 24px
+
+    &--paddings
+        +bp($bp-large3, min)
+            .wrapper
+                padding-left: 190px
+                padding-right: 190px
+
+    &__section
+        margin-bottom: 60px
+        h2, h3, .title
+            font-size: 40px
+            font-weight: 400
+            line-height: 110%;
+            letter-spacing: 1.2px
+        p
+            font-size: inherit
+        .link
+            color: $blue
+            border-color: $blue
+        .b-video
+            .b-video__image
+                aspect-ratio: 16/9
+        
+        &--small
+            font-size: 18px
+        
+    &__section-title 
+        font-size: 18px
+        font-weight: 500
+        line-height: 180%
+        letter-spacing: 1.26px
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        margin-bottom: 18px
+        svg
+            width: 50px
+            height: 50px
+            fill: transparent
+            margin-right: 20px
+
+    &__quote
+        background-color: $blue-light4
+        padding: 32px 110px 32px 140px
+        margin: 90px 0
+        border: none
+        border-radius: 7px
+        position: relative
+        &::after
+            content: ""
+            display: block
+            width: 24px
+            height: 30px
+            position: absolute
+            top: 45px
+            left: 60px
+            background-image: url(/images/sprites/svg/quote.svg)
+            background-repeat: no-repeat
+            background-size: contain
+        h4
+            font-size: 30px
+            font-style: normal
+            font-weight: 300
+            line-height: 160%
+            letter-spacing: 0.6px
+            text-transform: none
+
+
+    &__warning
+        position: relative
+        font-size: 18px
+        font-style: normal
+        font-weight: 300
+        line-height: 160%
+        letter-spacing: 0.36px
+        padding-left: 93px
+        +bp($bp-medium, min)
+            &--large
+                font-size: 24px
+        &::before
+            content: "!"
+            display: block
+            width: 63px
+            height: 63px
+            color: $blue
+            border: 1px solid $blue
+            border-radius: 100%
+            position: absolute
+            left: 0
+            top: 0
+            text-align: center
+            font-size: 40px
+            font-weight: 300
+            line-height: 63px
+
+    .article__videos
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+
+    .article-table
+        font-size: 15px
+        thead
+            td
+                background-color: $blue-light4
+                font-weight: 500
+        tr,
+        td
+            border: 1px solid$blue-light3
+            border-collapse: collapse
+            padding: 0
+        td:after
+            display: none
+        td,
+        td:first-child
+            padding: 26px 50px 25px !important
+            font-size: inherit
+            line-height: 1
+
+    +bp($bp-tablet)
+        font-size: 18px
+        &__quote
+            margin: 70px 0
+            padding-right: 70px
+            h4
+                font-size: 24px
+
+    +bp($bp-extra-small)
+
+        font-size: 15px
+
+        .article__videos
+            grid-template-columns: 1fr
+
+        .table-wrapper
+            overflow: auto
+        .article-table
+            td,
+            td:first-child
+                padding: 25px 15px !important
+        
+        &__section
+            margin-bottom: 40px
+            h2, h3, .title
+                font-size: 1.125rem
+        &__section-title 
+            font-size: 15px
+        &__warning
+            padding-left: 0
+            font-size: inherit
+            &::before
+                position: relative
+                margin-left: auto
+                margin-right: auto
+                margin-bottom: 25px
+        &__quote
+            padding: 22px 32px
+            margin-top: 50px
+            margin-bottom: 50px   
+            h4
+                font-size: 18px
+            &::after
+                width: 20px
+                height: 25px
+                left: 20px
+                left: -5px
+                top: 20px
+                opacity: 0.4
+
+.article-image-block
+    position: relative
+    margin-bottom: 90px
+    &__img
+        width: 100%
+        height: auto
+    &__title
+        position: absolute
+        text-transform: none
+        left: 60px
+        right: 60px
+        bottom: 20px
+        color: $white
+        font-size: 50px
+        font-weight: 500
+        line-height: 110%
+        letter-spacing: 2.5px
+
+    +bp($bp-tablet)
+        &__title
+            font-size: 40px
+            left: 30px
+            bottom: 0
+    +bp($bp-extra-small)
+        margin-bottom: 40px
+        &__title
+            font-size: 20px
+            left: 20px
+
+
+.article-list 
+    margin-bottom: 100px
+    font-size: inherit
+    &__item
+        font-size: inherit
+        margin: 0
+        padding-left: 50px
+        margin-bottom: 30px
+        line-height: 160%
+        &::after
+            color: $white
+            background-color: $orange
+            font-size: 15px
+            border-radius: 100%
+            width: 30px
+            height: 30px
+            line-height: 30px
+            text-align: center
+            left: 0
+            top: 4px
+    &__title 
+        font-weight: 500
+        line-height: 180%
+        letter-spacing: 1.26px
+        text-transform: uppercase
+    
+    +bp($bp-extra-small)
+        font-size: 15px
+        margin-bottom: 0
+
+.article-list--horizontal
+    display: grid
+    // grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-gap: 45px 50px
+    .article-list__title
+        padding-left: 50px
+        margin-bottom: 18px
+    .article-list__item
+        padding-left: 0
+        margin-bottom: 0
+        &::after
+            top: 0
+
+    +bp($bp-tablet)
+        // grid-template-columns: 1fr 1fr
+
+.article-list--small
+    font-size: 18px

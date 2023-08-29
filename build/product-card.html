@@ -8,7 +8,7 @@
     </title>
     <link rel="icon" href="">
     <link rel="icon" href="" sizes="16x16">
-    <link rel="stylesheet" href="css/main.css?v=1692965958457">
+    <link rel="stylesheet" href="css/main.css?v=1693308575886">
   </head>
   <body>
     <div class="page js-page">
@@ -582,14 +582,14 @@
                 </button>
               </div>
               <div class="product-card__partner-stores"><a class="product-card__partner-stores-btn product-card__partner-stores-btn--ozon" href="#">Купить на<img class="icon" src="images/ozon.svg"></a><a class="product-card__partner-stores-btn product-card__partner-stores-btn--wildberries" href="#">Купить на<img class="icon" src="images/wildberries.svg"></a></div>
-              <div class="js-tab">
-                <div class="product-card__tabs js-tab__list">
-                  <button class="product-card__tabs-item js-tab__item is-active" data-id="tab-details-1">Характеристики</button>
-                  <button class="product-card__tabs-item js-tab__item" data-id="tab-details-2">Меню и настройки</button>
-                  <button class="product-card__tabs-item js-tab__item" data-id="tab-details-3">Доставка</button>
+              <div class="js-tabs">
+                <div class="tabs__list product-card__tabs">
+                  <button class="tabs__btn product-card__tabs-item is-active" data-id="tab-details-1">Характеристики</button>
+                  <button class="tabs__btn product-card__tabs-item" data-id="tab-details-2">Меню и настройки</button>
+                  <button class="tabs__btn product-card__tabs-item" data-id="tab-details-3">Доставка</button>
                 </div>
-                <div class="js-tab__content">
-                  <div class="product-card__tabs-container js-tab__block is-active" id="tab-details-1">
+                <div class="tabs__content-wrapper">
+                  <div class="tabs__content-tab product-card__tabs-container is-active" id="tab-details-1">
                     <div class="product-card__tab-details">
                       <div class="product-card__tab-details-title">Параметры:</div>
                       <table class="product-card__details-table"> 
@@ -651,13 +651,13 @@
                       </table>
                     </div>
                   </div>
-                  <div class="product-card__tabs-container js-tab__block" id="tab-details-2"> 
+                  <div class="tabs__content-tab product-card__tabs-container" id="tab-details-2"> 
                     <div class="product-card__tab-details">
                       <div class="product-card__tab-details-title">Меню и настройки:</div>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                   </div>
-                  <div class="product-card__tabs-container js-tab__block" id="tab-details-3"> 
+                  <div class="tabs__content-tab" id="tab-details-3"> 
                     <div class="product-card__tab-details">
                       <div class="product-card__tab-details-title">Доставка:</div>
                       <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
@@ -717,15 +717,15 @@
                 </div>
               </div>
             </h4>
-            <div class="products-horizontal__container js-tab">
-              <div class="products-horizontal__tabs js-tab__list">
-                <button class="products-horizontal__tabs-item js-tab__item is-active" data-id="buy-also-0">Все</button>
-                <button class="products-horizontal__tabs-item js-tab__item" data-id="buy-also-1">Оборудование</button>
-                <button class="products-horizontal__tabs-item js-tab__item" data-id="buy-also-2">Купюроприемники</button>
-                <button class="products-horizontal__tabs-item js-tab__item" data-id="buy-also-3">Монетоприемники</button>
+            <div class="tabs products-horizontal__container js-tabs">
+              <div class="tabs__list products-horizontal__tabs">
+                <button class="tabs__btn products-horizontal__tabs-item is-active" data-id="buy-also-0">Все</button>
+                <button class="tabs__btn products-horizontal__tabs-item" data-id="buy-also-1">Оборудование</button>
+                <button class="tabs__btn products-horizontal__tabs-item" data-id="buy-also-2">Купюроприемники</button>
+                <button class="tabs__btn products-horizontal__tabs-item" data-id="buy-also-3">Монетоприемники</button>
               </div>
-              <div class="tabs-container js-tab__content">
-                <div class="js-tab__block is-active" id="buy-also-0">
+              <div class="tabs__content-wrapper">
+                <div class="tabs__content-tab is-active" id="buy-also-0">
                   <div class="swiper js-slider-horizontal" data-navigation="slider-nav-buy-also-0">
                     <div class="products-horizontal__products swiper-wrapper">
                       <div class="product-horizontal swiper-slide">
@@ -844,7 +844,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="js-tab__block" id="buy-also-1">
+                <div class="tabs__content-tab" id="buy-also-1">
                   <div class="swiper js-slider-horizontal" data-navigation="slider-nav-buy-also-1">
                     <div class="products-horizontal__products swiper-wrapper">
                       <div class="product-horizontal swiper-slide">
@@ -935,8 +935,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="js-tab__block" id="buy-also-2"></div>
-                <div class="js-tab__block" id="buy-also-3"></div>
+                <div class="tabs__content-tab" id="buy-also-2"></div>
+                <div class="tabs__content-tab" id="buy-also-3"></div>
               </div>
             </div>
           </div>
@@ -1573,7 +1573,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"> </script>
-    <script src="js/vendor.js?v=1692965958462"></script>
-    <script src="js/main.js?v=1692965958462"></script>
+    <script src="js/vendor.js?v=1693308575889"></script>
+    <script src="js/main.js?v=1693308575889"></script>
   </body>
 </html>

@@ -1,0 +1,43 @@
+.shipping-page
+    h1
+        text-transform: none
+        margin-bottom: 55px
+        font-size: 50px
+        +bp($bp-small)
+            font-size: 1.375rem;
+    &__tabs
+        .tabs__list
+            margin-bottom: 95px
+            +bp($bp-tablet)
+                margin-bottom: 55px
+
+    +bp($bp-extra-small)
+        padding-top: 40px
+        h1 
+            margin-bottom: 40px
+
+
+.shipping-options
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 30px
+    margin-bottom: 125px
+    &__description
+        p
+            font-size: 18px
+        li
+            margin: 0
+        a
+            font-size: 15px
+            font-weight: 500
+            color: $blue
+            border-color: rgba(34, 34, 34, 0.30)
+    +bp($bp-tablet)
+        margin-bottom: 95px
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(3, auto)
+    +bp($bp-extra-small)
+        margin-bottom: 65px
+        &__description
+            p
+                font-size: 15px

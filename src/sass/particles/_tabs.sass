@@ -1,0 +1,39 @@
+.tabs
+	&__list
+		display: flex
+		gap: 40px
+		margin-bottom: 25px
+		overflow: hidden
+		overflow-x: auto
+		white-space: nowrap
+		position: relative
+		&:after
+			position: absolute
+			content: ""
+			display: block
+			height: 1px
+			background-color: $blue-light3
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+
+	&__btn
+		padding: 0 0 12px 0
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		position: relative
+		border-bottom: 1px solid transparent
+		font-size: 15px
+		&.is-active
+			color: $blue
+			border-color: $blue
+
+	&__content-tab
+		display: none
+		&.is-active
+			display: block
+
+	+bp($bp-extra-small)
+		&__list
+			gap: 24px

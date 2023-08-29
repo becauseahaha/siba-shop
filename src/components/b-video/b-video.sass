@@ -33,3 +33,51 @@
 		margin-bottom: 20px 
 		&__block-image 
 			height: 52vw
+
+.b-video--inner
+
+	position: relative
+	
+	.b-video__image
+		max-height: 730px
+
+	+bp($bp-tablet, min)
+
+		.b-video__icon
+			left: 50%
+			top: 50%
+			right: unset
+			bottom: unset
+			transform: translate(-50%, -50%)
+			width: 80px
+			height: 80px
+		.b-video__desc
+			position: absolute
+			bottom: 30px
+			left: 30px
+			width: 60%
+			color: $white
+			.h6-title
+				color: inhrit
+				font-size: 36px
+				font-weight: 500
+				line-height: 110%
+				letter-spacing: 2.5px
+				text-transform: unset
+			.small-title
+				color: inhrit
+				font-size: 15px
+				font-weight: 500
+				line-height: 140%
+				letter-spacing: 0.75px
+				text-transform: uppercase
+
+	+bp($bp-large3, min)
+		.b-video__icon
+			width: 120px
+			height: 120px
+		.b-video__desc
+			.h6-title
+				font-size: 50px
+	
+
