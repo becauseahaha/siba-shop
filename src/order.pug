@@ -1,0 +1,129 @@
+extends pug/base
+include components/repair-item/repair-item
+include components/counter/counter
+include components/select/select
+
+
+append vars
+	- title = 'Карточка товара'
+
+block content
+	.order
+		.wrapper
+			.order-content
+				.order__title Оформление заказа
+				.order-info 
+					.order-info__desc Авторизуйтесь, используя логин и пароль или воспользуйтесь формой ниже
+					.order-info__btn.btn.btn--blue 
+						span авторизоваться
+				.order-form
+					.order-form-section
+						.order-form__title Данные для оформления заказа
+						.order-form__select
+							+select({
+									className: 'js-select',
+									name: 'region',
+									label: 'Выберите',
+									options: ['Общество с ограниченной ответственностью', 'Индивидуальный предприниматель', 'Физическое лицо'],
+									optionsValue: ['0', '1', '2']
+							})
+						.order-form__radio
+							.radio 
+								input(type="radio", id="type-1" name="type" class="radio__input" checked)
+								label(for="type-1" class="radio__label") Общество с ограниченной <br> ответственностью
+							.radio 
+								input(type="radio", id="type-2" name="type" class="radio__input")
+								label(for="type-2" class="radio__label") Индивидуальный <br> предприниматель
+							.radio 
+								input(type="radio", id="type-3" name="type" class="radio__input")
+								label(for="type-3" class="radio__label") Физическое <br> лицо
+						.form__line
+							.form-field.form-group
+								.form-field__label Название компании
+								input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+								.form-field__mask
+						.form-row 
+							.form__line
+								.form-field.form-group
+									.form-field__label ИНН
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+							.form__line
+								.form-field.form-group
+									.form-field__label ОГРН
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+						.form-row 
+							.form__line
+								.form-field.form-group
+									.form-field__label Банк
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+							.form__line
+								.form-field.form-group
+									.form-field__label Корреспондентский счёт
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+						.form-row 
+							.form__line
+								.form-field.form-group
+									.form-field__label БИК банка
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+							.form__line
+								.form-field.form-group
+									.form-field__label Расчетный счет
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+						.form-row 
+							.form__line
+								.form-field.form-group
+									.form-field__label КПП
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+							.form__line
+								.form-field.form-group
+									.form-field__label ОКПО
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+						.form-row 
+							.form__line
+								.form-field.form-group
+									.form-field__label Юр.адрес 
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+							.form__line
+								.form-field.form-group
+									.form-field__label Факт.адрес 
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+					.order-form-section
+						.order-form__title Контактная информация
+						.form-row 
+							.form__line
+								.form-field.form-group
+									.form-field__label Имя
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+							.form__line
+								.form-field.form-group
+									.form-field__label Телефон
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+						.form-row 
+							.form__line
+								.form-field.form-group
+									.form-field__label E-mail
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+							.form__line
+								.form-field.form-group
+									.form-field__label Пароль
+									input.form-field__input.js-input(type='email' name='email' data-pristine-required-message='' required='')
+									.form-field__mask
+					.order-form-action 
+						.order-form__goods.js-basket-total В корзине 2 товара
+						.order-form__price 1 042 897,71 ₽
+							span 12 060.00 €
+						.order-form__btn.btn.btn--blue.btn--large 	Оформить заказ
+		include components/basket-popup/basket-popup

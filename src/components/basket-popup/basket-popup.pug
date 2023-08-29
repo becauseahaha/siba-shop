@@ -1,16 +1,21 @@
 .basket-popup 
-  .basket-overlay 
+  .basket-popup__overlay 
   .basket-panel 
     .basket-popup__close
+      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <path d="M1 9L5 5L1 1" stroke="#252525" stroke-width="1.5"/>
+        <path d="M9 9L5 5L9 1" stroke="#252525" stroke-width="1.5"/>
+      </svg>
     .basket-panel__title Корзина
     .basket-panel-list
-      .basket-panel-item 
-        .basket-panel-item__remove
+      .basket-panel-item.js-basket-item 
+        .basket-panel-item__remove.js-basket-remove
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
             <path d="M1 9L5 5L1 1" stroke="#252525" stroke-width="1.5"/>
             <path d="M9 9L5 5L9 1" stroke="#252525" stroke-width="1.5"/>
           </svg>
         .basket-panel-item__img  
+          img(src="images/products/eq-1.png", alt="")
         .basket-panel-item__desc
           .basket-panel-item__info 
             .basket-panel-item__name Кофейный автомат OPERA
@@ -18,11 +23,78 @@
           .basket-panel-item__price 521 897,71 ₽
             span 6 030.00 €
           .basket-panel-item__counter
+            +counter({val: 1})
+      .basket-panel-item.js-basket-item 
+        .basket-panel-item__remove.js-basket-remove
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L5 5L1 1" stroke="#252525" stroke-width="1.5"/>
+            <path d="M9 9L5 5L9 1" stroke="#252525" stroke-width="1.5"/>
+          </svg>
+        .basket-panel-item__img  
+          img(src="images/products/eq-1.png", alt="")
+        .basket-panel-item__desc
+          .basket-panel-item__info 
+            .basket-panel-item__name Кофейный автомат OPERA
+            .basket-panel-item__articul Артикул 142 364
+          .basket-panel-item__price 521 897,71 ₽
+            span 6 030.00 €
+          .basket-panel-item__counter
+            +counter({val: 1})
+      .basket-panel-item.js-basket-item 
+        .basket-panel-item__remove.js-basket-remove
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L5 5L1 1" stroke="#252525" stroke-width="1.5"/>
+            <path d="M9 9L5 5L9 1" stroke="#252525" stroke-width="1.5"/>
+          </svg>
+        .basket-panel-item__img  
+          img(src="images/products/eq-1.png", alt="")
+        .basket-panel-item__desc
+          .basket-panel-item__info 
+            .basket-panel-item__name Кофейный автомат OPERA
+            .basket-panel-item__articul Артикул 142 364
+          .basket-panel-item__price 521 897,71 ₽
+            span 6 030.00 €
+          .basket-panel-item__counter
+            +counter({val: 1})
+      .basket-panel-item.js-basket-item 
+        .basket-panel-item__remove.js-basket-remove
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L5 5L1 1" stroke="#252525" stroke-width="1.5"/>
+            <path d="M9 9L5 5L9 1" stroke="#252525" stroke-width="1.5"/>
+          </svg>
+        .basket-panel-item__img  
+          img(src="images/products/eq-1.png", alt="")
+        .basket-panel-item__desc
+          .basket-panel-item__info 
+            .basket-panel-item__name Кофейный автомат OPERA
+            .basket-panel-item__articul Артикул 142 364
+          .basket-panel-item__price 521 897,71 ₽
+            span 6 030.00 €
+          .basket-panel-item__counter
+            +counter({val: 1})
+      .basket-panel-item.js-basket-item 
+        .basket-panel-item__remove.js-basket-remove
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L5 5L1 1" stroke="#252525" stroke-width="1.5"/>
+            <path d="M9 9L5 5L9 1" stroke="#252525" stroke-width="1.5"/>
+          </svg>
+        .basket-panel-item__img  
+          img(src="images/products/eq-1.png", alt="")
+        .basket-panel-item__desc
+          .basket-panel-item__info 
+            .basket-panel-item__name Кофейный автомат OPERA
+            .basket-panel-item__articul Артикул 142 364
+          .basket-panel-item__price 521 897,71 ₽
+            span 6 030.00 €
+          .basket-panel-item__counter
+            +counter({val: 1})
     .basket-panel-total 
       .basket-panel-total__top 
         .basket-panel-total__title В итоге
         .basket-panel-total__price 522 697,71 ₽
           span 6 030.00 €
       .basket-panel-total__action 
-        a(href="/basket.html").basket-panel-total__btn.btn.btn--blue Перейти в корзину
-        .basket-panel-total__btn.btn.btn--white Очистить
+        a(href="/basket.html").basket-panel-total__basket.btn.btn--blue 
+          span Перейти в корзину
+        .basket-panel-total__clean.btn.btn--outline 
+          span Очистить

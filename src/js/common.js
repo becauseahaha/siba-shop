@@ -248,7 +248,7 @@ D.addEventListener("DOMContentLoaded", function() {
 // });
 
 
-let basketItems = document.querySelectorAll('.basket-item');
+let basketItems = document.querySelectorAll('.js-basket-item');
 
 if(basketItems) {
 	basketItems.forEach(function(item){
@@ -259,3 +259,25 @@ if(basketItems) {
 	})
 }
 
+let basketPopupBtn = document.querySelectorAll('.js-basket-total');
+let basketPopup = document.querySelector('.basket-popup');
+let basketPopupClose = document.querySelector('.basket-popup__close');
+let basketPopupOverlay = document.querySelector('.basket-popup__overlay');
+
+
+
+if(basketPopup) {
+	basketPopupBtn.forEach((item) => {
+		item.addEventListener('click', function(){
+			basketPopup.classList.add('is-open')
+		})
+	})
+
+	basketPopupClose.addEventListener('click', function(){
+		basketPopup.classList.remove('is-open')
+	})
+	
+	basketPopupOverlay.addEventListener('click', function(){
+		basketPopup.classList.remove('is-open')
+	})
+}
