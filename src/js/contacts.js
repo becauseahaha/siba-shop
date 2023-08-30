@@ -2,7 +2,7 @@ const contactsMap = () => {
 
     const pin = {
         iconLayout: 'default#image',
-        iconImageHref: './../images/sprites/svg/pin.svg',
+        iconImageHref: './images/sprites/svg/pin.svg',
         iconImageSize: [38, 38],
         iconImageOffset: [-19,-19]
     }
