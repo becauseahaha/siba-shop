@@ -10,7 +10,12 @@
     .b-video__image
         aspect-ratio: 16 / 9
 
-    +bp(+$bp-tablet)
+    +bp($bp-medium, min)
+        .b-video:not(.b-video--inner) .b-video__icon
+            width: 80px
+            height: 80px
+
+    +bp($bp-tablet)
         margin-bottom: 0px
         grid-gap: 0
         grid-template-columns: 1fr

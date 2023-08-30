@@ -101,6 +101,11 @@
         grid-template-columns: 1fr 1fr
         gap: 20px
 
+    +bp($bp-medium, min)
+        .b-video:not(.b-video--inner) .b-video__icon
+            width: 80px
+            height: 80px
+
     .article-table
         font-size: 15px
         thead
